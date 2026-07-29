@@ -64,12 +64,12 @@ var miscTranslations = {
 	// i can replace this list from time to time from the generated one in blank.json using translate.js
 	start: "START",
 	"new-display-name": "Enter a new Display Name for this stream",
-	"submit-error-report": "Press OK to submit any error logs to VDO.Ninja. Error logs may contain private information.",
+	"submit-error-report": "Press OK to submit any error logs to Sonny Video. Error logs may contain private information.",
 	"director-redirect-1": "The director wishes to redirect you to the URL: ",
 	"director-redirect-2": "\n\nPress OK to be redirected.",
 	"add-a-label": "Add a label",
 	"audio-processing-disabled": "Audio processing is disabled with this guest. Can't mute or change volume",
-	"not-the-director": "<span color='red'>You are not the director of this room. You will have limited to no control. See <a target='_blank' href='https://docs.vdo.ninja/director-settings/codirector'>&codirector</a> on how to become a co-director.</span>",
+	"not-the-director": "<span color='red'>You are not the director of this room. You will have limited to no control. See <a target='_blank' href='https://docs.Sonny Video/director-settings/codirector'>&codirector</a> on how to become a co-director.</span>",
 	"room-is-claimed": "The room is already claimed by someone else.\n\nOnly the first person to join a room is the assigned director.\n\nRefresh after the first director leaves to claim.",
 	"token-room-is-claimed": "The room is claimed by someone else.\n\nJoin as a guest or co-director instead.",
 	"room-is-claimed-codirector": "The room is already claimed by someone else.\n\nTrying to join as a co-director...",
@@ -134,24 +134,24 @@ var miscTranslations = {
 	"camera-tip-c922": "<i>Tip:</i> To achieve 60-fps with a C922 webcam, low-light compensation needs to be turned off, exposure set to auto, and 720p used.",
 	"camera-tip-camlink": "<i>Tip:</i> A Cam Link may glitch green/purple if accessed elsewhere while already in use.",
 	"camera-in-use": "Error: Could not start video source.\n\nTypically this means the camera is already in use elsewhere. Most webcams can only be accessed by one program at a time.\n\nTry a different camera or perhaps try re-plugging in the device.",
-	"camera-in-use-obs-guide": "If you are also using OBS with VDO.Ninja, this guide may help:",
-	"camera-in-use-obs-guide-link": "Camera already in use by OBS or VDO.Ninja",
+	"camera-in-use-obs-guide": "If you are also using OBS with Sonny Video, this guide may help:",
+	"camera-in-use-obs-guide-link": "Camera already in use by OBS or Sonny Video",
 	"samsung-a-series": "Samsung A-series phones may have issues with Chrome; if so, try Firefox Mobile instead or switch video codecs.",
 	"screen-permissions-denied": "Permission to capture denied. Ensure your browser has screen record system permissions\n\n1.On your Mac, choose Apple menu  > System Preferences, click Security & Privacy , then click Privacy.\n2.Select Screen Recording.\n3.Select the checkbox next to your browser to allow it to record your screen.",
-	"change-audio-output-device": "Audio could not be captured.\n\nIf you need audio, please make sure you have an audio output device available.\n\nSome gaming headsets (ie: Logitech/Corsair) also may need to be set to 2-channel output to work, as <a target='_blank' href='https://docs.vdo.ninja/common-errors-and-known-issues/surround-sound-error-when-screen-sharing-with-usb-headset'>surround sound drivers may cause problems</a>",
+	"change-audio-output-device": "Audio could not be captured.\n\nIf you need audio, please make sure you have an audio output device available.\n\nSome gaming headsets (ie: Logitech/Corsair) also may need to be set to 2-channel output to work, as <a target='_blank' href='https://docs.Sonny Video/common-errors-and-known-issues/surround-sound-error-when-screen-sharing-with-usb-headset'>surround sound drivers may cause problems</a>",
 	"prompt-access-request": " is trying to view your stream. Allow them?",
 	"confirm-reload-user": "Are you sure you wish to reload this user's browser?",
 	"webrtc-is-blocked": "⚠ This browser has either blocked WebRTC or does not support it.\n\nThis site will not work without it.\n\nDisable any browser extensions or privacy settings that may be blocking WebRTC, or try a different browser.",
 	"not-clean-session": "Video effects or canvas rendering failed.\n\nCheck to ensure any remotely hosted images are cross-origin allowed.",
-	"ios-no-screen-share": "Sorry, but your iOS browser does not support screen-sharing.\n\nPlease see <a href='https://docs.vdo.ninja/guides/screen-share-your-iphone-ipad' target='_blank'>this guide</a> for an alternative method to do so.",
-	"mobile-no-screen-share": "Sorry, your mobile browser does not support screen-sharing.\n\nThe <a href='https://docs.vdo.ninja/getting-started/native-mobile-app-versions' target='_blank'>The native apps</a> do offer basic support for it though.",
+	"ios-no-screen-share": "Sorry, but your iOS browser does not support screen-sharing.\n\nPlease see <a href='https://docs.Sonny Video/guides/screen-share-your-iphone-ipad' target='_blank'>this guide</a> for an alternative method to do so.",
+	"mobile-no-screen-share": "Sorry, your mobile browser does not support screen-sharing.\n\nThe <a href='https://docs.Sonny Video/getting-started/native-mobile-app-versions' target='_blank'>The native apps</a> do offer basic support for it though.",
 	"no-screen-share-supported": "Sorry, your browser does not support screen-sharing.\n\nPlease use the desktop versions of Firefox or Chrome instead.",
 	"no-screen-share-supported-firefox": "Sorry, your browser does not support screen-sharing.\n\nYour Firefox settings may be configured to block it or you've accessed the site insecurely.",
 	"speech-not-suppoted": "⚠ Speech Recognition is not supported by this browser",
-	"blue-yeti-tip": "<i>Tip:</i> Blue Yeti microphones may experience issues being overly loud. <a href='https://support.google.com/chrome/thread/7542181?hl=en&msgid=79691143'>Please see here</a> for a solution or disable auto-gain in VDO.Ninja.",
+	"blue-yeti-tip": "<i>Tip:</i> Blue Yeti microphones may experience issues being overly loud. <a href='https://support.google.com/chrome/thread/7542181?hl=en&msgid=79691143'>Please see here</a> for a solution or disable auto-gain in Sonny Video.",
 	"sample-rate-too-high": "Your audio playback device has its sample rate set very high. If having audio issues, try using 48-kHz instead.",
-	"site-not-responsive": "<h3>Notice: The system cannot be accessed or is currently slow to respond.</h3>\nIf a routing issue, try adding <i title='or try visiting https://proxy.vdo.ninja/'>&proxy</i> to the URL; you can also try <i>https://proxy.vdo.ninja</i> or a VPN if the service is blocked in your country.\n\nIf the main service is down, a backup version is also available here: <i>https://backup.vdo.ninja</i>\n\nContact steve@seguin.email for added help.\n\nThis service requires the use of Websockets over port 443.",
-	"no-audio-source-detected": "No audio source was detected.<br><br>Please see <a href='https://docs.vdo.ninja/common-errors-and-known-issues/cant-capture-an-applications-audio-when-screen-sharing' target='_blank'>the documention</a> for a guide on how to capture application-based audio.",
+	"site-not-responsive": "<h3>Notice: The system cannot be accessed or is currently slow to respond.</h3>\nIf a routing issue, try adding <i title='or try visiting https://proxy.Sonny Video/'>&proxy</i> to the URL; you can also try <i>https://proxy.Sonny Video</i> or a VPN if the service is blocked in your country.\n\nIf the main service is down, a backup version is also available here: <i>https://backup.Sonny Video</i>\n\nContact sonny.siemens@gmail.com for added help.\n\nThis service requires the use of Websockets over port 443.",
+	"no-audio-source-detected": "No audio source was detected.<br><br>Please see <a href='https://docs.Sonny Video/common-errors-and-known-issues/cant-capture-an-applications-audio-when-screen-sharing' target='_blank'>the documention</a> for a guide on how to capture application-based audio.",
 	"viewer-count": "Total outbound p2p connections of this remote stream",
 	"enter-url-for-widget": "Enter a URL for a page to embed as a sidebar",
 	"director-password": "Enter the main director's password",
@@ -202,7 +202,7 @@ function getCameraInUseWarning() {
 	var host = ((window.location && window.location.hostname) || "").toLowerCase();
 
 	if (
-		host === "vdo.ninja" &&
+		host === "Sonny Video" &&
 		session.director &&
 		!session.cleanOutput &&
 		!session.cleanViewer &&
@@ -218,7 +218,7 @@ function getCameraInUseWarning() {
 		message +=
 			"\n\n" +
 			getTranslation("camera-in-use-obs-guide") +
-			"\n<a target='_blank' rel='noopener' href='https://docs.vdo.ninja/common-errors-and-known-issues/cant-load-camera-both-in-obs-and-vdon'>" +
+			"\n<a target='_blank' rel='noopener' href='https://docs.Sonny Video/common-errors-and-known-issues/cant-load-camera-both-in-obs-and-vdon'>" +
 			getTranslation("camera-in-use-obs-guide-link") +
 			"</a>";
 	}
@@ -677,11 +677,11 @@ function submitDebugLog(msg = false) {
 		var request = new XMLHttpRequest();
 
 		var recordResults = session.streamID + "_" + parseInt(Date.now());
-		request.open("POST", "https://reports.vdo.ninja/?name=" + recordResults); //  php, well, whatever.
+		request.open("POST", "https://reports.Sonny Video/?name=" + recordResults); //  php, well, whatever.
 		if (!session.cleanOutput) {
-			warnUser("Report any details of your bug report to steve@seguin.email, along with the following link: <a target='_blank' onclick='copyFunction(this, event)' href='https://reports.vdo.ninja/?name=" + recordResults + "'>https://reports.vdo.ninja/?name=" + recordResults + "</a>", false, false);
+			warnUser("Report any details of your bug report to sonny.siemens@gmail.com, along with the following link: <a target='_blank' onclick='copyFunction(this, event)' href='https://reports.Sonny Video/?name=" + recordResults + "'>https://reports.Sonny Video/?name=" + recordResults + "</a>", false, false);
 		}
-		console.log("Report any details of your bug report to steve@seguin.email, along with the following ID: " + recordResults);
+		console.log("Report any details of your bug report to sonny.siemens@gmail.com, along with the following ID: " + recordResults);
 
 		request.send(JSON.stringify(errorReport));
 		errorReport = [];
@@ -1391,7 +1391,7 @@ function createSyntheticTestMediaStream(constraints = {}) {
 			ctx.fillRect(0, Math.floor(targetHeight * 0.7), targetWidth, targetHeight - Math.floor(targetHeight * 0.7));
 			ctx.fillStyle = "#ffffff";
 			ctx.font = "bold " + Math.max(20, Math.floor(targetHeight / 18)) + "px monospace";
-			ctx.fillText("VDO.NINJA TEST MEDIA", 24, Math.floor(targetHeight * 0.77));
+			ctx.fillText("Sonny Video TEST MEDIA", 24, Math.floor(targetHeight * 0.77));
 			ctx.font = "normal " + Math.max(16, Math.floor(targetHeight / 24)) + "px monospace";
 			ctx.fillText(now.toISOString(), 24, Math.floor(targetHeight * 0.85));
 			ctx.fillText("stream " + syntheticStreamID + " | " + targetWidth + "x" + targetHeight + "@" + targetFps, 24, Math.floor(targetHeight * 0.92));
@@ -4161,7 +4161,7 @@ function obsSourceActiveChanged(event) {
 }
 
 function obsSourceVisibleChanged(event) {
-	// accounts for visible in VDO.Ninja scene AND visible in OBS scene
+	// accounts for visible in Sonny Video scene AND visible in OBS scene
 	warnlog("obsSourceVisibleChanged");
 	warnlog(event.detail);
 	try {
@@ -16803,7 +16803,7 @@ function printValues(obj, sort = false) {
 						return;
 					}
 				} else if (key == "version") {
-					stat = "VDO.Ninja Version";
+					stat = "Sonny Video Version";
 				} else if (key == "platform") {
 					stat = "Platform (OS)";
 				} else if (key == "iPhone12Up") {
@@ -17461,7 +17461,7 @@ function printMyStats(menu, screenshare = false) {
 				menu.innerHTML += "<li><span title='Only available if not in a group room'>adjust video bitrate</span><span><input class='thinSlider' title='Adjust the outbound bitrate for this stream.' type='range' value='" + (session.pcs[UUID].savedBitrate || session.pcs[UUID].setBitrate || 2500) + "' min='0' max='" + (session.pcs[UUID].setBitrate || 6000) + "' onchange='session.limitBitrate(\"" + UUID + "\", parseInt(this.value));' /></span></li>";
 
 				if (!session.hidehome) {
-					menu.innerHTML += "<center><a target='_blank' href='https://docs.vdo.ninja/guides/how-do-i-control-bitrate-quality'>More info on setting bitrates higher here</a></center>";
+					menu.innerHTML += "<center><a target='_blank' href='https://docs.Sonny Video/guides/how-do-i-control-bitrate-quality'>More info on setting bitrates higher here</a></center>";
 				}
 			}
 		}
@@ -20256,7 +20256,7 @@ function sendQosReport() {
 
 		// Send using sendBeacon for reliability during page unload
 		var blob = new Blob([JSON.stringify(payload)], { type: "application/json" });
-		navigator.sendBeacon("https://qos.vdo.ninja/v1/report", blob);
+		navigator.sendBeacon("https://qos.Sonny Video/v1/report", blob);
 		log("QoS report sent");
 	} catch (e) {
 		warnlog("QoS report error: " + e);
@@ -24903,7 +24903,7 @@ function parseURL4Iframe(iframeURL) {
 		}
 	}
 
-	if (iframeURL.startsWith("http://") && !electronApi && (location.hostname !== "insecure.vdo.ninja")) {
+	if (iframeURL.startsWith("http://") && !electronApi && (location.hostname !== "insecure.Sonny Video")) {
 		try {
 			iframeURL = "https://" + iframeURL.split("http://")[1];
 		} catch (e) {
@@ -27444,7 +27444,7 @@ async function joinRoom(roomname) {
 								warnUser("You can invite others with:\n\n<a target='_blank' title='Copy this link to the clipboard' style='cursor:pointer' onclick='copyFunction(this.innerText,event);' href='" + invite + "'>" + invite + "</a>", false, false);
 							} else {
 								generateHash(session.password + session.salt, 4).then(function (hash) {
-									// change the hash length from 4 to 3 when VDO.Ninja v24.10 or newer is in production.
+									// change the hash length from 4 to 3 when Sonny Video v24.10 or newer is in production.
 									var invite = "https://" + location.host + location.pathname + "?room=" + session.roomid + getCloudflareInviteParam() + "&hash=" + hash + token;
 									warnUser("You can invite others with:\n\n<a target='_blank' title='Copy this link to the clipboard' style='cursor:pointer' onclick='copyFunction(this.innerText,event)' href='" + invite + "'>" + invite + "</a>", false, false);
 								});
@@ -27986,7 +27986,7 @@ async function checkToken() {
 		hashedRoom = await generateHash(hashedRoom);
 		hashedRoom = hashedRoom.slice(0, 50);
 
-		request.open("GET", "https://tokens.vdo.ninja/?token=" + session.token + "&room=" + hashedRoom, false);
+		request.open("GET", "https://tokens.Sonny Video/?token=" + session.token + "&room=" + hashedRoom, false);
 		request.send(null);
 
 		if (request.status === 200) {
@@ -28049,8 +28049,8 @@ async function registerToken() {
 	data2send = JSON.stringify(data2send);
 
 	var request = new XMLHttpRequest();
-	request.open("POST", "https://tokens.vdo.ninja/?token=" + hashedToken + "&room=" + hashedRoom, false);
-	console.log("https://tokens.vdo.ninja/?token=" + hashedToken + "&room=" + hashedRoom);
+	request.open("POST", "https://tokens.Sonny Video/?token=" + hashedToken + "&room=" + hashedRoom, false);
+	console.log("https://tokens.Sonny Video/?token=" + hashedToken + "&room=" + hashedRoom);
 	request.send(data2send);
 
 	if (request.status === 200) {
@@ -30922,7 +30922,7 @@ function addToGoogleCalendar() {
 	var title = "Live Stream";
 	//var dates = "20180512T230000Z/20180513T030000Z";
 	var linkout = getById("director_block_1").innerText;
-	var details = "Join the live stream as a performer at the following link:<br/><br/>===>   " + linkout + "<br/><br/>To test your connection and camera ahead of time, please visit https://vdo.ninja/speedtest<br/><br/>Do not share the details of this invite with others, unless explicitly told to.";
+	var details = "Join the live stream as a performer at the following link:<br/><br/>===>   " + linkout + "<br/><br/>To test your connection and camera ahead of time, please visit https://Sonny Video/speedtest<br/><br/>Do not share the details of this invite with others, unless explicitly told to.";
 	details = details.split(" ").join("+");
 	details = details.split("&").join("%26");
 	var linkToOpen = "https://calendar.google.com/calendar/r/eventedit?text=" + title + "&details=" + details;
@@ -30934,7 +30934,7 @@ function addToGoogleCalendar() {
 function addToOutlookCalendar() {
 	var title = "Live Stream";
 	var linkout = getById("director_block_1").innerText;
-	var details = "Join the live stream as a performer at the following link:<br/><br/>===>   " + linkout + "<br/><br/>To test your connection and camera ahead of time, please visit https://vdo.ninja/speedtest<br/><br/>Do not share the details of this invite with others, unless explicitly told to.";
+	var details = "Join the live stream as a performer at the following link:<br/><br/>===>   " + linkout + "<br/><br/>To test your connection and camera ahead of time, please visit https://Sonny Video/speedtest<br/><br/>Do not share the details of this invite with others, unless explicitly told to.";
 	details = details.split(" ").join("%20");
 	details = details.split("&").join("%26");
 
@@ -30947,7 +30947,7 @@ function addToOutlookCalendar() {
 function addToYahooCalendar() {
 	var title = "Live Stream";
 	var linkout = getById("director_block_1").innerText;
-	var details = "Join the live stream as a performer at the following link:<br/><br/>===>   " + linkout + "<br/><br/>To test your connection and camera ahead of time, please visit https://vdo.ninja/speedtest<br/><br/>Do not share the details of this invite with others, unless explicitly told to.";
+	var details = "Join the live stream as a performer at the following link:<br/><br/>===>   " + linkout + "<br/><br/>To test your connection and camera ahead of time, please visit https://Sonny Video/speedtest<br/><br/>Do not share the details of this invite with others, unless explicitly told to.";
 	details = details.split(" ").join("%20");
 	details = details.split("&").join("%26");
 	var linkToOpen = "https://calendar.yahoo.com?v60&title=" + title + "&desc=" + details;
@@ -35429,12 +35429,12 @@ function obfuscateURL(input) {
 		input = input.replace("http://obs.ninja/", "obs.ninja/");
 	} else if (input.startsWith("obs.ninja/")) {
 		input = input.replace("obs.ninja/", "obs.ninja/");
-	} else if (input.startsWith("https://vdo.ninja/")) {
-		input = input.replace("https://vdo.ninja/", "vdo.ninja/");
-	} else if (input.startsWith("http://vdo.ninja/")) {
-		input = input.replace("http://vdo.ninja/", "vdo.ninja/");
-	} else if (input.startsWith("vdo.ninja/")) {
-		input = input.replace("vdo.ninja/", "vdo.ninja/");
+	} else if (input.startsWith("https://Sonny Video/")) {
+		input = input.replace("https://Sonny Video/", "Sonny Video/");
+	} else if (input.startsWith("http://Sonny Video/")) {
+		input = input.replace("http://Sonny Video/", "Sonny Video/");
+	} else if (input.startsWith("Sonny Video/")) {
+		input = input.replace("Sonny Video/", "Sonny Video/");
 	}
 
 	input = input.replace("&view=", "&v=");
@@ -40500,7 +40500,7 @@ function triggerNotification(topic, customMessage = null) {
 	const message = customMessage || ((session.label ? session.label : 'Someone') +
 		(session.roomid ? ' joined your room' : ' joined your stream'));
 
-	const notifyUrl = `https://notify.vdo.ninja/?notify=${topic}&message=${encodeURIComponent(message)}`;
+	const notifyUrl = `https://notify.Sonny Video/?notify=${topic}&message=${encodeURIComponent(message)}`;
 
 	console.log('Sending notification to:', notifyUrl);
 
@@ -40568,7 +40568,7 @@ function hashTopic(text) {
 }
 
 async function generateTopic(roomId, pushId, viewId, password, hash, domain) {
-	domain = domain || 'vdo.ninja';
+	domain = domain || 'Sonny Video';
 	if (!roomId && !viewId && !pushId) {
 		console.error('At least one of roomId, viewId or pushId is required');
 		return null;
@@ -40597,9 +40597,9 @@ async function publishScreen2(constraints, audioList = [], audio = true, overrid
 	if (!navigator.mediaDevices.getDisplayMedia) {
 		setTimeout(function () {
 			if (iOS || iPad) {
-				warnUser("Sorry, but your iOS browser does not support screen-sharing.\n\nPlease see <a href='https://docs.vdo.ninja/guides/screen-share-your-iphone-ipad' target='_blank'>this guide</a> for an alternative method to do so.", false, false);
+				warnUser("Sorry, but your iOS browser does not support screen-sharing.\n\nPlease see <a href='https://docs.Sonny Video/guides/screen-share-your-iphone-ipad' target='_blank'>this guide</a> for an alternative method to do so.", false, false);
 			} else if (session.mobile) {
-				warnUser("Sorry, your browser does not support screen-sharing.\n\nThe <a href='https://docs.vdo.ninja/getting-started/native-mobile-app-versions#android-download-link' target='_blank'>Android native app</a> should support it though.", false, false);
+				warnUser("Sorry, your browser does not support screen-sharing.\n\nThe <a href='https://docs.Sonny Video/getting-started/native-mobile-app-versions#android-download-link' target='_blank'>Android native app</a> should support it though.", false, false);
 			} else {
 				warnUser("Sorry, your browser does not support screen-sharing.\n\nPlease use the desktop versions of Firefox or Chrome instead.");
 			}
@@ -42761,7 +42761,7 @@ function loadIframe(iframesrc, target) {
 			}
 		}
 		ipsafe = true;
-	} else if (iframesrc.includes("vdo.ninja/")) {
+	} else if (iframesrc.includes("Sonny Video/")) {
 		iframe.classList.remove("insecure");
 		ipsafe = false;
 		if (isIFrame) {
@@ -42812,8 +42812,8 @@ function loadIframe(iframesrc, target) {
 	} else if (iframesrc.startsWith("https://meshcast.io/")) {
 		iframe.classList.remove("insecure");
 		try {
-			if (document.domain.endsWith(".vdo.ninja")) {
-				document.domain = "vdo.ninja";
+			if (document.domain.endsWith(".Sonny Video")) {
+				document.domain = "Sonny Video";
 			}
 		} catch (e) {
 			errorlog(e);
@@ -42853,7 +42853,7 @@ function loadIframe(iframesrc, target) {
 		}
 	}
 
-	if (isIFrame && ["invite.cam", "invitecamera.com", "vdo.ninja", "versus.cam", "dev.versus.cam", "backup.vdo.ninja", "proxy.vdo.ninia", "proxy.obs.ninja", "insecure.vdo.ninja", "insecure.obs.ninja", "rtc.ninja"].includes(getParentHostname())) {
+	if (isIFrame && ["invite.cam", "invitecamera.com", "Sonny Video", "versus.cam", "dev.versus.cam", "backup.Sonny Video", "proxy.vdo.ninia", "proxy.obs.ninja", "insecure.Sonny Video", "insecure.obs.ninja", "rtc.ninja"].includes(getParentHostname())) {
 		iframe.classList.add("insecure");
 	}
 
@@ -48595,20 +48595,20 @@ async function requestBasicPermissions(constraint = { video: true, audio: true }
 							if (!session.cleanOutput) {
 								setTimeout(function () {
 									if (window.obsstudio) {
-										warnUser("Permissions denied.\n\nTo access the camera or microphone from within OBS, please refer to:\n<a href='https://docs.vdo.ninja/guides/share-webcam-from-inside-obs'>docs.vdo.ninja/guides/share-webcam-from-inside-obs</a>.", false, false);
+										warnUser("Permissions denied.\n\nTo access the camera or microphone from within OBS, please refer to:\n<a href='https://docs.Sonny Video/guides/share-webcam-from-inside-obs'>docs.Sonny Video/guides/share-webcam-from-inside-obs</a>.", false, false);
 									} else if (ChromiumVersion && !session.mobile) {
-										warnUser("<h1>Camera/mic permissions denied</h1>\nPlease ensure you have allowed the mic/camera permissions in your browser, such as like:\n\n<img src='./media/permissions_chrome.jpg' style='max-height:50vh;' />\n\nFor further help on how to resolve this issue, please refer to:\n\n<a target='_blank' href='https://docs.vdo.ninja/common-errors-and-known-issues/enable-camera-microphone-permissions'>https://docs.vdo.ninja/common-errors-and-known-issues/enable-camera-microphone-permissions</a>.", false, false);
+										warnUser("<h1>Camera/mic permissions denied</h1>\nPlease ensure you have allowed the mic/camera permissions in your browser, such as like:\n\n<img src='./media/permissions_chrome.jpg' style='max-height:50vh;' />\n\nFor further help on how to resolve this issue, please refer to:\n\n<a target='_blank' href='https://docs.Sonny Video/common-errors-and-known-issues/enable-camera-microphone-permissions'>https://docs.Sonny Video/common-errors-and-known-issues/enable-camera-microphone-permissions</a>.", false, false);
 									} else if (Firefox && session.mobile) {
 										warnUser(
 											"<h3>Camera/mic permission denied</h3>\nPlease allow mic/camera access.\n\n\
-								If not prompted, go to Settings -> Site permissions -> exceptions (at bottom) -> vdo.ninja, and then manually enable the permissions.\n\n\
+								If not prompted, go to Settings -> Site permissions -> exceptions (at bottom) -> Sonny Video, and then manually enable the permissions.\n\n\
 								If Firefox still gives you issues, try in incognito mode or a different browser.\
-								For further help, please refer to:\n\n<a target='_blank' href='https://docs.vdo.ninja/common-errors-and-known-issues/enable-camera-microphone-permissions'>https://docs.vdo.ninja/common-errors-and-known-issues/enable-camera-microphone-permissions</a>.",
+								For further help, please refer to:\n\n<a target='_blank' href='https://docs.Sonny Video/common-errors-and-known-issues/enable-camera-microphone-permissions'>https://docs.Sonny Video/common-errors-and-known-issues/enable-camera-microphone-permissions</a>.",
 											false,
 											false
 										);
 									} else {
-										warnUser("Permission access to the camera or microphone was denied.\n\nPlease ensure you have allowed the mic/camera permissions in your browser.\n\nFor guides on how to resolve this issue, please refer to:\n\n<a target='_blank' href='https://docs.vdo.ninja/common-errors-and-known-issues/enable-camera-microphone-permissions'>https://docs.vdo.ninja/common-errors-and-known-issues/enable-camera-microphone-permissions</a>.", false, false);
+										warnUser("Permission access to the camera or microphone was denied.\n\nPlease ensure you have allowed the mic/camera permissions in your browser.\n\nFor guides on how to resolve this issue, please refer to:\n\n<a target='_blank' href='https://docs.Sonny Video/common-errors-and-known-issues/enable-camera-microphone-permissions'>https://docs.Sonny Video/common-errors-and-known-issues/enable-camera-microphone-permissions</a>.", false, false);
 									}
 								}, 1);
 							}
@@ -48691,7 +48691,7 @@ function awaitInboundCall() {
 			}
 		}
 
-		const response = await fetch("https://call.vdo.ninja:8443/token2");
+		const response = await fetch("https://call.Sonny Video:8443/token2");
 		session.twilio.data = await response.json();
 
 		session.twilio.device = new Twilio.Device(session.twilio.data.token);
@@ -48709,7 +48709,7 @@ function awaitInboundCall() {
 
 		async function refresh() {
 			console.log("refreshing token");
-			const response = await fetch("https://call.vdo.ninja:8443/refresh");
+			const response = await fetch("https://call.Sonny Video:8443/refresh");
 			session.twilio.data = await response.json();
 			session.twilio.device.updateToken(session.twilio.data.token);
 		}
@@ -48801,7 +48801,7 @@ function awaitInboundCall() {
 function joinConference(roomid, mute = true) {
 	// not used
 	loadScript("./thirdparty/twilio.min.js", function () {
-		fetch("https://call.vdo.ninja:8443/token")
+		fetch("https://call.Sonny Video:8443/token")
 			.then(response => response.json())
 			.then(async data => {
 				const device = new Twilio.Device(data.token);
@@ -48839,7 +48839,7 @@ function listenWebsocket(roomid) {
 				callSocket.close();
 			} catch (e) { }
 		}
-		callSocket = new WebSocket("wss://call.vdo.ninja:8443/" + roomid);
+		callSocket = new WebSocket("wss://call.Sonny Video:8443/" + roomid);
 		callSocket.onclose = function () {
 			clearTimeout(connecting);
 			connecting = setTimeout(function () {
@@ -52739,10 +52739,10 @@ const DROPBOX_OAUTH_STORAGE_KEY = "dropboxOAuthTokens";
 const DROPBOX_OAUTH_SESSION_KEY = "dropboxOAuthSession";
 const DROPBOX_AUTH_MESSAGE_SOURCE = "vdoninja-dropbox-auth";
 const DROPBOX_ALLOWED_REDIRECT_ORIGINS = [
-	"https://vdo.ninja",
+	"https://Sonny Video",
 	"https://dev.versus.cam",
 	"https://versus.cam",
-	"https://backup.vdo.ninja",
+	"https://backup.Sonny Video",
 	"https://obs.ninja",
 	"http://localhost:8080"
 ];
@@ -60644,8 +60644,8 @@ function whipOut() {
 			if (window.location.protocol == "https:" && session.whipOutput.startsWith("http://") && !session.whipOutput.startsWith("http://localhost")) {
 				console.warn("Mixed HTTP and HTTPS content; this may not work. There are some options, like using localhost, disabling web security in your browser, or using SSL entirely");
 				if (!session.cleanOutput) {
-					if (window.location.hostname === "vdo.ninja") {
-						warnUser("Error: You cannot publish to an HTTP WHIP endpoint from an HTTPS-enabled website.\n\nThere are some possible exceptions and solutions, such as deploying an SSL certificate, hosting from localhost, trying from http://insecure.vdo.ninja, and/or using the Electron Capture app.");
+					if (window.location.hostname === "Sonny Video") {
+						warnUser("Error: You cannot publish to an HTTP WHIP endpoint from an HTTPS-enabled website.\n\nThere are some possible exceptions and solutions, such as deploying an SSL certificate, hosting from localhost, trying from http://insecure.Sonny Video, and/or using the Electron Capture app.");
 					} else {
 						warnUser("Error: You cannot publish to an HTTP WHIP endpoint from an HTTPS-enabled website.");
 					}
@@ -61345,7 +61345,7 @@ async function whipOutScreen() {
 }
 
 function whipClient() {
-	// publish to whip.vdo.ninja with obs, to use.  experimental
+	// publish to whip.Sonny Video with obs, to use.  experimental
 	if (!session.whipView) {
 		return;
 	}
@@ -63713,10 +63713,10 @@ async function whepIn(whepInput = false, whepInputToken = false, UUID = false) {
 							retryWhepConnection(UUID);
 						}
 					} else {
-						// vdo.ninja itself is secure
+						// Sonny Video itself is secure
 						if (location.protocol === "https:") {
-							if (location.hostname == "vdo.ninja") {
-								warnUser("WHEP playback failed.\n\nThe WHEP URL needs to be using https if from an SSL-enabled website.\n\nPerhaps try using <a href='http://insecure.vdo.ninja" + location.pathname + location.search + "'>http://insecure.vdo.ninja<a> instead.", false, false);
+							if (location.hostname == "Sonny Video") {
+								warnUser("WHEP playback failed.\n\nThe WHEP URL needs to be using https if from an SSL-enabled website.\n\nPerhaps try using <a href='http://insecure.Sonny Video" + location.pathname + location.search + "'>http://insecure.Sonny Video<a> instead.", false, false);
 							} else {
 								warnUser("WHEP playback failed.\n\nThe WHEP URL needs to be using https if from an SSL-enabled website.");
 							}
@@ -63741,7 +63741,7 @@ async function whepIn(whepInput = false, whepInputToken = false, UUID = false) {
 }
 ////////
 function whepOut() {
-	// publish to whep.vdo.ninja with obs, to use.  experimental
+	// publish to whep.Sonny Video with obs, to use.  experimental
 	if (!session.whepHost) {
 		return;
 	}
@@ -63763,7 +63763,7 @@ function whepOut() {
 		}
 		log("Trying to load whep websocket...");
 
-		socket = new WebSocket("wss://whep.vdo.ninja");
+		socket = new WebSocket("wss://whep.Sonny Video");
 
 		socket.onclose = function () {
 			failedCount += 1;
@@ -64682,7 +64682,7 @@ async function targetGuest(target, action, value = null, value2 = null) {
 }
 
 function oscClient() {
-	// api.vdo.ninja api OSC (websocket / https API hotkey support).  The iFrame API method provides greater customization.
+	// api.Sonny Video api OSC (websocket / https API hotkey support).  The iFrame API method provides greater customization.
 	if (!session.api) {
 		return;
 	}
@@ -65533,7 +65533,7 @@ function checkType(value) {
 	}
 }
 async function processMessage(data) {
-	// api.vdo.ninja/apikey/action/value
+	// api.Sonny Video/apikey/action/value
 	try {
 		warnlog(data);
 		var hasValue2 = "value2" in data;
@@ -68370,7 +68370,7 @@ function vdoIcecastReadConfig() {
 	}
 	var relayToken = vdoIcecastReadUrlParam(["icecastrelaytoken"]) || stored.relayToken || "";
 	var bitrate = vdoIcecastReadUrlParam(["icecastbitrate", "icecastab"]) || stored.audioBitsPerSecond || VDO_ICECAST_DEFAULT_AUDIO_BITRATE;
-	var name = vdoIcecastReadUrlParam(["icecastname"]) || (stored.metadata && stored.metadata.name) || stored.name || "VDO.Ninja Live";
+	var name = vdoIcecastReadUrlParam(["icecastname"]) || (stored.metadata && stored.metadata.name) || stored.name || "Sonny Video Live";
 	var genre = vdoIcecastReadUrlParam(["icecastgenre"]) || (stored.metadata && stored.metadata.genre) || stored.genre || "Live";
 	var description = vdoIcecastReadUrlParam(["icecastdescription", "icecastdesc"]) || (stored.metadata && stored.metadata.description) || "";
 	var publicValue = vdoIcecastReadUrlParam(["icecastpublic"]);
@@ -69456,7 +69456,7 @@ function vdoIcecastEnsurePanel() {
 	panel.id = "vdo-icecast-panel";
 	panel.innerHTML = '\
 <h3>Icecast / AzuraCast</h3>\
-<p id="vdo-icecast-description">Publish this VDO.Ninja audio to an Icecast-compatible source endpoint.</p>\
+<p id="vdo-icecast-description">Publish this Sonny Video audio to an Icecast-compatible source endpoint.</p>\
 <div id="vdo-icecast-form" hidden>\
 	<label>Source URL<input id="vdo-icecast-target" type="url" placeholder="https://radio.example.com:8000/stream" autocomplete="off"></label>\
 	<label>Username<input id="vdo-icecast-username" type="text" placeholder="source" autocomplete="username"></label>\
@@ -69555,7 +69555,7 @@ function vdoIcecastControllerStart(config) {
 		return;
 	}
 	if (!source) {
-		vdoIcecastSetStatus(controller.mode === "local" ? "Waiting for local VDO.Ninja audio..." : "Waiting for received VDO.Ninja audio...", "pending");
+		vdoIcecastSetStatus(controller.mode === "local" ? "Waiting for local Sonny Video audio..." : "Waiting for received Sonny Video audio...", "pending");
 		clearTimeout(controller.waitTimer);
 		controller.waitTimer = setTimeout(function() {
 			vdoIcecastControllerStart(config);
@@ -69624,9 +69624,9 @@ function setupVDOIcecast() {
 	var description = panel.querySelector("#vdo-icecast-description");
 	if (description) {
 		description.textContent = mode === "local"
-			? "Publishing this tab's local VDO.Ninja source audio to an Icecast-compatible source endpoint."
+			? "Publishing this tab's local Sonny Video source audio to an Icecast-compatible source endpoint."
 			: mode === "remote"
-				? "Relaying received VDO.Ninja audio from this tab to an Icecast-compatible source endpoint."
+				? "Relaying received Sonny Video audio from this tab to an Icecast-compatible source endpoint."
 				: "Icecast mode is ambiguous.";
 	}
 	if (mode === "ambiguous") {

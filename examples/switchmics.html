@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta name="description" content="Toggle mute on two remote guests with single-click controls for quick audio checks." />
-	<link rel="canonical" href="https://vdo.ninja/examples/switchmics.html" /><title>Switch Mics - VDO.Ninja</title>
+	<link rel="canonical" href="https://Sonny Video/examples/switchmics.html" /><title>Switch Mics - Sonny Video</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 <style>
@@ -81,8 +81,8 @@ span {
 </div>
 <div id="deleteme">
 	<h2>PTZ Remote Control interface</h2>
-	<input placeholder="Enter a push link. ie) https://vdo.ninja/?push=english123a&label=ENGLISH" id="viewlinka" type="text"><br>
-	<input placeholder="Enter a push link. ie) https://vdo.ninja/?push=french123b&label=FRENCH" id="viewlinkb" type="text" /><br>
+	<input placeholder="Enter a push link. ie) https://Sonny Video/?push=english123a&label=ENGLISH" id="viewlinka" type="text"><br>
+	<input placeholder="Enter a push link. ie) https://Sonny Video/?push=french123b&label=FRENCH" id="viewlinkb" type="text" /><br>
 	<button onclick="loadIframes()">CONNECT</button>
 	<br>
 	This app is a toggle between two different inputs
@@ -128,7 +128,7 @@ if (urlParams.get("a")){
 	if (window.location.host){
 		var path = window.location.host+window.location.pathname.replace("/examples/","/").split("/").slice(0,-1).join("/");
 	} else {
-		var path = "vdo.ninja";
+		var path = "Sonny Video";
 	}
 	document.getElementById("viewlinka").value = "https://"+path+"/?push="+urlParams.get("a");
 
@@ -143,7 +143,7 @@ if (urlParams.get("b")){
 	if (window.location.host){
 		var path = window.location.host+window.location.pathname.replace("/examples/","/").split("/").slice(0,-1).join("/");
 	} else {
-		var path = "vdo.ninja";
+		var path = "Sonny Video";
 	}
 	document.getElementById("viewlinkb").value = "https://"+path+"/?push="+urlParams.get("b");
 

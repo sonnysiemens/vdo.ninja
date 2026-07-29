@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Validate a Cloudflare Stream API token and generate an encrypted cftoken parameter for VDO.Ninja.">
-    <title>Cloudflare Token Helper | VDO.Ninja</title>
+    <meta name="description" content="Validate a Cloudflare Stream API token and generate an encrypted cftoken parameter for Sonny Video.">
+    <title>Cloudflare Token Helper | Sonny Video</title>
     <link rel="icon" href="/media/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon-16x16.png">
@@ -306,7 +306,7 @@
             <h1>Cloudflare Token Helper</h1>
             <p class="intro">
                 Validate a Cloudflare API token, confirm it can access Stream live inputs for the selected account,
-                and then generate an encrypted <code>&amp;cftoken=</code> parameter for VDO.Ninja.
+                and then generate an encrypted <code>&amp;cftoken=</code> parameter for Sonny Video.
             </p>
 
             <div class="form-card">
@@ -336,7 +336,7 @@
             <div id="validationMeta" class="meta hidden"></div>
 
             <label for="response" class="output-label">Generated URL Parameter</label>
-            <textarea id="response" rows="5" readonly placeholder="Use this with your VDO.Ninja links in place of &amp;meshcast"></textarea>
+            <textarea id="response" rows="5" readonly placeholder="Use this with your Sonny Video links in place of &amp;meshcast"></textarea>
 
             <div class="response-actions">
                 <button type="button" id="copyButton" class="ghost-button" disabled>Copy</button>
@@ -348,7 +348,7 @@
                 <h2>Why This Exists</h2>
                 <p>
                     Cloudflare can create unique WHIP ingest endpoints for each participant, but doing that manually is tedious.
-                    This helper encrypts your Cloudflare credentials into a short URL-safe parameter that VDO.Ninja can use to
+                    This helper encrypts your Cloudflare credentials into a short URL-safe parameter that Sonny Video can use to
                     create live inputs on demand.
                 </p>
                 <p>
@@ -373,7 +373,7 @@
 
                 <h3>3. Better troubleshooting</h3>
                 <p>
-                    If publish fails later, <code>cloudflare.vdo.ninja</code> now returns the actual Cloudflare API error instead of a generic
+                    If publish fails later, <code>cloudflare.Sonny Video</code> now returns the actual Cloudflare API error instead of a generic
                     JavaScript null-property failure.
                 </p>
             </div>
@@ -599,7 +599,7 @@
             setStatus("info", "Checking Cloudflare token and Stream access...", []);
 
             try {
-                const result = await postJson("https://cloudflare.vdo.ninja/validate/", data);
+                const result = await postJson("https://cloudflare.Sonny Video/validate/", data);
                 if (!result.json) {
                     throw new Error(result.text || `Validation failed with HTTP ${result.status}`);
                 }
@@ -635,7 +635,7 @@
                     await validateToken();
                 }
 
-                const result = await postJson("https://cloudflare.vdo.ninja/encode/", data);
+                const result = await postJson("https://cloudflare.Sonny Video/encode/", data);
                 if (!result.ok) {
                     throw new Error(result.text || `Generation failed with HTTP ${result.status}`);
                 }

@@ -495,7 +495,7 @@ async function translateBatch(languageCode, entries, selectedModel) {
     {
       role: "system",
       content:
-        "You translate UI strings for VDO.Ninja. Return only a flat JSON object. The output object's property names must exactly match the input strings object's property names. Do not include targetLanguage, strings, explanations, markdown, or nested objects. Preserve HTML tags, attributes, entities, product names, keyboard shortcuts, URLs, variable-looking tokens, and emoji. Translate visible human-readable text only.",
+        "You translate UI strings for Sonny Video. Return only a flat JSON object. The output object's property names must exactly match the input strings object's property names. Do not include targetLanguage, strings, explanations, markdown, or nested objects. Preserve HTML tags, attributes, entities, product names, keyboard shortcuts, URLs, variable-looking tokens, and emoji. Translate visible human-readable text only.",
     },
     {
       role: "user",

@@ -1,19 +1,19 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Remote API Playground - VDO.Ninja</title>
+	<title>Remote API Playground - Sonny Video</title>
 	<meta name="description" content="Retro-themed sandbox for experimenting with remote control actions and macros." />
-	<link rel="canonical" href="https://vdo.ninja/examples/remoteapi.html" />
+	<link rel="canonical" href="https://Sonny Video/examples/remoteapi.html" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="VDO.Ninja" />
-	<meta property="og:url" content="https://vdo.ninja/examples/remoteapi.html" />
-	<meta property="og:title" content="Remote API Playground - VDO.Ninja" />
+	<meta property="og:site_name" content="Sonny Video" />
+	<meta property="og:url" content="https://Sonny Video/examples/remoteapi.html" />
+	<meta property="og:title" content="Remote API Playground - Sonny Video" />
 	<meta property="og:description" content="Retro-themed sandbox for experimenting with remote control actions and macros." />
-	<meta property="og:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+	<meta property="og:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Remote API Playground - VDO.Ninja" />
+	<meta name="twitter:title" content="Remote API Playground - Sonny Video" />
 	<meta name="twitter:description" content="Retro-themed sandbox for experimenting with remote control actions and macros." />
-	<meta name="twitter:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+	<meta name="twitter:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
 	<meta charset="utf-8"/>
 	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link href="./nes.min.css" rel="stylesheet" />
@@ -118,7 +118,7 @@ if (urlParams.has("api")){
 
 }
 
-var path = "vdo.ninja";  //window.location.host+window.location.pathname.split("/").slice(0,-1).join("/");
+var path = "Sonny Video";  //window.location.host+window.location.pathname.split("/").slice(0,-1).join("/");
 var header = document.getElementById("header");
 var linkWrapper = document.createElement("div");
 var linkLabel = document.createElement("span");
@@ -133,7 +133,7 @@ linkWrapper.appendChild(linkLabel);
 linkWrapper.appendChild(shareLink);
 header.appendChild(linkWrapper);
 var info = document.createElement("small");
-info.textContent = "You can append your own VDO.Ninja parameters to this link, treating it like a normal VDO.Ninja link.";
+info.textContent = "You can append your own Sonny Video parameters to this link, treating it like a normal Sonny Video link.";
 header.appendChild(info);
 header.appendChild(document.createElement("br"));
 header.appendChild(document.createElement("br"));
@@ -156,7 +156,7 @@ function connect(){
 			socket.close();
 		} catch(e){}
 	}
-	socket = new WebSocket("wss://api.vdo.ninja:443");
+	socket = new WebSocket("wss://api.Sonny Video:443");
 
 	socket.onclose = function (){
 		failedCount+=1;
@@ -233,7 +233,7 @@ function ajax(data) {
   if (!action || !apiid){
 	alert("no action or api ID provided; request won't work");
   } else {
-	var URL = "https://api.vdo.ninja/"+apiid+"/"+action+"/"+target+"/"+value;
+	var URL = "https://api.Sonny Video/"+apiid+"/"+action+"/"+target+"/"+value;
 	xhttp.open("GET", URL, true);
 	xhttp.send();
   }

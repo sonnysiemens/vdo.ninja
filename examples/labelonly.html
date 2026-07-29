@@ -1,5 +1,5 @@
 <!--
-  VDO.Ninja Connected Label Overlay
+  Sonny Video Connected Label Overlay
   Description: Displays the label of the first connected peer in an overlay for OBS Studio
 
   Parameters:
@@ -10,7 +10,7 @@
   Usage:
     - Add as a browser source in OBS Studio
     - Can be hosted locally: file:///C:/Users/steve/Code/vdoninja/examples/labelonly.html?view=steve123
-    - Or online: https://vdo.ninja/examples/labelonly.html?view=steve123
+    - Or online: https://Sonny Video/examples/labelonly.html?view=steve123
 
   Styling:
     - Modify the #labelDisplay CSS styles to customize appearance
@@ -20,10 +20,10 @@
 <html lang="en">
 <head>
 	<meta name="description" content="Show only the connected guest's label as a minimal lower-third element." />
-	<link rel="canonical" href="https://vdo.ninja/examples/labelonly.html" />
+	<link rel="canonical" href="https://Sonny Video/examples/labelonly.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta charset="UTF-8">
-    <title>Label Only Overlay - VDO.Ninja</title>
+    <title>Label Only Overlay - Sonny Video</title>
     <style>
         body, html {
             margin: 0;
@@ -122,7 +122,7 @@
 
         function RecvDataWindow(room) {
             const iframe = document.createElement("iframe");
-            iframe.src = `https://vdo.ninja/?ln${password}${room}${view}&notmobile&label=overlaypage&vd=0&ad=0&novideo&noaudio&cleanoutput`;
+            iframe.src = `https://Sonny Video/?ln${password}${room}${view}&notmobile&label=overlaypage&vd=0&ad=0&novideo&noaudio&cleanoutput`;
             iframe.style.width = "0";
             iframe.style.height = "0";
             iframe.style.position = "fixed";

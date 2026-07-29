@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="description" content="Stream your phone camera plus 6DoF AR pose data (ARCore / ARKit) into VDO.Ninja." />
-	<link rel="canonical" href="https://vdo.ninja/examples/webxr-ar-sender.html" />
+	<meta name="description" content="Stream your phone camera plus 6DoF AR pose data (ARCore / ARKit) into Sonny Video." />
+	<link rel="canonical" href="https://Sonny Video/examples/webxr-ar-sender.html" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="VDO.Ninja" />
-	<meta property="og:url" content="https://vdo.ninja/examples/webxr-ar-sender.html" />
-	<meta property="og:title" content="WebXR AR Sender - VDO.Ninja" />
-	<meta property="og:description" content="Stream your phone camera plus 6DoF AR pose data (ARCore / ARKit) into VDO.Ninja." />
-	<meta property="og:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+	<meta property="og:site_name" content="Sonny Video" />
+	<meta property="og:url" content="https://Sonny Video/examples/webxr-ar-sender.html" />
+	<meta property="og:title" content="WebXR AR Sender - Sonny Video" />
+	<meta property="og:description" content="Stream your phone camera plus 6DoF AR pose data (ARCore / ARKit) into Sonny Video." />
+	<meta property="og:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="WebXR AR Sender - VDO.Ninja" />
-	<meta name="twitter:description" content="Stream your phone camera plus 6DoF AR pose data (ARCore / ARKit) into VDO.Ninja." />
-	<meta name="twitter:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
-	<title>WebXR AR Sender - VDO.Ninja</title>
+	<meta name="twitter:title" content="WebXR AR Sender - Sonny Video" />
+	<meta name="twitter:description" content="Stream your phone camera plus 6DoF AR pose data (ARCore / ARKit) into Sonny Video." />
+	<meta name="twitter:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
+	<title>WebXR AR Sender - Sonny Video</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<style>
@@ -25,7 +25,7 @@
 		min-height: 100vh;
 		overflow: hidden;
 	}
-	/* VDO.Ninja video layer (captures and shows webcam) */
+	/* Sonny Video video layer (captures and shows webcam) */
 	#video-layer {
 		position: fixed;
 		top: 0; left: 0;
@@ -130,7 +130,7 @@
 			pointer-events: auto;
 		}
 		#exit-btn.active { display: block; }
-		/* VDO.Ninja iframe - fullscreen camera */
+		/* Sonny Video iframe - fullscreen camera */
 		#vdo-frame {
 			width: 100%;
 			height: 100%;
@@ -152,12 +152,12 @@
 </head>
 <body>
 
-<!-- VDO.Ninja layer: handles the actual webcam/video stream -->
+<!-- Sonny Video layer: handles the actual webcam/video stream -->
 <div id="video-layer">
 	<iframe
 		id="vdo-frame"
 		allow="autoplay; camera; microphone; fullscreen; picture-in-picture; xr-spatial-tracking"
-		title="VDO.Ninja push"
+		title="Sonny Video push"
 		playsinline
 	></iframe>
 </div>
@@ -167,7 +167,7 @@
 
 <div id="intro">
 	<h1>WebXR AR 6DoF Sender</h1>
-	<p>Streams camera + 6DoF pose data via VDO.Ninja. Requires ARCore (Android) or ARKit (iOS) support.</p>
+	<p>Streams camera + 6DoF pose data via Sonny Video. Requires ARCore (Android) or ARKit (iOS) support.</p>
 
 	<div class="input-group">
 		<label for="stream-id">Stream ID</label>
@@ -497,7 +497,7 @@ function startVDO() {
 	const streamId = streamIdInput.value.trim();
 	if (!streamId) return;
 
-	// Construct URL for VDO.Ninja - data relay only (no camera needed here)
+	// Construct URL for Sonny Video - data relay only (no camera needed here)
 	const pathParts = window.location.pathname.split('/');
 	pathParts.pop();
 	pathParts.pop();
@@ -506,7 +506,7 @@ function startVDO() {
 	// facing=environment for rear camera
 	const url = `${window.location.origin}${basePath}/?push=${encodeURIComponent(streamId)}&facing=environment&webxrbridge=1&autostart=1&mute=1`;
 
-	console.log('VDO.Ninja URL:', url);
+	console.log('Sonny Video URL:', url);
 	vdoFrame.src = url;
 }
 
@@ -529,7 +529,7 @@ async function startAR() {
 			exitBtn.classList.add('active');
 		}
 
-		// Start VDO.Ninja for data relay + video
+		// Start Sonny Video for data relay + video
 		startVDO();
 
 		// Start sensors + animation loop
@@ -549,7 +549,7 @@ async function startAR() {
 async function checkSupport() {
 	startBtn.disabled = false;
 	startBtn.textContent = "Start AR Stream";
-	statusEl.textContent = "Uses device motion for pose; camera stays with VDO.Ninja.";
+	statusEl.textContent = "Uses device motion for pose; camera stays with Sonny Video.";
 	statusEl.classList.add('ok');
 }
 

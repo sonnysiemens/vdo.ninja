@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="Shows how to replace hidden iframes with the VDO.Ninja DataChannel SDK." />
-	<link rel="canonical" href="https://vdo.ninja/examples/simple-iframe-replacement.html" />
-    <title>DataChannel Replacement - VDO.Ninja</title>
+	<meta name="description" content="Shows how to replace hidden iframes with the Sonny Video DataChannel SDK." />
+	<link rel="canonical" href="https://Sonny Video/examples/simple-iframe-replacement.html" />
+    <title>DataChannel Replacement - Sonny Video</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -51,13 +51,13 @@
     </style>
 </head>
 <body>
-    <h1>Simple IFRAME Replacement with VDO.Ninja DataChannel SDK</h1>
+    <h1>Simple IFRAME Replacement with Sonny Video DataChannel SDK</h1>
     
     <div class="example old-way">
         <h2>❌ Old Way: Hidden IFRAME</h2>
         <pre><code>// HTML
 &lt;iframe id="vdo-iframe" 
-        src="https://vdo.ninja/?room=myroom&amp;push=sender&amp;view=receiver&amp;datachannel=true" 
+        src="https://Sonny Video/?room=myroom&amp;push=sender&amp;view=receiver&amp;datachannel=true" 
         style="display:none"&gt;&lt;/iframe&gt;
 
 // JavaScript
@@ -71,13 +71,13 @@ iframe.contentWindow.postMessage({
 
 // Receive messages
 window.addEventListener('message', (event) => {
-    if (event.origin !== 'https://vdo.ninja') return;
+    if (event.origin !== 'https://Sonny Video') return;
     console.log('Received:', event.data);
 });</code></pre>
         
         <p><strong>Problems:</strong></p>
         <ul>
-            <li>Hidden IFRAME still loads full VDO.Ninja UI</li>
+            <li>Hidden IFRAME still loads full Sonny Video UI</li>
             <li>Cross-origin communication limitations</li>
             <li>No direct control over connections</li>
             <li>Hard to debug</li>
@@ -198,7 +198,7 @@ chat.publish({
             if (nodeA) nodeA.disconnect();
             
             nodeA = new VDONinjaDataChannel({
-                wss: 'wss://apibackup.vdo.ninja:443'
+                wss: 'wss://apibackup.Sonny Video:443'
             });
             
             nodeA.addEventListener('data', (e) => {
@@ -235,7 +235,7 @@ chat.publish({
             if (nodeB) nodeB.disconnect();
             
             nodeB = new VDONinjaDataChannel({
-                wss: 'wss://apibackup.vdo.ninja:443'
+                wss: 'wss://apibackup.Sonny Video:443'
             });
             
             nodeB.addEventListener('data', (e) => {

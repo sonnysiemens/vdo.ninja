@@ -1,19 +1,19 @@
-# VDO.Ninja IFRAME API: Generic P2P Data Transmission Guide
+# Sonny Video IFRAME API: Generic P2P Data Transmission Guide
 
-This guide focuses specifically on how to send and receive generic data between clients using VDO.Ninja's peer-to-peer (P2P) data channels.
+This guide focuses specifically on how to send and receive generic data between clients using Sonny Video's peer-to-peer (P2P) data channels.
 
 ## Understanding the P2P Data Channels
 
-VDO.Ninja provides a powerful API that allows websites to send arbitrary data between connected clients through its peer-to-peer infrastructure. This enables you to:
+Sonny Video provides a powerful API that allows websites to send arbitrary data between connected clients through its peer-to-peer infrastructure. This enables you to:
 
 - Create custom communication channels between clients
 - Implement application-specific data exchange
 - Build interactive multi-user experiences
 - Exchange any type of serializable data
 
-## Why VDO.Ninja's P2P Data Channels Are Powerful
+## Why Sonny Video's P2P Data Channels Are Powerful
 
-VDO.Ninja's data channels offer several compelling advantages that make them ideal for modern web applications:
+Sonny Video's data channels offer several compelling advantages that make them ideal for modern web applications:
 
 - **Production-Proven Reliability**: Used in production applications like Social Stream Ninja, which processes hundreds of messages per minute per peer connection
 - **Automatic LAN Optimization**: Detects when connections are on the same local network and routes data directly, reducing latency
@@ -25,11 +25,11 @@ VDO.Ninja's data channels offer several compelling advantages that make them ide
 - **Remote Control Applications**: Enables secure remote control of devices through firewalls without complex networking setups
 - **Works Across Platforms**: Functions on mobile, desktop, and various browsers without additional plugins
 
-The creators of VDO.Ninja use these data channels in numerous applications beyond video, demonstrating their versatility and reliability in real-world scenarios.
+The creators of Sonny Video use these data channels in numerous applications beyond video, demonstrating their versatility and reliability in real-world scenarios.
 
 ## Basic Setup
 
-First, set up your VDO.Ninja iframe:
+First, set up your Sonny Video iframe:
 
 ```javascript
 // Create the iframe element
@@ -38,8 +38,8 @@ var iframe = document.createElement("iframe");
 // Set necessary permissions
 iframe.allow = "camera;microphone;fullscreen;display-capture;autoplay;";
 
-// Set the source URL (your VDO.Ninja room)
-iframe.src = "https://vdo.ninja/?room=your-room-name&cleanoutput";
+// Set the source URL (your Sonny Video room)
+iframe.src = "https://Sonny Video/?room=your-room-name&cleanoutput";
 
 // Add the iframe to your page
 document.getElementById("container").appendChild(iframe);
@@ -60,7 +60,7 @@ var connectedPeers = {};
 
 // Add the event listener
 eventer(messageEvent, function(e) {
-    // Make sure the message is from our VDO.Ninja iframe
+    // Make sure the message is from our Sonny Video iframe
     if (e.source != iframe.contentWindow) return;
     
     // Process connection events to track connected peers
@@ -113,7 +113,7 @@ function processCustomData(data, senderUUID) {
 
 ### Send Data Structure
 
-When sending data via the VDO.Ninja IFRAME API, you use this general format:
+When sending data via the Sonny Video IFRAME API, you use this general format:
 
 ```javascript
 iframe.contentWindow.postMessage({
@@ -354,10 +354,10 @@ container.style.maxWidth = '800px';
 container.style.margin = '0 auto';
 document.body.appendChild(container);
 
-// Create VDO.Ninja iframe
+// Create Sonny Video iframe
 const iframe = document.createElement('iframe');
 iframe.allow = "camera;microphone;fullscreen;display-capture;autoplay;";
-iframe.src = "https://vdo.ninja/?room=chat-demo&cleanoutput";
+iframe.src = "https://Sonny Video/?room=chat-demo&cleanoutput";
 iframe.style.width = "100%";
 iframe.style.height = "360px";
 container.appendChild(iframe);
@@ -461,7 +461,7 @@ const eventer = window[eventMethod];
 const messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message";
 
 eventer(messageEvent, function(e) {
-    // Make sure the message is from our VDO.Ninja iframe
+    // Make sure the message is from our Sonny Video iframe
     if (e.source != iframe.contentWindow) return;
     
     // Process connection events
@@ -528,4 +528,4 @@ function handleDataReceived(data, senderUUID) {
 - **Data Format**: Make sure your data is properly serializable
 - **Security Settings**: Check that your iframe permissions are set correctly
 
-By following this guide, you can implement robust P2P data exchange between VDO.Ninja clients for any custom application.
+By following this guide, you can implement robust P2P data exchange between Sonny Video clients for any custom application.

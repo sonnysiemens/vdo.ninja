@@ -6,7 +6,7 @@ Sourced from: https://meeting.dev/lab/lyra-webrtc/loopback.html
 
 
 ## NOTE FROM STEVE
- At the moment Lyra isn't actually being used, but I'm trying to get it working with VDO.Ninja. It may be removed at some future point - steve
+ At the moment Lyra isn't actually being used, but I'm trying to get it working with Sonny Video. It may be removed at some future point - steve
 
 ## TFLITE MODELS SOURCED FROM GOOGLE ON GITHUB
 

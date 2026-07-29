@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta name="description" content="Pan, tilt, and zoom a remote camera by sending PTZ commands over the data channel." />
-	<link rel="canonical" href="https://vdo.ninja/examples/ptz.html" /><title>PTZ Remote - VDO.Ninja</title>
+	<link rel="canonical" href="https://Sonny Video/examples/ptz.html" /><title>PTZ Remote - Sonny Video</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 <style>
@@ -82,9 +82,9 @@ span {
 </div>
 <div>
 	<h2>PTZ Remote Control interface</h2>
-	<input placeholder="Enter a view link. ie) https://vdo.ninja/?view=abc123" id="viewlink" type="text" onchange="loadIframes()" /><br>
+	<input placeholder="Enter a view link. ie) https://Sonny Video/?view=abc123" id="viewlink" type="text" onchange="loadIframes()" /><br>
 	<br>
-	This app is a custom remote client for VDO.Ninja's PTZ remote control feature.
+	This app is a custom remote client for Sonny Video's PTZ remote control feature.
 	<br>
 	<br>
 	notes: Make sure the remote sender adds <b>&ptz</b> and <b>&remote</b> to their URL, otherwise PTZ remote control will not be allowed.
@@ -127,7 +127,7 @@ if (urlParams.has("view") || urlParams.has("v")){
 	if (window.location.host){
 		var path = window.location.host+window.location.pathname.replace("/examples/","/").split("/").slice(0,-1).join("/");
 	} else {
-		var path = "vdo.ninja";
+		var path = "Sonny Video";
 	}
 	document.getElementById("viewlink").value = "https://"+path+"/";
 	loadIframes();

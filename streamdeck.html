@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StreamDeck + VDO.Ninja Mixer - Quick Setup Guide</title>
+    <title>StreamDeck + Sonny Video Mixer - Quick Setup Guide</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -253,13 +253,13 @@
 <body>
     <div class="container">
         <header>
-            <h1>StreamDeck + VDO.Ninja Mixer</h1>
+            <h1>StreamDeck + Sonny Video Mixer</h1>
             <p class="subtitle">Professional control made simple - no MIDI required!</p>
         </header>
 
         <div class="highlight-box">
-            <h2 style="margin-bottom: 15px;">🎥 Welcome to VDO.Ninja Control!</h2>
-            <p>Tired of limited control in other streaming platforms? VDO.Ninja's API lets you create a professional control setup using your Elgato StreamDeck. Switch between layouts, control cameras, manage guests - all with simple HTTP GET requests!</p>
+            <h2 style="margin-bottom: 15px;">🎥 Welcome to Sonny Video Control!</h2>
+            <p>Tired of limited control in other streaming platforms? Sonny Video's API lets you create a professional control setup using your Elgato StreamDeck. Switch between layouts, control cameras, manage guests - all with simple HTTP GET requests!</p>
         </div>
 
         <div class="step-container">
@@ -268,11 +268,11 @@
                 <h3>Generate Your API Key</h3>
             </div>
             <div class="step-content">
-                <p>First, choose a unique API key. This key links your StreamDeck commands to your VDO.Ninja mixer session. It should be hard for others to guess.</p>
+                <p>First, choose a unique API key. This key links your StreamDeck commands to your Sonny Video mixer session. It should be hard for others to guess.</p>
                 <div class="code-block">Your API Key: <span class="important">YOUR_UNIQUE_API_KEY</span> (e.g., MySecretMixerKey2025)</div>
                 <div class="tip-box">
                     <span class="tip-icon">💡</span>
-                    <strong>Tip:</strong> Make your API key memorable for you but secure. You'll need to use this exact same key in both VDO.Ninja and your StreamDeck button configurations. It can be any combination of letters and numbers that you make up.
+                    <strong>Tip:</strong> Make your API key memorable for you but secure. You'll need to use this exact same key in both Sonny Video and your StreamDeck button configurations. It can be any combination of letters and numbers that you make up.
                 </div>
             </div>
         </div>
@@ -280,17 +280,17 @@
         <div class="step-container">
             <div class="step-header">
                 <span class="step-number">2</span>
-                <h3>Open VDO.Ninja Mixer with API Enabled</h3>
+                <h3>Open Sonny Video Mixer with API Enabled</h3>
             </div>
             <div class="step-content">
-                <p>Open your VDO.Ninja Mixer page in your browser, adding your API key as a URL parameter. Replace `YOUR_UNIQUE_API_KEY` with the key you chose in Step 1:</p>
-                <div class="code-block">https://vdo.ninja/mixer?api=YOUR_UNIQUE_API_KEY</div>
+                <p>Open your Sonny Video Mixer page in your browser, adding your API key as a URL parameter. Replace `YOUR_UNIQUE_API_KEY` with the key you chose in Step 1:</p>
+                <div class="code-block">https://Sonny Video/mixer?api=YOUR_UNIQUE_API_KEY</div>
                 <p>If your mixer URL already has other parameters (e.g., `?room=MyRoom`), add the API key with an ampersand (`&`):</p>
-                <div class="code-block">https://vdo.ninja/mixer?room=MyRoom&api=YOUR_UNIQUE_API_KEY</div>
+                <div class="code-block">https://Sonny Video/mixer?room=MyRoom&api=YOUR_UNIQUE_API_KEY</div>
                 <p>This allows the mixer page to listen for commands associated with your API key.</p>
                 <div class="warning-box">
                     <span class="warning-icon">⚠️</span>
-                    <strong>Important:</strong> You <span class="important">must</span> add the `?api=YOUR_UNIQUE_API_KEY` (or `&api=YOUR_UNIQUE_API_KEY`) parameter to your VDO.Ninja Mixer URL, otherwise, the StreamDeck commands will not work! The VDO.Ninja page needs to be open and have this API key in its URL to receive commands.
+                    <strong>Important:</strong> You <span class="important">must</span> add the `?api=YOUR_UNIQUE_API_KEY` (or `&api=YOUR_UNIQUE_API_KEY`) parameter to your Sonny Video Mixer URL, otherwise, the StreamDeck commands will not work! The Sonny Video page needs to be open and have this API key in its URL to receive commands.
                 </div>
             </div>
         </div>
@@ -301,7 +301,7 @@
                 <h3>Configure StreamDeck Buttons for HTTP Requests</h3>
             </div>
             <div class="step-content">
-                <p>On your Stream Deck, you'll create buttons that send HTTP GET requests to the VDO.Ninja API.</p>
+                <p>On your Stream Deck, you'll create buttons that send HTTP GET requests to the Sonny Video API.</p>
                 <p><strong>The recommended method for simplicity is using the Stream Deck's built-in "Website" action:</strong></p>
                 <ul>
                     <li>Open the Stream Deck software on your computer.</li>
@@ -310,19 +310,19 @@
                     <li>Configure the "Website" action for the key:
                         <ul>
                             <li><strong>Title:</strong> Give your button a descriptive name (e.g., "Layout 0", "Mute Mic").</li>
-                            <li><strong>URL:</strong> This is where you'll put the VDO.Ninja API command URL (see examples below). Make sure to replace `YOUR_UNIQUE_API_KEY` in the URL with the key you chose in Step 1.</li>
+                            <li><strong>URL:</strong> This is where you'll put the Sonny Video API command URL (see examples below). Make sure to replace `YOUR_UNIQUE_API_KEY` in the URL with the key you chose in Step 1.</li>
                             <li><strong>Access in background:</strong> <span class="important">Crucially, ensure this checkbox is CHECKED.</span> This makes the Stream Deck send the request without trying to open a web browser window.</li>
                         </ul>
                     </li>
                 </ul>
                 <div class="tip-box">
                     <span class="tip-icon">💡</span>
-                    <strong>Alternative (Advanced):</strong> For more complex needs (not typically required for VDO.Ninja's basic API), you could explore Stream Deck plugins specifically designed for API/HTTP requests (e.g., "API Ninja" by BarRaider or "HTTP GET Request"). These offer more options like custom headers or parsing responses, but the "Website" action is sufficient for these commands.
+                    <strong>Alternative (Advanced):</strong> For more complex needs (not typically required for Sonny Video's basic API), you could explore Stream Deck plugins specifically designed for API/HTTP requests (e.g., "API Ninja" by BarRaider or "HTTP GET Request"). These offer more options like custom headers or parsing responses, but the "Website" action is sufficient for these commands.
                 </div>
 
                 <p style="margin-top: 20px;"><strong>Understanding the API URL Structure:</strong></p>
-                <p>The general format for the VDO.Ninja API URLs you'll use is:</p>
-                <div class="code-block">https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/action/target/value</div>
+                <p>The general format for the Sonny Video API URLs you'll use is:</p>
+                <div class="code-block">https://api.Sonny Video/YOUR_UNIQUE_API_KEY/action/target/value</div>
                 <ul>
                     <li><code>YOUR_UNIQUE_API_KEY</code>: The key from Step 1.</li>
                     <li><code>action</code>: The command to perform (e.g., `layout`, `mic`, `camera`).</li>
@@ -332,7 +332,7 @@
                 <p>If a parameter like `target` or `value` is not needed for a specific command, it's often represented by `null` in the URL path. <span class="important">Do not use double slashes (//) if a middle parameter is `null`. Always include `null` as part of the path.</span></p>
 
                 <h4 style="margin-top: 30px;">Layout Controls (Defaults)</h4>
-                <p>Assign these URLs to Stream Deck "Website" actions to switch VDO.Ninja Mixer layouts. Remember to replace `YOUR_UNIQUE_API_KEY`.</p>
+                <p>Assign these URLs to Stream Deck "Website" actions to switch Sonny Video Mixer layouts. Remember to replace `YOUR_UNIQUE_API_KEY`.</p>
                 <div class="layout-showcase">
                     <div class="layout-card">
                         <div class="layout-visual">
@@ -341,7 +341,7 @@
                             </div>
                         </div>
                         <div class="layout-label">Auto Mix (Layout 0)</div>
-                        <div class="code-block" style="font-size: 0.9em;">https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/layout/null/0</div>
+                        <div class="code-block" style="font-size: 0.9em;">https://api.Sonny Video/YOUR_UNIQUE_API_KEY/layout/null/0</div>
                     </div>
                     <div class="layout-card">
                         <div class="layout-visual">
@@ -350,7 +350,7 @@
                             </div>
                         </div>
                         <div class="layout-label">Layout 1</div>
-                        <div class="code-block" style="font-size: 0.9em;">https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/layout/null/1</div>
+                        <div class="code-block" style="font-size: 0.9em;">https://api.Sonny Video/YOUR_UNIQUE_API_KEY/layout/null/1</div>
                     </div>
                     <div class="layout-card">
                         <div class="layout-visual">
@@ -360,7 +360,7 @@
                             </div>
                         </div>
                         <div class="layout-label">Layout 5</div>
-                        <div class="code-block" style="font-size: 0.9em;">https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/layout/null/5</div>
+                        <div class="code-block" style="font-size: 0.9em;">https://api.Sonny Video/YOUR_UNIQUE_API_KEY/layout/null/5</div>
                     </div>
                     <div class="layout-card">
                         <div class="layout-visual">
@@ -372,12 +372,12 @@
                             </div>
                         </div>
                         <div class="layout-label">Layout 7</div>
-                        <div class="code-block" style="font-size: 0.9em;">https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/layout/null/7</div>
+                        <div class="code-block" style="font-size: 0.9em;">https://api.Sonny Video/YOUR_UNIQUE_API_KEY/layout/null/7</div>
                     </div>
                 </div>
 
                 <h4 style="margin-top: 40px;">Essential Controls (Self)</h4>
-                <p>These commands control your own VDO.Ninja instance (the one with the `?api=` parameter). The `target` is `null` as these actions apply to the VDO.Ninja instance itself.</p>
+                <p>These commands control your own Sonny Video instance (the one with the `?api=` parameter). The `target` is `null` as these actions apply to the Sonny Video instance itself.</p>
                 <table class="command-table">
                     <tr>
                         <th>Button Label (Suggestion)</th>
@@ -386,27 +386,27 @@
                     </tr>
                     <tr>
                         <td>🎤 Mute/Unmute Mic</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/mic/null/toggle</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/mic/null/toggle</code></td>
                         <td>Toggle your microphone on/off</td>
                     </tr>
                     <tr>
                         <td>📹 Mute/Unmute Cam</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/camera/null/toggle</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/camera/null/toggle</code></td>
                         <td>Toggle your camera on/off</td>
                     </tr>
                     <tr>
                         <td>🔴 Start Record</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/record/null/true</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/record/null/true</code></td>
                         <td>Start recording (local)</td>
                     </tr>
                     <tr>
                         <td>⏹️ Stop Record</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/record/null/false</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/record/null/false</code></td>
                         <td>Stop recording (local)</td>
                     </tr>
                     <tr>
                         <td>✋ Toggle Hand</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/togglehand/null/null</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/togglehand/null/null</code></td>
                         <td>Raise/lower your hand</td>
                     </tr>
                 </table>
@@ -421,32 +421,32 @@
                     </tr>
                     <tr>
                         <td>Mute Guest 1</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/mic/1/toggle</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/mic/1/toggle</code></td>
                         <td>Toggle Guest 1's microphone</td>
                     </tr>
                     <tr>
                         <td>Cam Off Guest 1</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/camera/1/false</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/camera/1/false</code></td>
                         <td>Turn Guest 1's camera off</td>
                     </tr>
                     <tr>
                         <td>Add Guest 1 to Scene 0</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/addScene/1/0</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/addScene/1/0</code></td>
                         <td>Toggle Guest 1 in/out of Scene 0 (Auto-Mix/Main Scene)</td>
                     </tr>
                     <tr>
                         <td>Assign Guest 1 to Slot 2</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/setslot/1/2</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/setslot/1/2</code></td>
                         <td>Move the current guest in source slot 1 to destination slot 2</td>
                     </tr>
                     <tr>
                         <td>Mute All Guests</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/muteAllGuests/true</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/muteAllGuests/true</code></td>
                         <td>Mute every non-director guest using the director's existing mute-all behavior</td>
                     </tr>
                      <tr>
                         <td>Hangup Guest 2</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/hangup/2/null</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/hangup/2/null</code></td>
                         <td>Disconnect guest in slot 2</td>
                     </tr>
                 </table>
@@ -465,7 +465,7 @@
                 <h3>Advanced Control Options & Full List</h3>
             </div>
             <div class="step-content">
-                <p>VDO.Ninja offers many more API commands. For a comprehensive list, please refer to the official API documentation (often found on the Companion-Ninja GitHub or VDO.Ninja docs).</p>
+                <p>Sonny Video offers many more API commands. For a comprehensive list, please refer to the official API documentation (often found on the Companion-Ninja GitHub or Sonny Video docs).</p>
                 <p>Here are a few more examples of what's possible:</p>
 
                 <h4>Scene Management (Director)</h4>
@@ -476,11 +476,11 @@
                     </tr>
                     <tr>
                         <td>Add Guest in Slot 1 to Scene 0</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/addScene/1/0</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/addScene/1/0</code></td>
                     </tr>
                     <tr>
                         <td>Mute Guest in Slot 1 in Scene 0</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/muteScene/1/0</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/muteScene/1/0</code></td>
                     </tr>
                 </table>
 
@@ -492,15 +492,15 @@
                     </tr>
                     <tr>
                         <td>Join Group 1 (Self)</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/joinGroup/null/1</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/joinGroup/null/1</code></td>
                     </tr>
                     <tr>
                         <td>Leave Group 2 (Self)</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/leaveGroup/null/2</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/leaveGroup/null/2</code></td>
                     </tr>
                     <tr>
                         <td>Toggle Self in/out of Group 3</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/group/null/3</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/group/null/3</code></td>
                     </tr>
                 </table>
 
@@ -512,24 +512,24 @@
                     </tr>
                     <tr>
                         <td>Zoom In (Self)</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/zoom/null/0.1</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/zoom/null/0.1</code></td>
                     </tr>
                     <tr>
                         <td>Zoom Out (Self)</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/zoom/null/-0.1</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/zoom/null/-0.1</code></td>
                     </tr>
                     <tr>
                         <td>Pan Left (Self)</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/pan/null/-0.1</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/pan/null/-0.1</code></td>
                     </tr>
                     <tr>
                         <td>Pan Right (Self)</td>
-                        <td><code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/pan/null/0.1</code></td>
+                        <td><code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/pan/null/0.1</code></td>
                     </tr>
                 </table>
                 <div class="tip-box">
                     <span class="tip-icon">💡</span>
-                    <strong>Targeting Guests for PTZ:</strong> Local camera commands use <code>zoom</code>, <code>pan</code>, <code>tilt</code>, and <code>focus</code>. Director guest camera commands use <code>ptzZoom</code>, <code>ptzPan</code>, <code>ptzTilt</code>, and <code>ptzFocus</code>. For example, to zoom Guest 1's camera in: <code>https://api.vdo.ninja/YOUR_UNIQUE_API_KEY/ptzZoom/1/0.1</code>. The controlled camera page or guest publisher should open with <code>&amp;ptz</code> and approve the browser PTZ prompt.
+                    <strong>Targeting Guests for PTZ:</strong> Local camera commands use <code>zoom</code>, <code>pan</code>, <code>tilt</code>, and <code>focus</code>. Director guest camera commands use <code>ptzZoom</code>, <code>ptzPan</code>, <code>ptzTilt</code>, and <code>ptzFocus</code>. For example, to zoom Guest 1's camera in: <code>https://api.Sonny Video/YOUR_UNIQUE_API_KEY/ptzZoom/1/0.1</code>. The controlled camera page or guest publisher should open with <code>&amp;ptz</code> and approve the browser PTZ prompt.
                 </div>
             </div>
         </div>
@@ -576,8 +576,8 @@
 
         <div class="highlight-box">
             <h2 style="margin-bottom: 15px;">🚀 You're All Set!</h2>
-            <p>With these StreamDeck controls, you now have powerful, tactile command over your VDO.Ninja Mixer sessions. No more frantic clicking through menus during a live production – just press a button for instant control!</p>
-            <p style="margin-top: 15px;"><strong>Remember:</strong> Always keep your API key secure and never share it publicly. Ensure the VDO.Ninja Mixer page with the `?api=` parameter is open in your browser for the commands to work.</p>
+            <p>With these StreamDeck controls, you now have powerful, tactile command over your Sonny Video Mixer sessions. No more frantic clicking through menus during a live production – just press a button for instant control!</p>
+            <p style="margin-top: 15px;"><strong>Remember:</strong> Always keep your API key secure and never share it publicly. Ensure the Sonny Video Mixer page with the `?api=` parameter is open in your browser for the commands to work.</p>
         </div>
     <footer class="site-footer">
         <p>
@@ -588,8 +588,8 @@
         </p>
     </footer>
         <footer>
-            <p>Created with ❤️ for the VDO.Ninja community</p>
-            <p>For detailed API commands and support, visit the VDO.Ninja documentation and the <a href="https://github.com/steveseguin/Companion-Ninja" style="color: #667eea;" target="_blank">Companion-Ninja GitHub</a>.</p>
+            <p>Created with ❤️ for the Sonny Video community</p>
+            <p>For detailed API commands and support, visit the Sonny Video documentation and the <a href="https://github.com/steveseguin/Companion-Ninja" style="color: #667eea;" target="_blank">Companion-Ninja GitHub</a>.</p>
         </footer>
     </div>
 </body>

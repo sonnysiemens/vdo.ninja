@@ -52,7 +52,7 @@ async function handleSubscriptionChange(event) {
         newSubscription = event.newSubscription;
       } else {
         // Get VAPID key from server
-        const keyResponse = await fetch('https://notify.vdo.ninja/vapidPublicKey');
+        const keyResponse = await fetch('https://notify.Sonny Video/vapidPublicKey');
         if (!keyResponse.ok) {
           throw new Error('Failed to fetch VAPID key');
         }
@@ -75,7 +75,7 @@ async function handleSubscriptionChange(event) {
       }
       
       // Send the new subscription to the server
-      await fetch('https://notify.vdo.ninja/subscribe', {
+      await fetch('https://notify.Sonny Video/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -114,7 +114,7 @@ self.addEventListener('push', event => {
         } catch (e) {
           console.error('[SW] Failed to parse push data:', e);
           notification = {
-            title: 'VDO.Ninja Notification',
+            title: 'Sonny Video Notification',
             body: 'Someone joined your room',
             timestamp: Date.now(),
             url: self.registration.scope
@@ -122,7 +122,7 @@ self.addEventListener('push', event => {
         }
       } else {
         notification = {
-          title: 'VDO.Ninja Notification',
+          title: 'Sonny Video Notification',
           body: 'Someone joined your room',
           timestamp: Date.now(),
           url: self.registration.scope
@@ -171,7 +171,7 @@ async function decryptPushMessage(rawData, subscription) {
       return JSON.parse(decodedData);
     } catch (e) {
       return {
-        title: 'VDO.Ninja Notification',
+        title: 'Sonny Video Notification',
         body: 'New notification received',
         timestamp: Date.now(),
         url: self.registration.scope
@@ -180,7 +180,7 @@ async function decryptPushMessage(rawData, subscription) {
   } catch (error) {
     console.error('[SW] Error decrypting push message:', error);
     return {
-      title: 'VDO.Ninja Notification',
+      title: 'Sonny Video Notification',
       body: 'New notification received',
       timestamp: Date.now(),
       url: self.registration.scope
@@ -495,7 +495,7 @@ function connectToSSE(topic) {
   currentTopic = topic;
   return setStoreItem('topic', topic).then(() => {
     try {
-      const url = `https://notify.vdo.ninja/events?topic=${encodeURIComponent(topic)}`;
+      const url = `https://notify.Sonny Video/events?topic=${encodeURIComponent(topic)}`;
       console.log('[SW] Connecting to SSE:', url);
       setStoreItem('sseStatus', {
         connected: false,
@@ -563,7 +563,7 @@ function connectToSSE(topic) {
 			} catch (e) {
 			  console.log('[SW-DEBUG] Failed to parse SSE data, using default notification');
 			  notification = {
-				title: 'VDO.Ninja Notification',
+				title: 'Sonny Video Notification',
 				body: 'New notification received',
 				timestamp: Date.now()
 			  };
@@ -767,7 +767,7 @@ function pollForNotifications(topic) {
   if (!topic) return Promise.resolve([]);
   return getStoreItem('pollingStatus').then(status => {
     const lastPoll = status?.lastPoll || (Date.now() - 3600000);
-    return fetch(`https://notify.vdo.ninja/poll?topic=${encodeURIComponent(topic)}&since=${lastPoll}`)
+    return fetch(`https://notify.Sonny Video/poll?topic=${encodeURIComponent(topic)}&since=${lastPoll}`)
       .then(response => response.json())
       .then(async data => {
         setStoreItem('pollingStatus', {
@@ -836,7 +836,7 @@ function showNotification(notification) {
     };
     
     return self.registration.showNotification(
-      notification.title || 'VDO.Ninja',
+      notification.title || 'Sonny Video',
       options
     );
   });

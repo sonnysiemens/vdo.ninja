@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta name="description" content="Request inbound connection stats over the IFRAME API and log them for inspection." />
-	<link rel="canonical" href="https://vdo.ninja/examples/iframe.inbound-stats.html" /><title>IFRAME Inbound Stats - VDO.Ninja</title>
+	<link rel="canonical" href="https://Sonny Video/examples/iframe.inbound-stats.html" /><title>IFRAME Inbound Stats - Sonny Video</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 <style>
@@ -67,7 +67,7 @@ button {
 <body>
     <div id="clean">
         <center>
-			Create a simple vdo.ninja/?push=XXX link in a different tab, enter the stream ID below to view it and view the IFRAME API stats.  Stats will be printed to screen and console.<hr>
+			Create a simple Sonny Video/?push=XXX link in a different tab, enter the stream ID below to view it and view the IFRAME API stats.  Stats will be printed to screen and console.<hr>
             <input placeholder="Enter a VDON stream ID here" id="viewlink" type="text" />
             <button id="startButton" onclick="loadIframes()" style="display:block;padding:10px;margin:10px;">START</button>
         </center>
@@ -84,7 +84,7 @@ button {
 
         function loadIframes() {
             var streamID = document.getElementById("viewlink").value;
-            var path = "vdo.ninja";
+            var path = "Sonny Video";
             var streamSrc = "https://" + path + "/?view=" + streamID;
 
             document.getElementById("clean").style.display = "none";

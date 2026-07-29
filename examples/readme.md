@@ -1,6 +1,6 @@
-# VDO.Ninja Examples
+# Sonny Video Examples
 
-This directory contains various examples demonstrating different features and capabilities of VDO.Ninja. All examples are accessible through the index.html file.
+This directory contains various examples demonstrating different features and capabilities of Sonny Video. All examples are accessible through the index.html file.
 
 ## Categories
 
@@ -8,13 +8,13 @@ This directory contains various examples demonstrating different features and ca
 - **api_example.html** - Basic iframe API usage demonstration
 - **simple_iframe_api.html** - Simple iframe API implementation
 - **iframetesting.html** - Testing iframe functionality
-- **iframe.outbound-stats.html** - Get stats from VDO.Ninja using the iframe API
+- **iframe.outbound-stats.html** - Get stats from Sonny Video using the iframe API
 - **mute_guest_iframe.html** - Control guest muting via iframe API
 - **iframe_example.html** - Additional iframe API example
 
 ### UI & Layout Examples
 - **draggable.html** - Drag multiple windows around to create custom layouts
-- **dual.html** - Two VDO.Ninja windows (Picture-in-Picture style)
+- **dual.html** - Two Sonny Video windows (Picture-in-Picture style)
 - **custom_overlay.html** - Custom overlay implementation
 - **rotated.html** - Video rotation example
 - **slidingzoom.html** - Sliding zoom effect
@@ -26,7 +26,7 @@ This directory contains various examples demonstrating different features and ca
 - **transfer.html** - Room transfer functionality
 
 ### Control Examples
-- **obsremote.html** - Remotely control OBS using VDO.Ninja
+- **obsremote.html** - Remotely control OBS using Sonny Video
 - **webcontrol.html** - Web-based control interface
 - **powerpoint.html** - PowerPoint control integration
 - **gamecontroller.html** - Game controller input handling
@@ -40,11 +40,11 @@ This directory contains various examples demonstrating different features and ca
 - **accelerometer.html** - Accelerometer data usage
 
 ### Platform Integration
-- **twitch.html** - Twitch live chat side-by-side with VDO.Ninja
+- **twitch.html** - Twitch live chat side-by-side with Sonny Video
 - **youtube.html** - YouTube integration example
 - **kick.html** - Kick platform integration
 - **wireless.html** - Wireless streaming setup
-- **zoom.html** - Publish to VDO.Ninja for window-capturing into Zoom
+- **zoom.html** - Publish to Sonny Video for window-capturing into Zoom
 
 ### Specialized Applications
 - **teleprompter.html** - Teleprompter implementation
@@ -71,7 +71,7 @@ This directory contains various examples demonstrating different features and ca
 
 ## Notes
 
-- Examples may require specific VDO.Ninja features or permissions
+- Examples may require specific Sonny Video features or permissions
 - Some examples work best when used with specific hardware or platforms
 - Always check browser console for debugging information
 - Many examples include inline documentation in their source code

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VDO.Ninja MIDI Configuration</title>
+    <title>Sonny Video MIDI Configuration</title>
     <script src="./thirdparty/webmidi3.js"></script>
     <style>
         body {
@@ -61,7 +61,7 @@
     </style>
 </head>
 <body>
-    <h1>VDO.Ninja MIDI Configuration</h1>
+    <h1>Sonny Video MIDI Configuration</h1>
     
     <div class="section">
         <h2>MIDI Mode</h2>
@@ -105,7 +105,7 @@
         <select id="midiInDevice"></select>
     </div>
     <div class="section">
-        <button onclick="generateURL()">Generate VDO.Ninja URL</button>
+        <button onclick="generateURL()">Generate Sonny Video URL</button>
         <p>Generated URL:</p>
         <div id="urlOutput"></div>
     </div>
@@ -179,7 +179,7 @@
         });
 
         function generateURL() {
-            const baseUrl = 'https://vdo.ninja/?';
+            const baseUrl = 'https://Sonny Video/?';
             let params = [];
 
             const midiMode = document.querySelector('input[name="midiMode"]:checked').value;

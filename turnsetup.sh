@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# VDO.Ninja TURN Server Setup Script
+# Sonny Video TURN Server Setup Script
 # Usage:
 #   ./turnsetup.sh          - Full installation
 #   ./turnsetup.sh --verify - Health check on existing server

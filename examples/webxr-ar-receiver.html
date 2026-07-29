@@ -2,18 +2,18 @@
 <html>
 <head>
 	<meta name="description" content="Receive a WebXR AR feed and render 6DoF-tracked 3D content over the incoming video." />
-	<link rel="canonical" href="https://vdo.ninja/examples/webxr-ar-receiver.html" />
+	<link rel="canonical" href="https://Sonny Video/examples/webxr-ar-receiver.html" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="VDO.Ninja" />
-	<meta property="og:url" content="https://vdo.ninja/examples/webxr-ar-receiver.html" />
-	<meta property="og:title" content="WebXR AR Receiver - VDO.Ninja" />
+	<meta property="og:site_name" content="Sonny Video" />
+	<meta property="og:url" content="https://Sonny Video/examples/webxr-ar-receiver.html" />
+	<meta property="og:title" content="WebXR AR Receiver - Sonny Video" />
 	<meta property="og:description" content="Receive a WebXR AR feed and render 6DoF-tracked 3D content over the incoming video." />
-	<meta property="og:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+	<meta property="og:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="WebXR AR Receiver - VDO.Ninja" />
+	<meta name="twitter:title" content="WebXR AR Receiver - Sonny Video" />
 	<meta name="twitter:description" content="Receive a WebXR AR feed and render 6DoF-tracked 3D content over the incoming video." />
-	<meta name="twitter:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
-	<title>WebXR AR Receiver - VDO.Ninja</title>
+	<meta name="twitter:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
+	<title>WebXR AR Receiver - Sonny Video</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
@@ -316,7 +316,7 @@ function connect() {
 	pathParts.pop();
 	const basePath = pathParts.join('/') || '';
 	// cleanoutput removes UI; autostart/muted to dodge autoplay blocks
-	// Sensor data forwarding to parent is automatic when VDO.Ninja is in an iframe
+	// Sensor data forwarding to parent is automatic when Sonny Video is in an iframe
 	const url = `${window.location.origin}${basePath}/?view=${encodeURIComponent(streamId)}&cleanoutput&debug&autostart=1&mute=1`;
 
 	console.log('Connecting to:', url);
@@ -354,7 +354,7 @@ function handleMessage(event) {
 		console.log('SENSOR DATA RECEIVED #' + msgCount, data.sensors);
 	}
 
-	// Handle pose data from VDO.Ninja
+	// Handle pose data from Sonny Video
 	if (data.sensors && data.sensors.pose) {
 		msgCount++;
 		document.getElementById('stat-msgs').textContent = msgCount;

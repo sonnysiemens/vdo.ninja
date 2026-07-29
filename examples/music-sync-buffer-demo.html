@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
 	<meta name="description" content="Deliberately delay incoming video so it lines up with externally-played music for NINJAM-style or loop-based sessions." />
-	<link rel="canonical" href="https://vdo.ninja/examples/music-sync-buffer-demo.html" />
+	<link rel="canonical" href="https://Sonny Video/examples/music-sync-buffer-demo.html" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="VDO.Ninja" />
-	<meta property="og:url" content="https://vdo.ninja/examples/music-sync-buffer-demo.html" />
-	<meta property="og:title" content="Music Sync Buffer - VDO.Ninja" />
+	<meta property="og:site_name" content="Sonny Video" />
+	<meta property="og:url" content="https://Sonny Video/examples/music-sync-buffer-demo.html" />
+	<meta property="og:title" content="Music Sync Buffer - Sonny Video" />
 	<meta property="og:description" content="Deliberately delay incoming video so it lines up with externally-played music for NINJAM-style or loop-based sessions." />
-	<meta property="og:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+	<meta property="og:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Music Sync Buffer - VDO.Ninja" />
+	<meta name="twitter:title" content="Music Sync Buffer - Sonny Video" />
 	<meta name="twitter:description" content="Deliberately delay incoming video so it lines up with externally-played music for NINJAM-style or loop-based sessions." />
-	<meta name="twitter:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+	<meta name="twitter:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Music Sync Buffer - VDO.Ninja</title>
+	<title>Music Sync Buffer - Sonny Video</title>
 	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 	<link rel="icon" type="image/png" sizes="32x32" href="../media/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png">
@@ -314,9 +314,9 @@
 			<section class="panel">
 				<p class="eyebrow">Music Sync</p>
 				<h1>Delayed Video For External Music Audio</h1>
-				<p>This demo is for NINJAM-style or loop-based music sessions where the audio is handled outside VDO.Ninja and the video needs deliberate chunked delay to line up.</p>
+				<p>This demo is for NINJAM-style or loop-based music sessions where the audio is handled outside Sonny Video and the video needs deliberate chunked delay to line up.</p>
 				<div class="note">
-					Use <code>noaudio</code> when the real audio is coming from OBS or another app. This demo is about delaying video, not long-delay audio playback inside VDO.Ninja.
+					Use <code>noaudio</code> when the real audio is coming from OBS or another app. This demo is about delaying video, not long-delay audio playback inside Sonny Video.
 				</div>
 			</section>
 
@@ -485,7 +485,7 @@
 				<p class="muted">Recommended for musician sync tools:</p>
 				<p class="muted"><code>chunkbufferadaptive=0</code> keeps the requested target fixed instead of letting the viewer drift.</p>
 				<p class="muted"><code>chunkbufferceil=180000</code> allows up to 3 minutes of video buffering.</p>
-				<p class="muted"><code>noaudio</code> avoids pretending VDO.Ninja chunked audio is the long-delay path.</p>
+				<p class="muted"><code>noaudio</code> avoids pretending Sonny Video chunked audio is the long-delay path.</p>
 				<p class="muted"><code>setBufferDelay</code> drives the same internal playout target as <code>&buffer=</code>. It does not, by itself, enable the RTT-compensated <code>&buffer2</code> behavior.</p>
 				<p class="muted">If you want <code>buffer2</code>-style RTT compensation in this demo, add <code>buffer2=0</code> to the viewer params before loading the iframe. The buttons will still update the numeric delay target afterward.</p>
 				<p class="muted">For per-frame timing, listen for iframe messages with <code>action: "chunked-inbound"</code> or <code>"chunked-outbound"</code>. Their payload exposes <code>value.ts</code> and <code>value.type</code>.</p>

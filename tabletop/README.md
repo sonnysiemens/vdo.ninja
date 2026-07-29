@@ -1,4 +1,4 @@
-# VDO.Ninja Tabletop
+# Sonny Video Tabletop
 
 Lightweight video-first tabletop room for maps, tokens, drawing, dice, handouts, and clean board output.
 
@@ -8,7 +8,7 @@ Lightweight video-first tabletop room for maps, tokens, drawing, dice, handouts,
 - Player: `./tabletop/?room=my-campaign`
 - Board-only local testing: add `&novideo`
 
-The app uses the existing VDO.Ninja iframe/datachannel path for room sync. The embedded room autostarts the webcam path after entering the tabletop room so peers form and datachannels open. When `&novideo` is present, it skips the VDO iframe and uses same-browser local sync only, which is useful for Playwright and layout testing.
+The app uses the existing Sonny Video iframe/datachannel path for room sync. The embedded room autostarts the webcam path after entering the tabletop room so peers form and datachannels open. When `&novideo` is present, it skips the VDO iframe and uses same-browser local sync only, which is useful for Playwright and layout testing.
 
 ## Current Features
 

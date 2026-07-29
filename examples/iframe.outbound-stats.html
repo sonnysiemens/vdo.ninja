@@ -4,8 +4,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="Collect outbound connection stats from an embedded iframe for monitoring." />
-	<link rel="canonical" href="https://vdo.ninja/examples/iframe.outbound-stats.html" />
-    <title>IFRAME Outbound Stats - VDO.Ninja</title>
+	<link rel="canonical" href="https://Sonny Video/examples/iframe.outbound-stats.html" />
+    <title>IFRAME Outbound Stats - Sonny Video</title>
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
     <link rel="icon" type="image/png" sizes="32x32" href="../media//favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../media/favicon-16x16.png" />
@@ -47,7 +47,7 @@
     <div class="container-fluid">
         <div class="row controls" style="margin-bottom:15px;border-bottom:1px solid black;">
             <div class="col-8">
-                <input type="text" class="form-control" style="width:95%;margin:10px auto;" placeholder="Enter an VDO.Ninja View URL here" value="" id="viewlink" />
+                <input type="text" class="form-control" style="width:95%;margin:10px auto;" placeholder="Enter an Sonny Video View URL here" value="" id="viewlink" />
             </div>
             <div class="col-4">
                 <div class="row">
@@ -66,7 +66,7 @@
                 <div class="row text-light" style="margin-top:15px;">
                     <div class="col">
                         <p>This example will show all connections to the stream generated from this page using statistics gathered using the <a href="https://github.com/steveseguin/vdoninja/blob/master/IFRAME.md">iFrame API</a>.</p>
-                        <p>Click start to generate a stream using the VDO.Ninja URL shown. If you use the example URL shown, you can <a id="aView" href="" target="_blank">click here</a> to connect to this stream as a viewer in a new window/tab, this will then show in the table below. Expired connections will be removed after a short delay.</p>
+                        <p>Click start to generate a stream using the Sonny Video URL shown. If you use the example URL shown, you can <a id="aView" href="" target="_blank">click here</a> to connect to this stream as a viewer in a new window/tab, this will then show in the table below. Expired connections will be removed after a short delay.</p>
                     </div>
                 </div>
                 <div class="row" style="margin-top:5px;">
@@ -247,7 +247,7 @@
             //Add in random ID and password strings to URL's, the below is purely for the purposes of this example
             var pushid = makeid();
             var password = makeid();
-            var baseUrl = "https://vdo.ninja/";
+            var baseUrl = "https://Sonny Video/";
             $('#aView').attr('href', baseUrl + '?view=' + pushid + '&password=' + password + '&label=Test_Link');
             $('#viewlink').val(baseUrl + '?push=' + pushid + '&password=' + password + '&autostart&turn=false&fps=25&maxbitrate=1000&cleanoutput&audiobitrate=32&aec=0&denoise=0&webcam');
         });

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free, open-source live streaming whiteboard with secure E2EE P2P sharing via VDO.Ninja and WHIP support">
-    <meta name="keywords" content="whiteboard, streaming, VDO.Ninja, WHIP, e2ee, p2p, drawing, collaboration">
-    <meta name="author" content="VDO.Ninja">
-    <meta property="og:title" content="VDO.Ninja Whiteboard">
+    <meta name="description" content="Free, open-source live streaming whiteboard with secure E2EE P2P sharing via Sonny Video and WHIP support">
+    <meta name="keywords" content="whiteboard, streaming, Sonny Video, WHIP, e2ee, p2p, drawing, collaboration">
+    <meta name="author" content="Sonny Video">
+    <meta property="og:title" content="Sonny Video Whiteboard">
     <meta property="og:description" content="Free, open-source live streaming whiteboard with secure E2EE P2P sharing">
-    <meta property="og:image" content="https://vdo.ninja/media/logo.png">
-    <meta property="og:url" content="https://vdo.ninja/whiteboard">
+    <meta property="og:image" content="https://Sonny Video/media/logo.png">
+    <meta property="og:url" content="https://Sonny Video/whiteboard">
     <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTQgNGgyNHYyNEg0eiIvPjxwYXRoIGZpbGw9IiMwMDAiIGQ9Ik02IDZoMjB2MjBINnoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNOCA4aDE2djRsLTQgOHY0SDEydi00TDggMTJ6Ii8+PC9zdmc+">
     <title>Whiteboard - Live Streaming Collaboration Tool</title>
     <style>
@@ -367,7 +367,7 @@
 		<div class="modal">
 			<h3 style="text-align: center; margin-bottom: 15px;">Whiteboard Publishing Options</h3>
 			<div class="modal-buttons">
-				<button onclick="showMode('vdo')" title="Peer-to-peer encrypted streaming via VDO.Ninja">VDO.Ninja</button>
+				<button onclick="showMode('vdo')" title="Peer-to-peer encrypted streaming via Sonny Video">Sonny Video</button>
 				<button onclick="showMode('whip')" title="Stream to any WHIP-compatible service">WHIP</button>
 				<button onclick="showMode('twitch')" title="Stream directly to Twitch">Twitch</button>
 				<button onclick="showMode('playground')" title="Local drawing only - no streaming">Playground</button>
@@ -657,7 +657,7 @@
 		document.querySelector(`button[onclick="showMode('${mode}')"]`).classList.add('active');
 		
 		const descriptions = {
-			'vdo': 'Stream securely peer-to-peer using VDO.Ninja',
+			'vdo': 'Stream securely peer-to-peer using Sonny Video',
 			'whip': 'Stream to any WHIP-compatible service',
 			'twitch': 'Stream directly to your Twitch channel',
 			'playground': 'Local drawing mode - no streaming'
@@ -677,7 +677,7 @@
 		
 		const config = {
 			mode: 'whip',
-			whipUrl: 'https://twitch.vdo.ninja',
+			whipUrl: 'https://twitch.Sonny Video',
 			whipToken: twitchToken
 		};
 		

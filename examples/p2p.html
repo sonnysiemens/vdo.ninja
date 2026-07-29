@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>P2P Data Tunnel - VDO.Ninja</title>
-	<meta name="description" content="Use paired iframes to pass arbitrary data peer-to-peer via VDO.Ninja." />
-	<link rel="canonical" href="https://vdo.ninja/examples/p2p.html" />
+	<title>P2P Data Tunnel - Sonny Video</title>
+	<meta name="description" content="Use paired iframes to pass arbitrary data peer-to-peer via Sonny Video." />
+	<link rel="canonical" href="https://Sonny Video/examples/p2p.html" />
 	<style>
 		body { margin: 0; padding: 2rem; background: #0f131d; color: #f5f6f8; line-height: 1.6;
 			font-family: "Segoe UI", system-ui, sans-serif; }
@@ -21,7 +21,7 @@
 <body>
 <main>
 	<h1>P2P Data Tunnel</h1>
-	<p>Opens two hidden VDO.Ninja iframes &mdash; one publishing, one viewing &mdash; and bounces
+	<p>Opens two hidden Sonny Video iframes &mdash; one publishing, one viewing &mdash; and bounces
 		<code>ping</code>/<code>pong</code> messages between them over the peer-to-peer data channel.
 		Received messages are logged below; open the browser console to watch the full exchange.</p>
 	<div id="results">
@@ -32,7 +32,7 @@
   var connectionID = Math.random()*100000001;
   function RecvDataWindow(){
     var iframe = document.createElement("iframe");
-    iframe.src = "https://vdo.ninja/beta/?view="+connectionID+"&cleanoutput";
+    iframe.src = "https://Sonny Video/beta/?view="+connectionID+"&cleanoutput";
     iframe.style.width = "0px";
     iframe.style.height = "0px";
     iframe.style.position = "fixed";
@@ -59,7 +59,7 @@
 
   function SendDataWindow(){
     var iframe = document.createElement("iframe");
-    iframe.src = "https://vdo.ninja/beta/?push="+connectionID+"&vd=0&ad=0&autostart&cleanoutput";
+    iframe.src = "https://Sonny Video/beta/?push="+connectionID+"&vd=0&ad=0&autostart&cleanoutput";
     iframe.style.width = "0px";
     iframe.style.height = "0px";
     iframe.style.position = "fixed";

@@ -49,7 +49,7 @@ class NotificationManager {
 		  const response = await fetch(subscription.endpoint, {
 			method: 'HEAD',
 			headers: {
-			  'Origin': 'https://vdo.ninja'
+			  'Origin': 'https://Sonny Video'
 			}
 		  });
 		  if (response.status === 404 || response.status === 410) {
@@ -74,7 +74,7 @@ class NotificationManager {
 		const registration = await navigator.serviceWorker.ready;
 		const subscription = await registration.pushManager.getSubscription();
 		if (subscription) {
-		  await fetch('https://notify.vdo.ninja/unsubscribe', {
+		  await fetch('https://notify.Sonny Video/unsubscribe', {
 			method: 'POST',
 			headers: {
 			  'Content-Type': 'application/json'
@@ -116,7 +116,7 @@ class NotificationManager {
 		  try {
 			const response = await fetch(subscription.endpoint, {
 			  method: 'HEAD',
-			  headers: { 'Origin': 'https://vdo.ninja' }
+			  headers: { 'Origin': 'https://Sonny Video' }
 			});
 			console.log('Push endpoint status:', response.status);
 			console.log('Push endpoint:', subscription.endpoint.slice(-20));
@@ -155,7 +155,7 @@ class NotificationManager {
 	  try {
 		const response = await fetch(endpoint, {
 		  method: 'HEAD',
-		  headers: { 'Origin': 'https://vdo.ninja' }
+		  headers: { 'Origin': 'https://Sonny Video' }
 		});
 		
 		console.log('Push endpoint check:', endpoint.slice(-10), 'status:', response.status);
@@ -209,7 +209,7 @@ class NotificationManager {
 		  const response = await fetch(subscription.endpoint, {
 			method: 'HEAD',
 			headers: {
-			  'Origin': 'https://vdo.ninja'
+			  'Origin': 'https://Sonny Video'
 			}
 		  });
 		  return {
@@ -273,7 +273,7 @@ class NotificationManager {
 		  const subscriptionObject = existingSubscription.toJSON ? existingSubscription.toJSON() : existingSubscription;
 		  
 		  try {
-			const subscriptionResponse = await fetch('https://notify.vdo.ninja/subscribe', {
+			const subscriptionResponse = await fetch('https://notify.Sonny Video/subscribe', {
 			  method: 'POST',
 			  headers: {
 				'Content-Type': 'application/json'
@@ -297,7 +297,7 @@ class NotificationManager {
 		
 		try {
 		  // Get the server public key for VAPID with proper JSON parsing
-		  const response = await fetch('https://notify.vdo.ninja/vapidPublicKey');
+		  const response = await fetch('https://notify.Sonny Video/vapidPublicKey');
 		  if (!response.ok) {
 			throw new Error('Failed to fetch VAPID public key');
 		  }
@@ -323,7 +323,7 @@ class NotificationManager {
 			console.log('Created new push subscription');
 			const subscriptionObject = newSubscription.toJSON ? newSubscription.toJSON() : newSubscription;
 			
-			const subscriptionResponse = await fetch('https://notify.vdo.ninja/subscribe', {
+			const subscriptionResponse = await fetch('https://notify.Sonny Video/subscribe', {
 			  method: 'POST',
 			  headers: {
 				'Content-Type': 'application/json'
@@ -555,7 +555,7 @@ class NotificationManager {
 		  console.warn('No subscription to refresh');
 		  return false;
 		}
-		const response = await fetch('https://notify.vdo.ninja/refresh', {
+		const response = await fetch('https://notify.Sonny Video/refresh', {
 		  method: 'POST',
 		  headers: {
 			'Content-Type': 'application/json'
@@ -606,7 +606,7 @@ class NotificationManager {
     const pollForNotifications = async () => {
       try {
         const lastPollTime = parseInt(localStorage.getItem('lastPollTime') || '0');
-        const response = await fetch(`https://notify.vdo.ninja/poll?topic=${encodeURIComponent(topic)}&since=${lastPollTime}`);
+        const response = await fetch(`https://notify.Sonny Video/poll?topic=${encodeURIComponent(topic)}&since=${lastPollTime}`);
         const data = await response.json();
         localStorage.setItem('lastPollTime', Date.now().toString());
         if (data.notifications && Array.isArray(data.notifications) && data.notifications.length > 0) {
@@ -700,7 +700,7 @@ class NotificationManager {
 		  
 		  // Simply try to show the notification
 		  self.registration.showNotification(
-			notification.title || 'VDO.Ninja',
+			notification.title || 'Sonny Video',
 			options
 		  ).then(() => {
 			console.log('[SW-DEBUG] Notification shown successfully:', notification.id);
@@ -785,7 +785,7 @@ class NotificationManager {
 	async sendTestNotification(topic, customMessage = null) {
 	  if (!topic) return Promise.resolve(false);
 	  const message = customMessage || "Someone joined Test Room";
-	  const notifyUrl = `https://notify.vdo.ninja/?notify=${encodeURIComponent(topic)}&message=${encodeURIComponent(message)}`;
+	  const notifyUrl = `https://notify.Sonny Video/?notify=${encodeURIComponent(topic)}&message=${encodeURIComponent(message)}`;
 	  console.log('Sending notification to:', notifyUrl);
 	  try {
 		const response = await fetch(notifyUrl);

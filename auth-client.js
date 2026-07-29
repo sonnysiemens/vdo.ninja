@@ -1,13 +1,13 @@
-/* VDO.Ninja Authentication Client Integration */
+/* Sonny Video Authentication Client Integration */
 
 // Configuration
-const AUTH_SERVICE_URL = 'https://sso.vdo.ninja'; // Change for local dev: http://localhost:8787
+const AUTH_SERVICE_URL = 'https://sso.Sonny Video'; // Change for local dev: http://localhost:8787
 
 const AUTH_TOKEN_STORAGE_KEY = 'vdo_auth_token';
 
 function isVdoNinjaSSOHost(hostname) {
   hostname = String(hostname || "").toLowerCase();
-  return hostname === "vdo.ninja" || hostname.endsWith(".vdo.ninja");
+  return hostname === "Sonny Video" || hostname.endsWith(".Sonny Video");
 }
 
 function isSSOSupportedOnCurrentHost() {
@@ -262,7 +262,7 @@ function showAuthUI(options = {}) {
   const canDisableSSO = isDirectorAuthURL && session.authMode && !session.universalToken && !session.decrypted && !options.hideDisableSSO;
   authContainer.innerHTML = `
     <div class="auth-modal">
-      <h2>Sign in to VDO.Ninja</h2>
+      <h2>Sign in to Sonny Video</h2>
       <p>${options.message || 'Sign in to claim your personal stream ID and enable advanced features'}</p>
       
       <div class="auth-buttons">
@@ -1338,7 +1338,7 @@ async function handleAccessRequest(roomId, userId, action) {
   return false;
 }
 
-// Export functions for use in main VDO.Ninja code
+// Export functions for use in main Sonny Video code
 window.vdoAuth = {
   init: initAuthentication,
   assignStream: assignAuthStream,

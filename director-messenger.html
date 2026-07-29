@@ -492,7 +492,7 @@
 					<button id="sendBtn">Send</button>
 				</div>
 				<div class="helper">
-					This page rides the VDO.Ninja API. Dock it in OBS and load with the same <code>?api=</code> value as your director tab. Click a guest to target them, then send.
+					This page rides the Sonny Video API. Dock it in OBS and load with the same <code>?api=</code> value as your director tab. Click a guest to target them, then send.
 				</div>
 			</div>
 		</div>
@@ -525,7 +525,7 @@
 	let pollTimer = null;
 	let allowReconnect = true;
 	let apiKey = urlParams.get("api") || urlParams.get("id") || urlParams.get("wid") || "";
-	let apiServer = urlParams.get("apiserver") || "wss://api.vdo.ninja:443";
+	let apiServer = urlParams.get("apiserver") || "wss://api.Sonny Video:443";
 	let guests = new Map();
 	let selectedStream = null;
 	let lastUpdate = null;

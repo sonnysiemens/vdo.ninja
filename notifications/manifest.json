@@ -1,7 +1,7 @@
 {
-  "name": "VDO.Ninja Notifications",
+  "name": "Sonny Video Notifications",
   "short_name": "VDO Notify",
-  "description": "Get notified when someone joins your VDO.Ninja rooms",
+  "description": "Get notified when someone joins your Sonny Video rooms",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#121212",

@@ -270,7 +270,7 @@
     "publish-via-whip": "Publish via WHIP",
     "share-whepsrc": "Share via WHEP",
     "enter-the-whep-URL-you-wish-to-share": "Enter the WHEP URL you wish to share.",
-    "info-blob": "<h2>What is VDO.Ninja</h2><br><li>100% <b>free</b>; no downloads; no personal data collection; no sign-in</li><li>Bring live video from your smartphone, remote computer, or friends directly into OBS or other studio software.</li><li>We use cutting edge Peer-to-Peer forwarding technology that offers privacy and ultra-low latency</li><br><li>Youtube video <i class=\"lab la-youtube\"></i><a href=\"https://www.youtube.com/watch?v=QaA_6aOP9z8&amp;list=PLWodc2tCfAH1WHjl4WAOOoRSscJ8CHACe&amp;index=1\" alt=\"Youtube video demoing VDO.Ninja\">Demoing it here</a></li><br><h3>   🛠 For support, see the <a href=\"https://www.reddit.com/r/VDONinja/\">sub-reddit <i class=\"lab la-reddit-alien\"></i></a> or join the <a href=\"https://discord.vdo.ninja/\">Discord <i class=\"lab la-discord\"></i></a>. The <a href=\"https://docs.vdo.ninja/\">documentation is here</a> and my personal email is <i>steve@seguin.email</i></h3> ",
+    "info-blob": "<h2>What is Sonny Video</h2><br><li>100% <b>free</b>; no downloads; no personal data collection; no sign-in</li><li>Bring live video from your smartphone, remote computer, or friends directly into OBS or other studio software.</li><li>We use cutting edge Peer-to-Peer forwarding technology that offers privacy and ultra-low latency</li><br><li>Youtube video <i class=\"lab la-youtube\"></i><a href=\"https://www.youtube.com/watch?v=QaA_6aOP9z8&amp;list=PLWodc2tCfAH1WHjl4WAOOoRSscJ8CHACe&amp;index=1\" alt=\"Youtube video demoing Sonny Video\">Demoing it here</a></li><br><h3>   🛠 For support, see the <a href=\"https://www.reddit.com/r/VDONinja/\">sub-reddit <i class=\"lab la-reddit-alien\"></i></a> or join the <a href=\"https://discord.Sonny Video/\">Discord <i class=\"lab la-discord\"></i></a>. The <a href=\"https://docs.Sonny Video/\">documentation is here</a> and my personal email is <i>sonny.siemens@gmail.com</i></h3> ",
     "guest-1": "Guest 1",
     "guest-2": "Guest 2",
     "guest-3": "Guest 3",
@@ -583,11 +583,11 @@
     "more-options": "More Options",
     "transfer-any-file": "Transfer any file",
     "enter-an-https-url": "Enter an HTTPS URL",
-    "open-a-youtube-video-demoing-the-basics-of-vdo-ninja": "Open a YouTube video demoing the basics of VDO.Ninja",
+    "open-a-youtube-video-demoing-the-basics-of-vdo-ninja": "Open a YouTube video demoing the basics of Sonny Video",
     "for-a-list-of-common-or-known-issues-click-here": "For a list of common or known issues, click here",
-    "click-to-link-out-to-the-vdo-ninja-help-guide-for-common-obs-studio-problems": "Click to link out to the VDO.Ninja help guide for common OBS Studio problems",
-    "open-a-page-with-recent-vdo-ninja-development-and-feature-updates": "Open a page with recent VDO.Ninja development and feature updates",
-    "info-on-the-native-app-versions-of-vdo-ninja": "Info on the native app versions of VDO.Ninja",
+    "click-to-link-out-to-the-vdo-ninja-help-guide-for-common-obs-studio-problems": "Click to link out to the Sonny Video help guide for common OBS Studio problems",
+    "open-a-page-with-recent-vdo-ninja-development-and-feature-updates": "Open a page with recent Sonny Video development and feature updates",
+    "info-on-the-native-app-versions-of-vdo-ninja": "Info on the native app versions of Sonny Video",
     "mute-the-speaker": "Mute the Speaker",
     "mute-the-mic": "Mute the Mic",
     "disable-the-camera": "Disable the Camera",
@@ -766,7 +766,7 @@
     "system-default": "System Default",
     "streamid-already-published-obvious": "The stream ID you are publishing to is already in use.\n\nPlease consider using a password or a more varied/unique stream ID to avoid this issue.\n\nYou will now be disconnected.",
     "insecure-stream-id": "⚠️ Insecure stream ID detected\n\nIt is strongly advised that a password is used if using a short non-unique stream ID.\n\nThis is just a warning that can be ignored.",
-    "mobile-no-screen-share": "Sorry, your mobile browser does not support screen-sharing.\n\nThe <a href='https://docs.vdo.ninja/getting-started/native-mobile-app-versions' target='_blank'>The native apps</a> do offer basic support for it though.",
+    "mobile-no-screen-share": "Sorry, your mobile browser does not support screen-sharing.\n\nThe <a href='https://docs.Sonny Video/getting-started/native-mobile-app-versions' target='_blank'>The native apps</a> do offer basic support for it though.",
     "no-screen-share-supported-firefox": "Sorry, your browser does not support screen-sharing.\n\nYour Firefox settings may be configured to block it or you've accessed the site insecurely."
   }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="IP Camera streaming tool with secure E2EE P2P sharing via VDO.Ninja and WHIP support">
+    <meta name="description" content="IP Camera streaming tool with secure E2EE P2P sharing via Sonny Video and WHIP support">
     <title>IP Camera Stream</title>
     <style>
         html, body {
@@ -278,7 +278,7 @@
                 Configure how you want to publish your IP camera feed.
             </div>
             <div class="modal-buttons">
-                <button onclick="showMode('vdo')" title="Peer-to-peer encrypted streaming via VDO.Ninja">VDO.Ninja</button>
+                <button onclick="showMode('vdo')" title="Peer-to-peer encrypted streaming via Sonny Video">Sonny Video</button>
                 <button onclick="showMode('whip')" title="Stream to any WHIP-compatible service">WHIP</button>
                 <button onclick="showMode('twitch')" title="Stream directly to Twitch">Twitch</button>
                 <button onclick="showMode('preview')" title="Local preview only - no streaming">Preview</button>
@@ -367,7 +367,7 @@
 			let info = '';
 			switch (publishConfig.mode) {
 				case 'vdo':
-					info = `Publishing to VDO.Ninja - ${publishConfig.push ? 'Stream ID: ' + publishConfig.push : 'Room: ' + publishConfig.room}`;
+					info = `Publishing to Sonny Video - ${publishConfig.push ? 'Stream ID: ' + publishConfig.push : 'Room: ' + publishConfig.room}`;
 					document.querySelector('.view-link-container').style.display = 'flex';
 					break;
 				case 'whip':
@@ -419,10 +419,10 @@
         function startPublishing() {
 			if (!publishConfig || isPublishing) return;
 			
-			// Always start with HTTPS for VDO.Ninja URLs
+			// Always start with HTTPS for Sonny Video URLs
 			let iframeUrl;
 			// For VDO and WHIP modes, ensure we're using HTTPS
-			iframeUrl = new URL('https://vdo.ninja');
+			iframeUrl = new URL('https://Sonny Video');
 			// Preserve the path from the current URL
 			let pathParts = location.pathname.split('/').filter(Boolean);
 			pathParts.pop();
@@ -440,7 +440,7 @@
 					if (publishConfig.whipToken) iframeUrl.searchParams.set('whippushtoken', publishConfig.whipToken);
 					break;
 				case 'twitch':
-					iframeUrl.searchParams.set('whippush', 'https://twitch.vdo.ninja');
+					iframeUrl.searchParams.set('whippush', 'https://twitch.Sonny Video');
 					iframeUrl.searchParams.set('push', '');
 					iframeUrl.searchParams.set('token', publishConfig.twitchToken);
 					break;
@@ -687,8 +687,8 @@
 			const isHttps = url.toLowerCase().startsWith('https://');
 			
 			if (!isHttps && isSecureContext) {
-			  if (location.href.includes("vdo.ninja")) {
-				let insecure = "http://insecure.vdo.ninja" + location.pathname;
+			  if (location.href.includes("Sonny Video")) {
+				let insecure = "http://insecure.Sonny Video" + location.pathname;
 				alert('Mixed Content Error:\n\nStream URL must use HTTPS when accessing from a secure page\n\nTry via '+insecure+' instead.');
 			  } else {
 				alert('Mixed Content Error:\n\nStream URL must use HTTPS when accessing from a secure page\n\nTry via ElectronCapture. Please download from:\nhttps://electroncapture.app');
@@ -737,7 +737,7 @@
             document.querySelector(`button[onclick="showMode('${mode}')"]`).classList.add('active');
             
             const descriptions = {
-                'vdo': 'Stream securely peer-to-peer using VDO.Ninja',
+                'vdo': 'Stream securely peer-to-peer using Sonny Video',
                 'whip': 'Stream to any WHIP-compatible service',
                 'twitch': 'Stream directly to your Twitch channel',
                 'preview': 'Local preview mode - no streaming'
@@ -787,7 +787,7 @@
 				password
 			};
 
-			const viewUrl = new URL("https://vdo.ninja");
+			const viewUrl = new URL("https://Sonny Video");
 			if (push) viewUrl.searchParams.set("view", push);
 			if (room) viewUrl.searchParams.set("room", room);
 			if (publishConfig.push && publishConfig.room) viewUrl.searchParams.set("solo", "");

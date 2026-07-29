@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="description" content="All-in-one playground for experimenting with the VDO.Ninja developer API." />
-	<link rel="canonical" href="https://vdo.ninja/examples/sandbox.html" />
+	<meta name="description" content="All-in-one playground for experimenting with the Sonny Video developer API." />
+	<link rel="canonical" href="https://Sonny Video/examples/sandbox.html" />
 	<meta property="og:type" content="website" />
-	<meta property="og:site_name" content="VDO.Ninja" />
-	<meta property="og:url" content="https://vdo.ninja/examples/sandbox.html" />
-	<meta property="og:title" content="Developer API Sandbox - VDO.Ninja" />
-	<meta property="og:description" content="All-in-one playground for experimenting with the VDO.Ninja developer API." />
-	<meta property="og:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+	<meta property="og:site_name" content="Sonny Video" />
+	<meta property="og:url" content="https://Sonny Video/examples/sandbox.html" />
+	<meta property="og:title" content="Developer API Sandbox - Sonny Video" />
+	<meta property="og:description" content="All-in-one playground for experimenting with the Sonny Video developer API." />
+	<meta property="og:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Developer API Sandbox - VDO.Ninja" />
-	<meta name="twitter:description" content="All-in-one playground for experimenting with the VDO.Ninja developer API." />
-	<meta name="twitter:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png" />
+	<meta name="twitter:title" content="Developer API Sandbox - Sonny Video" />
+	<meta name="twitter:description" content="All-in-one playground for experimenting with the Sonny Video developer API." />
+	<meta name="twitter:image" content="https://Sonny Video/media/vdoNinja_logo_full.png" />
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Developer API Sandbox - VDO.Ninja</title>
+  <title>Developer API Sandbox - Sonny Video</title>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -620,7 +620,7 @@
 <body>
 <div class="container">
   <header>
-    <h1>VDO.Ninja Developer API Sandbox</h1>
+    <h1>Sonny Video Developer API Sandbox</h1>
     <div style="display: flex; flex-wrap: wrap; gap: var(--spacing); align-items: center;">
       <div>
         <p>Your API Key: <span class="api-key" id="api-key" onclick="copyToClipboard(this)">Loading...</span></p>
@@ -633,11 +633,11 @@
       </div>
       <div style="flex: 1;">
         <p>Your Ninja Link: <a id="ninja-link" href="#" target="_blank">Loading...</a></p>
-        <p><small>You can append VDO.Ninja parameters to this link, treating it like a normal VDO.Ninja link.</small></p>
+        <p><small>You can append Sonny Video parameters to this link, treating it like a normal Sonny Video link.</small></p>
       </div>
       <div>
         <a href="https://github.com/bitfocus/companion-module-vdo-ninja" target="_blank" style="margin-right: 10px;">Companion Module</a>
-        <a href="https://docs.vdo.ninja/guides/iframe-api-documentation" target="_blank">IFrame API Docs</a>
+        <a href="https://docs.Sonny Video/guides/iframe-api-documentation" target="_blank">IFrame API Docs</a>
       </div>
     </div>
   </header>
@@ -726,11 +726,11 @@
             <button class="copy-btn" onclick="copyCode('ws-code-example')">Copy</button>
           </div>
           <pre class="code-block" id="ws-code-example">// Connect to WebSocket API
-const socket = new WebSocket("wss://api.vdo.ninja:443");
+const socket = new WebSocket("wss://api.Sonny Video:443");
 
 // Track connection state
 socket.onopen = function() {
-  console.log("Connected to VDO.Ninja API");
+  console.log("Connected to Sonny Video API");
   // Join with your API ID
   socket.send(JSON.stringify({ "join": "YOUR_API_ID" }));
 };
@@ -818,7 +818,7 @@ function sendCommand(action, value = null, target = null) {
           </div>
           <div class="form-group">
             <label>Generated URL:</label>
-            <pre id="http-url-preview" style="background-color: var(--bg-primary); padding: 8px; white-space: pre-wrap; word-break: break-all;">https://api.vdo.ninja/YOUR_API_ID/action/target/value</pre>
+            <pre id="http-url-preview" style="background-color: var(--bg-primary); padding: 8px; white-space: pre-wrap; word-break: break-all;">https://api.Sonny Video/YOUR_API_ID/action/target/value</pre>
           </div>
           <div class="flex-row">
             <button onclick="sendHTTPRequest()" style="flex: 2;">Send HTTP GET Request</button>
@@ -841,7 +841,7 @@ function sendCommand(action, value = null, target = null) {
           <pre class="code-block" id="http-code-example">// HTTP GET API Example
 function sendHTTPRequest(apiID, action, target = "null", value = "null") {
   // Construct URL
-  const url = `https://api.vdo.ninja/${apiID}/${action}/${target}/${value}`;
+  const url = `https://api.Sonny Video/${apiID}/${action}/${target}/${value}`;
   
   // Send request
   fetch(url)
@@ -881,7 +881,7 @@ function sendHTTPRequest(apiID, action, target = "null", value = "null") {
     <div class="tab-content" id="sse-tab">
       <div class="section">
         <div class="section-title">Server-Sent Events (SSE) Listener</div>
-        <p>SSE provides a one-way communication channel to receive events from VDO.Ninja without sending requests.</p>
+        <p>SSE provides a one-way communication channel to receive events from Sonny Video without sending requests.</p>
         
         <div class="request-builder">
           <div class="form-group">
@@ -903,7 +903,7 @@ function sendHTTPRequest(apiID, action, target = "null", value = "null") {
           <pre class="code-block" id="sse-code-example">// Server-Sent Events (SSE) Example
 function connectToSSE(apiID) {
   // Create EventSource connection
-  const eventSource = new EventSource(`https://api.vdo.ninja/sse/${apiID}`);
+  const eventSource = new EventSource(`https://api.Sonny Video/sse/${apiID}`);
   
   // Connection opened
   eventSource.onopen = function() {
@@ -1008,7 +1008,7 @@ function connectToSSE(apiID) {
           <pre class="code-block" id="post-code-example">// HTTP POST API Example
 function sendPOSTRequest(apiID, data) {
   // Construct URL
-  const url = `https://api.vdo.ninja/${apiID}`;
+  const url = `https://api.Sonny Video/${apiID}`;
   
   // Configure request
   const options = {
@@ -1129,7 +1129,7 @@ function sendCameraCommand(apiID, action, value, value2 = null, target = null) {
   } 
   // Using HTTP as fallback
   else {
-    let url = `https://api.vdo.ninja/${apiID}/${action}`;
+    let url = `https://api.Sonny Video/${apiID}/${action}`;
     
     if (target !== null) {
       url += `/${target}`;
@@ -1169,7 +1169,7 @@ function sendCameraCommand(apiID, action, value, value2 = null, target = null) {
     <div class="tab-content" id="midi-tab">
       <div class="section">
         <div class="section-title">MIDI Integration</div>
-        <p>Control VDO.Ninja using MIDI controllers with various mapping options.</p>
+        <p>Control Sonny Video using MIDI controllers with various mapping options.</p>
         
         <div class="request-builder">
           <div class="form-group">
@@ -1193,7 +1193,7 @@ function sendCameraCommand(apiID, action, value, value2 = null, target = null) {
         </div>
         
         <h3>Default MIDI Mappings</h3>
-        <p>VDO.Ninja supports several MIDI mapping schemes, which can be configured using the <code>midiHotkeys</code> parameter.</p>
+        <p>Sonny Video supports several MIDI mapping schemes, which can be configured using the <code>midiHotkeys</code> parameter.</p>
         
         <div class="midi-config">
           <div class="midi-mapping">
@@ -1497,7 +1497,7 @@ function controlGuest(apiID, target, action, value = null, method = "websocket")
     // HTTP method
     const targetStr = target || "null";
     const valueStr = value !== null ? value : "null";
-    const url = `https://api.vdo.ninja/${apiID}/${action}/${targetStr}/${valueStr}`;
+    const url = `https://api.Sonny Video/${apiID}/${action}/${targetStr}/${valueStr}`;
     
     fetch(url)
       .then(response => response.text())
@@ -1520,11 +1520,11 @@ function controlGuest(apiID, target, action, value = null, method = "websocket")
     <!-- API Reference Tab -->
     <div class="tab-content" id="docs-tab">
       <div class="section">
-        <div class="section-title">VDO.Ninja API Reference</div>
+        <div class="section-title">Sonny Video API Reference</div>
         <p>Complete reference for all supported API commands, parameters, and response formats.</p>
         
         <h3>API Overview</h3>
-        <p>The VDO.Ninja API supports multiple communication methods:</p>
+        <p>The Sonny Video API supports multiple communication methods:</p>
         <ul>
           <li><strong>WebSocket API</strong>: Real-time bidirectional communication (preferred for most uses)</li>
           <li><strong>HTTP GET API</strong>: Simple REST-style requests, compatible with hotkey systems</li>
@@ -1534,7 +1534,7 @@ function controlGuest(apiID, target, action, value = null, method = "websocket")
         </ul>
         
         <p>For integrations with BitFocus Companion, check out the <a href="https://github.com/bitfocus/companion-module-vdo-ninja" target="_blank">official Companion module</a>.</p>
-        <p>For custom embeds, refer to the <a href="https://docs.vdo.ninja/guides/iframe-api-documentation" target="_blank">IFrame API Documentation</a>.</p>
+        <p>For custom embeds, refer to the <a href="https://docs.Sonny Video/guides/iframe-api-documentation" target="_blank">IFrame API Documentation</a>.</p>
         
         <h3>Command Reference</h3>
         <p>The following tables list all available commands, their parameters, and what they do.</p>
@@ -2043,7 +2043,7 @@ function updateHTTPUrlPreview() {
   const value = document.getElementById('http-value').value || "null";
   const apiID = WID;
   
-  document.getElementById('http-url-preview').textContent = `https://api.vdo.ninja/${apiID}/${action}/${target}/${value}`;
+  document.getElementById('http-url-preview').textContent = `https://api.Sonny Video/${apiID}/${action}/${target}/${value}`;
 }
 
 document.getElementById('http-action').addEventListener('change', updateHTTPUrlPreview);
@@ -2158,8 +2158,8 @@ if (urlParams.has("api")) {
 // Update the displayed API key
 document.getElementById('api-key').textContent = WID;
 
-// Create the VDO.Ninja link
-const ninjaPath = "vdo.ninja";
+// Create the Sonny Video link
+const ninjaPath = "Sonny Video";
 const ninjaLink = document.getElementById('ninja-link');
 ninjaLink.href = `https://${ninjaPath}/?api=${WID}`;
 ninjaLink.textContent = `https://${ninjaPath}/?api=${WID}`;
@@ -2183,7 +2183,7 @@ function connect() {
   }
   
   updateConnectionStatus('connecting');
-  socket = new WebSocket("wss://api.vdo.ninja:443");
+  socket = new WebSocket("wss://api.Sonny Video:443");
   
   socket.onclose = function() {
     updateConnectionStatus('disconnected');
@@ -2322,7 +2322,7 @@ function sendHTTPRequest() {
     const target = document.getElementById('http-target').value || "null";
     const value = document.getElementById('http-value').value || "null";
     
-    const url = `https://api.vdo.ninja/${WID}/${action}/${target}/${value}`;
+    const url = `https://api.Sonny Video/${WID}/${action}/${target}/${value}`;
     
     addLogEntry('request', 'GET', url);
     
@@ -2377,7 +2377,7 @@ function sendPOSTRequest() {
       if (target) jsonData.target = target;
     }
     
-    const url = `https://api.vdo.ninja/${WID}`;
+    const url = `https://api.Sonny Video/${WID}`;
     
     addLogEntry('request', 'POST', url, jsonData);
     
@@ -2417,9 +2417,9 @@ function connectSSE() {
   sseStatus.textContent = 'Connecting...';
   sseStatus.style.color = 'var(--accent-warning)';
   
-  eventSource = new EventSource(`https://api.vdo.ninja/sse/${WID}`);
+  eventSource = new EventSource(`https://api.Sonny Video/sse/${WID}`);
   
-  addLogEntry('request', 'SSE', `https://api.vdo.ninja/sse/${WID}`);
+  addLogEntry('request', 'SSE', `https://api.Sonny Video/sse/${WID}`);
   
   eventSource.onopen = function() {
     sseStatus.textContent = 'Connected - Listening for events';
@@ -2508,7 +2508,7 @@ function sendGuestCommand(target, action, value = null) {
     // HTTP method
     const targetStr = target || "null";
     const valueStr = value !== null ? value : "null";
-    const url = `https://api.vdo.ninja/${WID}/${action}/${targetStr}/${valueStr}`;
+    const url = `https://api.Sonny Video/${WID}/${action}/${targetStr}/${valueStr}`;
     
     addLogEntry('request', 'GET', url);
     
@@ -2910,7 +2910,7 @@ function createHTTPControls() {
     tooltip.className = 'tooltip-text';
     
     // Format the request info based on the control
-    let apiFormat = `GET: https://api.vdo.ninja/${WID}/${control.action}/null/`;
+    let apiFormat = `GET: https://api.Sonny Video/${WID}/${control.action}/null/`;
     if (control.value !== null) {
       apiFormat += typeof control.value === 'string' ? control.value : control.value;
     }
@@ -2923,7 +2923,7 @@ function createHTTPControls() {
     
     // Set onclick handler
     button.onclick = function() {
-      const url = `https://api.vdo.ninja/${WID}/${control.action}/null/${control.value !== null ? control.value : 'null'}`;
+      const url = `https://api.Sonny Video/${WID}/${control.action}/null/${control.value !== null ? control.value : 'null'}`;
       
       addLogEntry('request', 'GET', url);
       
@@ -2969,7 +2969,7 @@ function createHTTPGroupControls() {
       // Create tooltip with request details
       const tooltip = document.createElement('span');
       tooltip.className = 'tooltip-text';
-      tooltip.textContent = `GET: https://api.vdo.ninja/${WID}/${actionObj.action}/null/${group}`;
+      tooltip.textContent = `GET: https://api.Sonny Video/${WID}/${actionObj.action}/null/${group}`;
       
       // Add tooltip to button
       button.classList.add('tooltip');
@@ -2977,7 +2977,7 @@ function createHTTPGroupControls() {
       
       // Set onclick handler
       button.onclick = function() {
-        const url = `https://api.vdo.ninja/${WID}/${actionObj.action}/null/${group}`;
+        const url = `https://api.Sonny Video/${WID}/${actionObj.action}/null/${group}`;
         
         addLogEntry('request', 'GET', url);
         
@@ -3016,7 +3016,7 @@ function createHTTPGroupControls() {
       // Create tooltip with request details
       const tooltip = document.createElement('span');
       tooltip.className = 'tooltip-text';
-      tooltip.textContent = `GET: https://api.vdo.ninja/${WID}/${actionObj.action}/null/${group}`;
+      tooltip.textContent = `GET: https://api.Sonny Video/${WID}/${actionObj.action}/null/${group}`;
       
       // Add tooltip to button
       button.classList.add('tooltip');
@@ -3024,7 +3024,7 @@ function createHTTPGroupControls() {
       
       // Set onclick handler
       button.onclick = function() {
-        const url = `https://api.vdo.ninja/${WID}/${actionObj.action}/null/${group}`;
+        const url = `https://api.Sonny Video/${WID}/${actionObj.action}/null/${group}`;
         
         addLogEntry('request', 'GET', url);
         
@@ -3061,7 +3061,7 @@ function createHTTPGroupControls() {
     // Create tooltip with request details
     const tooltip = document.createElement('span');
     tooltip.className = 'tooltip-text';
-    tooltip.textContent = `GET: https://api.vdo.ninja/${WID}/${control.action}/null/null`;
+    tooltip.textContent = `GET: https://api.Sonny Video/${WID}/${control.action}/null/null`;
     
     // Add tooltip to button
     button.classList.add('tooltip');
@@ -3069,7 +3069,7 @@ function createHTTPGroupControls() {
     
     // Set onclick handler
     button.onclick = function() {
-      const url = `https://api.vdo.ninja/${WID}/${control.action}/null/null`;
+      const url = `https://api.Sonny Video/${WID}/${control.action}/null/null`;
       
       addLogEntry('request', 'GET', url);
       
@@ -3142,7 +3142,7 @@ function createGuestControls() {
       if (method === 'websocket') {
         tooltipText = `WS: {"target":"${guestSlot}","action":"${control.action}"${control.value !== undefined ? `,"value":${typeof control.value === 'string' ? `"${control.value}"` : control.value}` : ''}}`;
       } else {
-        tooltipText = `GET: https://api.vdo.ninja/${WID}/${control.action}/${guestSlot}/${control.value !== undefined ? control.value : 'null'}`;
+        tooltipText = `GET: https://api.Sonny Video/${WID}/${control.action}/${guestSlot}/${control.value !== undefined ? control.value : 'null'}`;
       }
       tooltip.textContent = tooltipText;
       

@@ -3775,7 +3775,7 @@ function clearCountdown() {
 }
 
 function updateDocumentTitle() {
-  const appTitle = "VDO.Ninja Screen Recorder";
+  const appTitle = "Sonny Video Screen Recorder";
 
   if (state.countdownRemaining > 0) {
     document.title = "Starting in " + state.countdownRemaining + " | " + appTitle;
@@ -5325,7 +5325,7 @@ function buildTranscriptExportText(videoFilename) {
   }
 
   const lines = [];
-  lines.push("VDO.Ninja Screen Recorder Transcript");
+  lines.push("Sonny Video Screen Recorder Transcript");
   lines.push("Source: " + videoFilename);
   lines.push("Created: " + new Date().toISOString());
   lines.push("");
@@ -5362,7 +5362,7 @@ function buildMarkerExportText(videoFilename) {
   }
 
   const lines = [];
-  lines.push("VDO.Ninja Screen Recorder Markers");
+  lines.push("Sonny Video Screen Recorder Markers");
   lines.push("Source: " + videoFilename);
   lines.push("Created: " + new Date().toISOString());
   lines.push("Timeline: timestamps are relative to the exported recording.");

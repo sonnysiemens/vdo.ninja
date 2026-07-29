@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-VDO.Ninja is maintained as a live web application and open source project. Security fixes are handled on a best-effort basis for the current hosted service, the active development branch, and release branches when a fix is practical.
+Sonny Video is maintained as a live web application and open source project. Security fixes are handled on a best-effort basis for the current hosted service, the active development branch, and release branches when a fix is practical.
 
 Older branches, forks, self-hosted deployments, browser extensions, third-party integrations, and downstream packages may not receive the same updates. This policy does not create a support contract, service-level agreement, bounty program, or obligation to fix every report.
 
@@ -12,9 +12,9 @@ Please do not open a public issue for a suspected security vulnerability.
 
 Use GitHub private vulnerability reporting for this repository when available:
 
-https://github.com/steveseguin/vdo.ninja/security/advisories/new
+https://github.com/steveseguin/Sonny Video/security/advisories/new
 
-If that form is unavailable, use the contact options on https://vdo.ninja to ask for a private security contact without sharing exploit details publicly.
+If that form is unavailable, use the contact options on https://Sonny Video to ask for a private security contact without sharing exploit details publicly.
 
 Helpful reports usually include:
 

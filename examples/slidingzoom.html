@@ -1,17 +1,17 @@
 <html>
-<head><title>Sliding Zoom Controller - VDO.Ninja</title>
+<head><title>Sliding Zoom Controller - Sonny Video</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 <meta content="utf-8" http-equiv="encoding" />
 <meta name="copyright" content="&copy; 2025 Steve Seguin" />
-<meta name="license" content="https://github.com/steveseguin/vdo.ninja/LICENSE.md" />
-<meta name="sourcecode" content="https://github.com/steveseguin/vdo.ninja" />
+<meta name="license" content="https://github.com/steveseguin/Sonny Video/LICENSE.md" />
+<meta name="sourcecode" content="https://github.com/steveseguin/Sonny Video" />
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://vdo.ninja/">
+<link rel="canonical" href="https://Sonny Video/">
 <link rel="author" href="/about" />
-<link rel="me" href="https://vdo.ninja/about" />
+<link rel="me" href="https://Sonny Video/about" />
 
-<meta id="metaTitle" name="title" content="VDO.Ninja" />
+<meta id="metaTitle" name="title" content="Sonny Video" />
 <meta name="description" content="Bring live video from your smartphone, computer, or friends directly into your Studio. 100% free." />
 <meta name="author" content="Steve Seguin" />
 
@@ -102,9 +102,9 @@ div {
 </div>
 <div>
     <h2>Remote Zoom Control interface</h2>
-    <input placeholder="Enter a view link. ie) https://vdo.ninja/?view=abc123" id="viewlink" type="text" onchange="loadIframes()" /><br>
+    <input placeholder="Enter a view link. ie) https://Sonny Video/?view=abc123" id="viewlink" type="text" onchange="loadIframes()" /><br>
     <br>
-    This app is a custom remote client for VDO.Ninja's remote zoom control feature. It uses a slider for mobile friendly use.
+    This app is a custom remote client for Sonny Video's remote zoom control feature. It uses a slider for mobile friendly use.
     <br>
     <br>
     notes: Make sure the remote sender adds <b>&ptz</b> and <b>&remote</b> to their URL, otherwise PTZ remote control will not be allowed.
@@ -137,7 +137,7 @@ if (urlParams.has("view") || urlParams.has("v")) {
     if (window.location.host) {
         var path = window.location.host+window.location.pathname.replace("/examples/","/").split("/").slice(0,-1).join("/");
     } else {
-        var path = "vdo.ninja";
+        var path = "Sonny Video";
     }
     document.getElementById("viewlink").value = "https://"+path+"/";
     loadIframes();

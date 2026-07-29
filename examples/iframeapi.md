@@ -1,17 +1,17 @@
-# Understanding the VDO.Ninja IFRAME API: Detecting User Joins and Disconnects
+# Understanding the Sonny Video IFRAME API: Detecting User Joins and Disconnects
 
-The VDO.Ninja IFRAME API allows websites to embed and interact with VDO.Ninja streams. One of the most useful features is the ability to detect when users join or disconnect from your stream through event messaging. This guide will explain how to implement this functionality in your own projects.
+The Sonny Video IFRAME API allows websites to embed and interact with Sonny Video streams. One of the most useful features is the ability to detect when users join or disconnect from your stream through event messaging. This guide will explain how to implement this functionality in your own projects.
 
 ## How the IFRAME API Works
 
-VDO.Ninja's IFRAME API uses the browser's `postMessage` API to communicate between your parent website and the embedded VDO.Ninja iframe. This allows you to:
+Sonny Video's IFRAME API uses the browser's `postMessage` API to communicate between your parent website and the embedded Sonny Video iframe. This allows you to:
 
-1. Send commands to control the VDO.Ninja instance
-2. Receive events and data from the VDO.Ninja instance
+1. Send commands to control the Sonny Video instance
+2. Receive events and data from the Sonny Video instance
 
 ## Setting Up the Basic Structure
 
-First, you need to create an iframe that loads VDO.Ninja:
+First, you need to create an iframe that loads Sonny Video:
 
 ```javascript
 // Create the iframe element
@@ -20,8 +20,8 @@ var iframe = document.createElement("iframe");
 // Set necessary permissions
 iframe.allow = "camera;microphone;fullscreen;display-capture;autoplay;";
 
-// Set the source URL (your VDO.Ninja room)
-iframe.src = "https://vdo.ninja/?room=your-room-name&cleanoutput";
+// Set the source URL (your Sonny Video room)
+iframe.src = "https://Sonny Video/?room=your-room-name&cleanoutput";
 
 // Add the iframe to your page
 document.getElementById("container").appendChild(iframe);
@@ -39,7 +39,7 @@ var messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message";
 
 // Add the event listener
 eventer(messageEvent, function (e) {
-    // Make sure the message is from our VDO.Ninja iframe
+    // Make sure the message is from our Sonny Video iframe
     if (e.source != iframe.contentWindow) return;
     
     // Log the data for debugging
@@ -129,7 +129,7 @@ document.body.appendChild(container);
 // Create the iframe element
 var iframe = document.createElement("iframe");
 iframe.allow = "camera;microphone;fullscreen;display-capture;autoplay;";
-iframe.src = "https://vdo.ninja/?room=your-room-name&cleanoutput";
+iframe.src = "https://Sonny Video/?room=your-room-name&cleanoutput";
 iframe.style.width = "100%";
 iframe.style.height = "100%";
 container.appendChild(iframe);
@@ -149,7 +149,7 @@ var connectedUsers = {};
 
 // Add the event listener
 eventer(messageEvent, function (e) {
-    // Make sure the message is from our VDO.Ninja iframe
+    // Make sure the message is from our Sonny Video iframe
     if (e.source != iframe.contentWindow) return;
     
     // Log all messages for debugging
@@ -249,17 +249,17 @@ iframe.contentWindow.postMessage({ "getDetailedState": true }, "*");
 
 ## Best Practices
 
-1. **Always check the source**: Make sure messages are coming from your VDO.Ninja iframe.
+1. **Always check the source**: Make sure messages are coming from your Sonny Video iframe.
 2. **Handle disconnections gracefully**: Sometimes connections drop unexpectedly.
 3. **Consider implementing reconnection logic**: If important users disconnect, you might want to notify them or attempt to reconnect.
 4. **Debug with console.log**: Log all events during development to understand the full message flow.
 5. **Test with multiple users**: The behavior can be different depending on who connects first.
 
-By implementing these techniques, you can build sophisticated applications that respond to users joining and leaving your VDO.Ninja sessions, creating more interactive and responsive experiences.
+By implementing these techniques, you can build sophisticated applications that respond to users joining and leaving your Sonny Video sessions, creating more interactive and responsive experiences.
 
-# VDO.Ninja IFRAME API - Complete Inbound Control Reference
+# Sonny Video IFRAME API - Complete Inbound Control Reference
 
-This document provides a comprehensive list of all inbound remote control calls available through the VDO.Ninja IFRAME API. These commands allow you to control a VDO.Ninja instance embedded in an iframe from your parent webpage.
+This document provides a comprehensive list of all inbound remote control calls available through the Sonny Video IFRAME API. These commands allow you to control a Sonny Video instance embedded in an iframe from your parent webpage.
 
 ## Table of Contents
 - [Basic Usage](#basic-usage)
@@ -278,7 +278,7 @@ This document provides a comprehensive list of all inbound remote control calls 
 
 ## Basic Usage
 
-To send commands to the VDO.Ninja iframe:
+To send commands to the Sonny Video iframe:
 
 ```javascript
 iframe.contentWindow.postMessage({

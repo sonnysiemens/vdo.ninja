@@ -191,7 +191,7 @@ function normalizeTemplateScene(scene, index) {
 
 function exportTemplate() {
 	const payload = {
-		app: "vdo.ninja.studio",
+		app: "Sonny Video.studio",
 		version: TEMPLATE_VERSION,
 		exportedAt: new Date().toISOString(),
 		scenes: state.scenes,

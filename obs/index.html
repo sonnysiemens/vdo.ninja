@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <title data-i18n="pageTitle">VDO.Ninja OBS Control Dock</title>
+    <title data-i18n="pageTitle">Sonny Video OBS Control Dock</title>
     <style>
         body {
             font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -417,7 +417,7 @@
         .prefix-group {
             margin-bottom: 10px;
         }
-        a[href^="https://docs.vdo.ninja/advanced-settings/video-parameters/codec"] {
+        a[href^="https://docs.Sonny Video/advanced-settings/video-parameters/codec"] {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -435,7 +435,7 @@
             transition: background-color 0.2s ease, color 0.2s ease,
                 border-color 0.2s ease;
         }
-        a[href^="https://docs.vdo.ninja/advanced-settings/video-parameters/codec"]:hover {
+        a[href^="https://docs.Sonny Video/advanced-settings/video-parameters/codec"]:hover {
             background-color: #007aff;
             color: white;
             border-color: #007aff;
@@ -660,7 +660,7 @@
     <style id="customUserCss"></style>
   </head>
   <body>
-    <h1 data-i18n="mainHeading">VDO.Ninja OBS Control</h1>
+    <h1 data-i18n="mainHeading">Sonny Video OBS Control</h1>
     <div class="container">
       <div class="language-switcher">
         <label for="languageSelector" data-i18n="languageSwitcher.label">Language:</label>
@@ -725,15 +725,15 @@
       </div>
     </div>
     <div class="container">
-      <h2 class="collapsible" data-state="expand" data-i18n="vdoNinjaSettings.title">VDO.Ninja Settings</h2>
+      <h2 class="collapsible" data-state="expand" data-i18n="vdoNinjaSettings.title">Sonny Video Settings</h2>
       <div class="collapsible-content">
-        <label for="vdoNinjaBaseUrl" data-i18n="vdoNinjaSettings.baseUrlLabel">VDO.Ninja Base URL:</label>
+        <label for="vdoNinjaBaseUrl" data-i18n="vdoNinjaSettings.baseUrlLabel">Sonny Video Base URL:</label>
         <input
           type="text"
           id="vdoNinjaBaseUrl"
           data-i18n="[placeholder]vdoNinjaSettings.baseUrlPlaceholder"
-          placeholder="https://vdo.ninja"
-          value="https://vdo.ninja"
+          placeholder="https://Sonny Video"
+          value="https://Sonny Video"
         />
         <label for="vdoNinjaRoom" data-i18n="vdoNinjaSettings.roomNameLabel">Room Name:</label>
         <input
@@ -850,7 +850,7 @@
                   <option value="hardware">hardware</option>
                 </select>
                 <a
-                  href="https://docs.vdo.ninja/advanced-settings/video-parameters/codec"
+                  href="https://docs.Sonny Video/advanced-settings/video-parameters/codec"
                   target="_blank"
                   data-i18n="[title]obsTargetSettings.codec.learnMoreTitle"
                   title="Learn more about codec options"
@@ -1003,7 +1003,7 @@
         
         loadSettings();
         updateContent();
-        logMessage("VDO.Ninja OBS Control Dock Initialized. Welcome!", "logMessages.appInitialized");
+        logMessage("Sonny Video OBS Control Dock Initialized. Welcome!", "logMessages.appInitialized");
         updateVdoNinjaButtonState(false);
         toggleVdoNinjaInputs(false);
         setupSecureFieldsBlur();
@@ -1198,7 +1198,7 @@
       if (vdoNinjaSettingsContainer) {
         vdoNinjaSettingsContainer.appendChild(buttonsDiv);
       } else {
-        console.error("VDO.Ninja settings container not found for injecting connect button.");
+        console.error("Sonny Video settings container not found for injecting connect button.");
       }
       vdoNinjaConnectBtn.addEventListener("click", () => {
         if (vdoNinjaConnected) {
@@ -1273,7 +1273,7 @@
       
       function getVdoNinjaBaseUrl() {
         const customUrl = vdoNinjaBaseUrlInput.value.trim();
-        return customUrl || "https://vdo.ninja";
+        return customUrl || "https://Sonny Video";
       }
 
       
@@ -1452,20 +1452,20 @@
         activeStreams = {}; 
         updateStreamList();
         updateVdoNinjaButtonState(false); 
-        logMessage("Disconnected from VDO.Ninja.", "logMessages.vdoNinja.disconnected");
+        logMessage("Disconnected from Sonny Video.", "logMessages.vdoNinja.disconnected");
       }
 
       
       function connectToVdoNinja() {
         if (vdoNinjaConnected) {
-          logMessage("Already connected to VDO.Ninja.", "logMessages.vdoNinja.alreadyConnected");
+          logMessage("Already connected to Sonny Video.", "logMessages.vdoNinja.alreadyConnected");
           return;
         }
         const room = vdoNinjaRoomInput.value.trim();
         const streamIds = vdoNinjaStreamIdsInput.value.trim();
         if (!room && !streamIds) {
           logMessage(
-            "VDO.Ninja Error: Room Name or Stream ID(s) must be provided.",
+            "Sonny Video Error: Room Name or Stream ID(s) must be provided.",
             "logMessages.vdoNinja.errorRoomOrStreamIdNeeded"
           );
           return;
@@ -1484,7 +1484,7 @@
             Date.now() - vdoNinjaLastActivityTime > 10000 
           ) {
             logMessage(
-              "VDO.Ninja connection timed out. No activity received from iframe.",
+              "Sonny Video connection timed out. No activity received from iframe.",
               "logMessages.vdoNinja.connectionTimeout"
             );
             if (window.translation) {
@@ -1521,8 +1521,8 @@
               <div style="margin-bottom: 5px;">
                   <label style="font-size: 1em; margin-bottom: 6px; display: block; font-weight:500;" data-i18n="streamIdMappings.ruleTitle">Stream Mapping Rule</label>
                   <div class="flex-row" style="align-items: center; margin-bottom: 6px;">
-                      <input type="text" value="${initialStreamId}" class="mapping-stream-id" data-i18n="[placeholder]streamIdMappings.streamIdPlaceholder;[title]streamIdMappings.streamIdTooltip" placeholder="Stream ID" title="Enter the VDO.Ninja Stream ID to match.">
-                      <input type="text" value="${label}" class="mapping-label" data-i18n="[placeholder]streamIdMappings.labelPlaceholder;[title]streamIdMappings.labelTooltip" placeholder="Label (Optional)" title="Enter the VDO.Ninja Label to match (optional).">
+                      <input type="text" value="${initialStreamId}" class="mapping-stream-id" data-i18n="[placeholder]streamIdMappings.streamIdPlaceholder;[title]streamIdMappings.streamIdTooltip" placeholder="Stream ID" title="Enter the Sonny Video Stream ID to match.">
+                      <input type="text" value="${label}" class="mapping-label" data-i18n="[placeholder]streamIdMappings.labelPlaceholder;[title]streamIdMappings.labelTooltip" placeholder="Label (Optional)" title="Enter the Sonny Video Label to match (optional).">
                       <select class="mapping-match-type" data-i18n="[title]streamIdMappings.matchTypeTooltip" title="How to match stream">
                           <option value="streamId" ${matchType === "streamId" ? "selected" : ""} data-i18n="streamIdMappings.matchType.idOnly">ID Only</option>
                           <option value="label" ${matchType === "label" ? "selected" : ""} data-i18n="streamIdMappings.matchType.labelOnly">Label Only</option>
@@ -2109,7 +2109,7 @@
             highlightSubPrefixInput.value =
               settings.highlightSubPrefix || "Highlight";
             vdoNinjaBaseUrlInput.value =
-              settings.vdoNinjaBaseUrl || "https://vdo.ninja";
+              settings.vdoNinjaBaseUrl || "https://Sonny Video";
             vdoNinjaRoomInput.value = settings.vdoNinjaRoom || "";
             vdoNinjaPasswordInput.value = settings.vdoNinjaPassword || "";
             vdoNinjaStreamIdsInput.value = settings.vdoNinjaStreamIds || "";
@@ -2154,7 +2154,7 @@
             cameraPrefixInput.value = "VDO";
             reactionSubPrefixInput.value = "Screen";
             highlightSubPrefixInput.value = "Highlight";
-            vdoNinjaBaseUrlInput.value = "https://vdo.ninja";
+            vdoNinjaBaseUrlInput.value = "https://Sonny Video";
             sourceSizingSelect.value = "defaultSize";
             sourceCodecSelect.value = "";
             initialSelectedSourceCreationScenes = [];
@@ -2168,7 +2168,7 @@
           cameraPrefixInput.value = "VDO";
           reactionSubPrefixInput.value = "Screen";
           highlightSubPrefixInput.value = "Highlight";
-          vdoNinjaBaseUrlInput.value = "https://vdo.ninja";
+          vdoNinjaBaseUrlInput.value = "https://Sonny Video";
           sourceSizingSelect.value = "defaultSize";
           sourceCodecSelect.value = "";
           initialSelectedSourceCreationScenes = [];
@@ -2364,7 +2364,7 @@
         const room = vdoNinjaRoomInput.value.trim();
         if (!room) {
           logMessage(
-            "Cannot add screen share: VDO.Ninja Room name is required for screen sharing URLs.",
+            "Cannot add screen share: Sonny Video Room name is required for screen sharing URLs.",
             "logMessages.obs.cannotAddScreenShareNoRoom"
           );
           updateStreamList();
@@ -3276,7 +3276,7 @@
         const streamIdsInput = vdoNinjaStreamIdsInput.value.trim();
         if (!room && !streamIdsInput) {
           logMessage(
-            "VDO.Ninja: Room Name or specific Stream ID(s) must be provided to connect.",
+            "Sonny Video: Room Name or specific Stream ID(s) must be provided to connect.",
             "logMessages.vdoNinja.roomOrStreamIdNeededForConnect"
           );
           updateVdoNinjaButtonState(false); 
@@ -3306,7 +3306,7 @@
             if (viewStreamIds.includes(",")) vdoNinjaUrl += "&solo"; 
           } else {
             logMessage(
-              "VDO.Ninja: Stream IDs provided but were empty after trimming.",
+              "Sonny Video: Stream IDs provided but were empty after trimming.",
               "logMessages.vdoNinja.streamIdsEmptyAfterTrim"
             );
             updateVdoNinjaButtonState(false);
@@ -3321,7 +3321,7 @@
         vdoNinjaUrl +=
           "&cleanoutput&dataonly&nocursor&nopush&noaudio&novideo&cors=" +
           encodeURIComponent(window.location.origin); 
-        logMessage(`Initializing VDO.Ninja iframe with URL: ${vdoNinjaUrl}`, "logMessages.vdoNinja.initializingIframe", { url: vdoNinjaUrl });
+        logMessage(`Initializing Sonny Video iframe with URL: ${vdoNinjaUrl}`, "logMessages.vdoNinja.initializingIframe", { url: vdoNinjaUrl });
         vdoNinjaIframe.src = "about:blank"; 
         vdoNinjaIframe.setAttribute("crossorigin", "anonymous"); 
         setTimeout(() => {
@@ -3340,7 +3340,7 @@
             parsedExpectedOrigin = new URL(expectedOriginBase);
           } catch (e) {
             logMessage(
-              `Invalid VDO.Ninja base URL in settings: ${expectedOriginBase}`,
+              `Invalid Sonny Video base URL in settings: ${expectedOriginBase}`,
               "logMessages.vdoNinja.invalidBaseUrl", { url: expectedOriginBase }
             );
             return; 
@@ -3360,7 +3360,7 @@
               clearTimeout(vdoNinjaConnectionCheckTimer); 
               vdoNinjaConnectionCheckTimer = null;
             }
-            logMessage("VDO.Ninja iframe connection established and active.", "logMessages.vdoNinja.iframeConnectedActive");
+            logMessage("Sonny Video iframe connection established and active.", "logMessages.vdoNinja.iframeConnectedActive");
           }
           if (data && data.streamID) {
             const streamId = data.streamID;
@@ -3371,7 +3371,7 @@
               (data.action === "push-connection" && data.value === true) 
             ) {
               logMessage(
-                `VDO.Ninja stream connected/active: "${label}" (ID: ${streamId})`,
+                `Sonny Video stream connected/active: "${label}" (ID: ${streamId})`,
                 "logMessages.vdoNinja.streamConnectedActive", { label, id: streamId }
               );
               activeStreams[streamId] = {
@@ -3393,7 +3393,7 @@
             ) {
               if (activeStreams[streamId]) {
                 logMessage(
-                  `VDO.Ninja stream disconnected/inactive: "${label}" (ID: ${streamId})`,
+                  `Sonny Video stream disconnected/inactive: "${label}" (ID: ${streamId})`,
                   "logMessages.vdoNinja.streamDisconnectedInactive", { label, id: streamId }
                 );
                 if (
@@ -3414,7 +3414,7 @@
               if (activeStreams[streamId]) {
                 if (activeStreams[streamId].label !== data.value.label) {
                   logMessage(
-                    `VDO.Ninja stream label updated for ID ${streamId}: "${data.value.label}" (was "${activeStreams[streamId].label}")`,
+                    `Sonny Video stream label updated for ID ${streamId}: "${data.value.label}" (was "${activeStreams[streamId].label}")`,
                     "logMessages.vdoNinja.streamLabelUpdated", { id: streamId, newLabel: data.value.label, oldLabel: activeStreams[streamId].label }
                   );
                   activeStreams[streamId].label = data.value.label;
@@ -3435,7 +3435,7 @@
             Date.now() - vdoNinjaLastActivityTime > 45000 
           ) {
             logMessage(
-              "VDO.Ninja connection lost (no activity from iframe). Attempting to reset.",
+              "Sonny Video connection lost (no activity from iframe). Attempting to reset.",
               "logMessages.vdoNinja.connectionLostResetting"
             );
             if (window.translation) vdoNinjaConnectionStatus.textContent = getTranslation("vdoNinjaSettings.statusConnectionLost");
@@ -3800,7 +3800,7 @@
         const cameraItems = vdoNinjaSceneItems.filter(item => item.sourceName.startsWith(generalCamPrefix) && !item.sourceName.endsWith(':s')); 
 
         if (cameraItems.length === 0) {
-            logMessage(`No VDO.Ninja camera sources to apply Grid layout in scene '${sceneName}'.`, "logMessages.obs.noSourcesForGridLayout", {sceneName});
+            logMessage(`No Sonny Video camera sources to apply Grid layout in scene '${sceneName}'.`, "logMessages.obs.noSourcesForGridLayout", {sceneName});
             for (const item of vdoNinjaSceneItems) {
                 if (!cameraItems.find(ci => ci.sceneItemId === item.sceneItemId)) {
                     await hideSourceItem(sceneName, item.sceneItemId, item.sourceName);
@@ -3808,7 +3808,7 @@
             }
             return;
         }
-        logMessage(`Applying Grid Layout to ${cameraItems.length} VDO.Ninja camera sources in scene '${sceneName}'.`, "logMessages.obs.applyingGridLayoutScene", {count: cameraItems.length, sceneName});
+        logMessage(`Applying Grid Layout to ${cameraItems.length} Sonny Video camera sources in scene '${sceneName}'.`, "logMessages.obs.applyingGridLayoutScene", {count: cameraItems.length, sceneName});
         
         const margin = layoutConfig.margin ?? DEFAULT_GRID_MARGIN;
         const spacing = layoutConfig.spacing ?? DEFAULT_GRID_SPACING;

@@ -1,8 +1,8 @@
 <html>
 <head>
 	<meta name="description" content="Showcase multiple POV feeds with buttons to reveal each player or clear the scene." />
-	<link rel="canonical" href="https://vdo.ninja/examples/esports.html" />
-	<title>Esports POV Toggler - VDO.Ninja</title>
+	<link rel="canonical" href="https://Sonny Video/examples/esports.html" />
+	<title>Esports POV Toggler - Sonny Video</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
 	<style>
@@ -46,7 +46,7 @@
 		iframe.allow = "autoplay;camera;microphone;fullscreen;picture-in-picture;display-capture;";
 
 
-		var iframesrc = "https://vdo.ninja/?transparent&cleanoutput&bitrate=200&manual&noaudio&view=";
+		var iframesrc = "https://Sonny Video/?transparent&cleanoutput&bitrate=200&manual&noaudio&view=";
 
 		var listOfStreamIDs = [
 			"1234_pov",
@@ -76,7 +76,7 @@
 			var button = document.createElement("button");
 			button.innerHTML = "SHOW "+listOfStreamIDs[i];
 			button.dataset.sid = listOfStreamIDs[i];
-			button.title = "Publish using: https://vdo.ninja/?push="+listOfStreamIDs[i];
+			button.title = "Publish using: https://Sonny Video/?push="+listOfStreamIDs[i];
 			button.onclick = function(){
 				iframe.contentWindow.postMessage({"target":"*", "remove":true}, '*');
 				iframe.contentWindow.postMessage({"target":this.dataset.sid, "add":true, "settings":{"style":{"width":"100%", "height":"100%", "display":"block"}}}, '*');

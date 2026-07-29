@@ -163,7 +163,7 @@ function generateInvite(){
 	var href = window.location.href;
 	var dir = href.substring(0, href.lastIndexOf('/')) + "/";
 	
-	var salt = location.hostname; // "vdo.ninja" is the expected default. You will want to change this if hosting dock.html locally.
+	var salt = location.hostname; // "Sonny Video" is the expected default. You will want to change this if hosting dock.html locally.
 	
 	if (getById("invite_password").value.trim().length){
 		generateHash(getById("invite_password").value.trim().replace(/[\W]+/g,"_")+salt,4).then(function(hash){
@@ -204,7 +204,7 @@ document.addEventListener("dragstart", event => {
     var streamId = url.split('view=');
     var label = url.split('label=');
 
-    url += '&layer-name=VDO.Ninja';
+    url += '&layer-name=Sonny Video';
     if (streamId.length > 1) url += ': ' + streamId[1].split('&')[0];
     if (label.length > 1) url += ' - ' + decodeURI(label[1].split('&')[0]);
     

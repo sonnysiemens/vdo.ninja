@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VDO.Ninja OBS Control Dock</title>
+    <title>Sonny Video OBS Control Dock</title>
     <style>
 body { 
     font-family: sans-serif; 
@@ -236,7 +236,7 @@ input[type="checkbox"] {
     </style>
 </head>
 <body>
-    <h1>VDO.Ninja OBS Control</h1>
+    <h1>Sonny Video OBS Control</h1>
 
     <div class="container">
         <h2 class="collapsible" data-state="collapse">OBS WebSocket Connection</h2>
@@ -256,7 +256,7 @@ input[type="checkbox"] {
     </div>
 
     <div class="container">
-        <h2 class="collapsible" data-state="collapse">VDO.Ninja Settings</h2>
+        <h2 class="collapsible" data-state="collapse">Sonny Video Settings</h2>
         <div class="collapsible-content">
             <label for="vdoNinjaRoom">Room Name:</label>
             <input type="text" id="vdoNinjaRoom" placeholder="e.g., MyNinjaRoom" class="blur-field">
@@ -374,7 +374,7 @@ document.querySelectorAll('.collapsible').forEach(header => {
 
 const vdoNinjaConnectBtn = document.createElement('button');
 vdoNinjaConnectBtn.id = 'vdoNinjaConnectBtn';
-vdoNinjaConnectBtn.textContent = 'Connect to VDO.Ninja';
+vdoNinjaConnectBtn.textContent = 'Connect to Sonny Video';
 vdoNinjaConnectBtn.style.marginTop = '5px';
 
 const vdoNinjaStatusIndicator = document.createElement('span');
@@ -441,7 +441,7 @@ function updateVdoNinjaButtonState(connected) {
         vdoNinjaConnectionStatus.textContent = 'Status: Connected';
         vdoNinjaStatusIndicator.classList.add('connected');
     } else {
-        vdoNinjaConnectBtn.textContent = 'Connect to VDO.Ninja';
+        vdoNinjaConnectBtn.textContent = 'Connect to Sonny Video';
         vdoNinjaConnectBtn.classList.remove('connected');
         vdoNinjaConnectBtn.classList.add('disconnected');
         vdoNinjaConnectionStatus.textContent = 'Status: Disconnected';
@@ -522,7 +522,7 @@ function connectToVdoNinja() {
     const streamIds = vdoNinjaStreamIdsInput.value.trim();
 
     if (!room && !streamIds) {
-        logMessage("VDO.Ninja Error: Room Name or Stream ID(s) must be provided.");
+        logMessage("Sonny Video Error: Room Name or Stream ID(s) must be provided.");
         return;
     }
 
@@ -535,9 +535,9 @@ function connectToVdoNinja() {
     }
     vdoNinjaConnectionCheckTimer = setTimeout(() => {
         if (Date.now() - vdoNinjaLastActivityTime > 10000) {
-            logMessage("VDO.Ninja connection timed out. No activity received.");
+            logMessage("Sonny Video connection timed out. No activity received.");
             vdoNinjaConnectionStatus.textContent = 'Status: Connection Failed';
-            vdoNinjaConnectBtn.textContent = 'Connect to VDO.Ninja';
+            vdoNinjaConnectBtn.textContent = 'Connect to Sonny Video';
         }
     }, 10000);
     toggleVdoNinjaInputs(true);
@@ -967,9 +967,9 @@ function sendRequest(requestType, requestData = {}) {
 function onObsConnected() {
     logMessage("OBS Connected. Fetching scenes...");
     
-    // Fetch scenes first, then handle VDO.Ninja connection
+    // Fetch scenes first, then handle Sonny Video connection
     fetchObsScenes().then(() => {
-        // Now that scenes are loaded, check if VDO.Ninja should be reconnected
+        // Now that scenes are loaded, check if Sonny Video should be reconnected
         const settingsJson = localStorage.getItem('obsNinjaSettings');
         if (settingsJson) {
             try {
@@ -978,7 +978,7 @@ function onObsConnected() {
                     connectToVdoNinja();
                 }
             } catch (e) { 
-                logMessage(`Error re-connecting VDO.Ninja: ${e.message}`); 
+                logMessage(`Error re-connecting Sonny Video: ${e.message}`); 
             }
         }
         
@@ -1068,7 +1068,7 @@ function getTargetScene() { return obsSceneSelect.value || ''; }
 function getVdoNinjaViewUrl(streamId, includeCommonParams = true) {
     const room = vdoNinjaRoomInput.value.trim();
     const ninjaPassword = vdoNinjaPasswordInput.value;
-    let url = "https://vdo.ninja/?";
+    let url = "https://Sonny Video/?";
     if (room) url += `view=${encodeURIComponent(streamId)}&solo&room=${encodeURIComponent(room)}`;
     else url += `view=${encodeURIComponent(streamId)}`;
     if (ninjaPassword) url += `&password=${encodeURIComponent(ninjaPassword)}`;
@@ -1079,8 +1079,8 @@ function getVdoNinjaViewUrl(streamId, includeCommonParams = true) {
 function initializeVdoNinjaIframe() {
     const room = vdoNinjaRoomInput.value.trim();
     const streamIds = vdoNinjaStreamIdsInput.value.trim();
-    if (!room && !streamIds) { logMessage("VDO.Ninja: Room or Stream ID(s) needed."); return; }
-    let vdoNinjaUrl = "https://vdo.ninja/?";
+    if (!room && !streamIds) { logMessage("Sonny Video: Room or Stream ID(s) needed."); return; }
+    let vdoNinjaUrl = "https://Sonny Video/?";
     if (room) {
         vdoNinjaUrl += `room=${encodeURIComponent(room)}`;
         if (streamIds) vdoNinjaUrl += `&view=${encodeURIComponent(streamIds.split(',').map(s => s.trim()).join(','))}&solo`;
@@ -1089,26 +1089,26 @@ function initializeVdoNinjaIframe() {
     }
     if (vdoNinjaPasswordInput.value) vdoNinjaUrl += `&password=${encodeURIComponent(vdoNinjaPasswordInput.value)}`;
     vdoNinjaUrl += "&cleanoutput&dataonly&nocursor&nopush&noaudio&novideo&cors="+encodeURIComponent(window.location.origin);
-    logMessage(`Loading VDO.Ninja iframe: ${vdoNinjaUrl}`);
+    logMessage(`Loading Sonny Video iframe: ${vdoNinjaUrl}`);
     vdoNinjaIframe.src = 'about:blank'; 
     vdoNinjaIframe.setAttribute('crossorigin', 'anonymous');
     vdoNinjaIframe.setAttribute('allow', 'autoplay; camera; microphone; fullscreen; display-capture; clipboard-write');
-    // Sandbox might be too restrictive for some VDO.Ninja features, but good for security
+    // Sandbox might be too restrictive for some Sonny Video features, but good for security
     // vdoNinjaIframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-popups'); 
     setTimeout(() => { vdoNinjaIframe.src = vdoNinjaUrl; }, 10);
     saveSettings();
 }
 
 window.addEventListener("message", (event) => {
-    if (!event.origin.startsWith("https://vdo.ninja") || event.source !== vdoNinjaIframe.contentWindow) return;
+    if (!event.origin.startsWith("https://Sonny Video") || event.source !== vdoNinjaIframe.contentWindow) return;
     const data = event.data;
     vdoNinjaLastActivityTime = Date.now();
     if (!vdoNinjaConnected) {
         updateVdoNinjaButtonState(true);
         if (vdoNinjaConnectionCheckTimer) { clearTimeout(vdoNinjaConnectionCheckTimer); vdoNinjaConnectionCheckTimer = null; }
-        logMessage("VDO.Ninja connection established.");
+        logMessage("Sonny Video connection established.");
     }
-    // if (data.action !== 'view-stats-updated') console.log("VDO.Ninja message:", data);
+    // if (data.action !== 'view-stats-updated') console.log("Sonny Video message:", data);
 
     if (data && data.streamID) {
         const streamId = data.streamID;
@@ -1117,7 +1117,7 @@ window.addEventListener("message", (event) => {
         if ((data.action === "view-connection" && data.value === true) || 
             (data.action === "guest-connected") || 
             (data.action === "push-connection" && data.value === true)) {
-            logMessage(`VDO.Ninja stream connected: ${label} (ID: ${streamId})`);
+            logMessage(`Sonny Video stream connected: ${label} (ID: ${streamId})`);
             activeStreams[streamId] = { label, sourceCreated: false, streamId, uuid: data.UUID || null, connected: true };
             updateStreamList();
             if (autoAddSourcesCheckbox.checked) {
@@ -1127,7 +1127,7 @@ window.addEventListener("message", (event) => {
         } else if ((data.action === "view-connection" && data.value === false) || 
                    (data.action === "push-connection" && data.value === false)) {
             if (activeStreams[streamId]) {
-                logMessage(`VDO.Ninja stream disconnected: ${label} (ID: ${streamId})`);
+                logMessage(`Sonny Video stream disconnected: ${label} (ID: ${streamId})`);
                 if (autoRemoveSourcesCheckbox && autoRemoveSourcesCheckbox.checked) {
                     removeStreamFromObs(streamId); // Pass targetInfo if available or let removeStreamFromObs determine it
                 }
@@ -1146,7 +1146,7 @@ window.addEventListener("message", (event) => {
 function startVdoNinjaConnectionMonitor() {
     setInterval(() => {
         if (vdoNinjaConnected && Date.now() - vdoNinjaLastActivityTime > 45000) {
-            logMessage("VDO.Ninja connection lost (no activity).");
+            logMessage("Sonny Video connection lost (no activity).");
             vdoNinjaConnectionStatus.textContent = 'Status: Connection Lost';
             vdoNinjaStatusIndicator.classList.remove('connected');
             vdoNinjaConnectBtn.textContent = 'Reconnect';
@@ -1164,7 +1164,7 @@ async function addStreamToObs(streamId, streamLabel, targetInfo = null) {
 
     if (!targetSceneName) { logMessage("Cannot add stream: Target OBS scene name is required."); return; }
 
-    const sourceName = `VDO.Ninja_${streamId}`;
+    const sourceName = `Sonny Video_${streamId}`;
     const mainDefaultScene = getTargetScene();
     
     let shouldCloneThisStreamToMain = false;
@@ -1361,12 +1361,12 @@ async function rearrangeAllStreamsInScene(sceneName) {
 
         const sceneItemsResponse = await sendRequest('GetSceneItemList', { sceneName });
         const vdoNinjaSourcesInScene = sceneItemsResponse.sceneItems.filter(item => 
-            item.sourceName.startsWith('VDO.Ninja_') && 
-            Object.values(activeStreams).some(as => `VDO.Ninja_${as.streamId}` === item.sourceName && as.connected) // Only active, connected VDO.Ninja streams
+            item.sourceName.startsWith('Sonny Video_') && 
+            Object.values(activeStreams).some(as => `Sonny Video_${as.streamId}` === item.sourceName && as.connected) // Only active, connected Sonny Video streams
         );
 
         if (vdoNinjaSourcesInScene.length === 0) { 
-            logMessage(`No active VDO.Ninja sources found in scene '${sceneName}' to rearrange.`);
+            logMessage(`No active Sonny Video sources found in scene '${sceneName}' to rearrange.`);
             return;
         }
         
@@ -1404,7 +1404,7 @@ function calculateTransform(sizingMode, sourceWidth, sourceHeight, canvasWidth, 
 
 async function removeStreamFromObs(streamId) {
     if (!obsConnected || !obs) return;
-    const sourceName = `VDO.Ninja_${streamId}`;
+    const sourceName = `Sonny Video_${streamId}`;
     logMessage(`Attempting to remove source '${sourceName}' from OBS.`);
 
     const streamInfo = activeStreams[streamId];
@@ -1485,7 +1485,7 @@ loadScenesBtn.addEventListener('click', fetchObsScenes);
 
 document.addEventListener('DOMContentLoaded', () => {
     loadSettings(); 
-    logMessage("VDO.Ninja OBS Control Dock Initialized.");
+    logMessage("Sonny Video OBS Control Dock Initialized.");
     const secureFields = document.querySelectorAll('#vdoNinjaRoom, #vdoNinjaStreamIds');
     secureFields.forEach(field => {
         field.classList.add('blur-field');

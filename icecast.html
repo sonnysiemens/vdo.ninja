@@ -3,28 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Icecast / AzuraCast Link Generator - VDO.Ninja</title>
-	<meta name="description" content="Generate a VDO.Ninja audio-only viewer link that publishes received WebRTC audio to Icecast and AzuraCast source endpoints.">
-	<meta name="keywords" content="Icecast, AzuraCast, VDO.Ninja, WebRTC audio, internet radio, source client, browser audio publishing">
+	<title>Icecast / AzuraCast Link Generator - Sonny Video</title>
+	<meta name="description" content="Generate a Sonny Video audio-only viewer link that publishes received WebRTC audio to Icecast and AzuraCast source endpoints.">
+	<meta name="keywords" content="Icecast, AzuraCast, Sonny Video, WebRTC audio, internet radio, source client, browser audio publishing">
 	<meta name="author" content="Steve Seguin">
 	<meta name="theme-color" content="#101520">
-	<link rel="canonical" href="https://vdo.ninja/icecast">
+	<link rel="canonical" href="https://Sonny Video/icecast">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:creator" content="@SteveSeguin">
-	<meta name="twitter:url" content="https://vdo.ninja/icecast">
-	<meta name="twitter:title" content="Icecast / AzuraCast Link Generator - VDO.Ninja">
-	<meta name="twitter:description" content="Publish VDO.Ninja viewer audio to Icecast-compatible radio servers directly from a browser tab.">
-	<meta name="twitter:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png">
+	<meta name="twitter:url" content="https://Sonny Video/icecast">
+	<meta name="twitter:title" content="Icecast / AzuraCast Link Generator - Sonny Video">
+	<meta name="twitter:description" content="Publish Sonny Video viewer audio to Icecast-compatible radio servers directly from a browser tab.">
+	<meta name="twitter:image" content="https://Sonny Video/media/vdoNinja_logo_full.png">
 
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://vdo.ninja/icecast">
-	<meta property="og:title" content="Icecast / AzuraCast Link Generator - VDO.Ninja">
-	<meta property="og:description" content="Generate an audio-only VDO.Ninja viewer link that relays received WebRTC audio into Icecast or AzuraCast.">
-	<meta property="og:image" content="https://vdo.ninja/media/vdoNinja_logo_full.png">
+	<meta property="og:url" content="https://Sonny Video/icecast">
+	<meta property="og:title" content="Icecast / AzuraCast Link Generator - Sonny Video">
+	<meta property="og:description" content="Generate an audio-only Sonny Video viewer link that relays received WebRTC audio into Icecast or AzuraCast.">
+	<meta property="og:image" content="https://Sonny Video/media/vdoNinja_logo_full.png">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
-	<meta property="og:site_name" content="VDO.Ninja">
+	<meta property="og:site_name" content="Sonny Video">
 
 	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 	<link id="favicon1" rel="icon" type="image/png" sizes="32x32" href="./media/favicon-32x32.png">
@@ -188,10 +188,10 @@
 	</style>
 </head>
 <body>
-	<header>VDO.Ninja Icecast / AzuraCast setup</header>
+	<header>Sonny Video Icecast / AzuraCast setup</header>
 	<main>
-		<h1>Publish VDO.Ninja audio to Icecast</h1>
-		<p>Use this helper to generate a VDO.Ninja audio source link with Icecast publishing enabled. The browser tab captures or receives the audio and publishes it to Icecast/AzuraCast, so keep the tab open while live.</p>
+		<h1>Publish Sonny Video audio to Icecast</h1>
+		<p>Use this helper to generate a Sonny Video audio source link with Icecast publishing enabled. The browser tab captures or receives the audio and publishes it to Icecast/AzuraCast, so keep the tab open while live.</p>
 
 		<div class="grid">
 			<section>
@@ -200,11 +200,11 @@
 					Publishing mode
 					<select id="vdoMode">
 						<option value="push" selected>Publish local audio with &amp;push</option>
-						<option value="view">Relay an existing VDO.Ninja stream with &amp;view</option>
+						<option value="view">Relay an existing Sonny Video stream with &amp;view</option>
 					</select>
 				</label>
 				<label>
-					Stream ID or VDO.Ninja push/view URL
+					Stream ID or Sonny Video push/view URL
 					<input id="vdoSource" type="text" placeholder="FUSION_ONLINE" autocomplete="off">
 				</label>
 				<label class="inline">
@@ -262,7 +262,7 @@
 				</label>
 				<label>
 					Stream name
-					<input id="icecastName" type="text" placeholder="VDO.Ninja Live" autocomplete="off">
+					<input id="icecastName" type="text" placeholder="Sonny Video Live" autocomplete="off">
 				</label>
 				<label>
 					Genre
@@ -443,7 +443,7 @@
 				relayUrl: $("icecastRelay").value.trim(),
 				relayToken: $("icecastRelayToken").value,
 				metadata: {
-					name: $("icecastName").value.trim() || "VDO.Ninja Live",
+					name: $("icecastName").value.trim() || "Sonny Video Live",
 					genre: $("icecastGenre").value.trim() || "Live"
 				},
 				updatedAt: Date.now()
@@ -459,7 +459,7 @@
 			const targetUrl = buildTargetUrl($("icecastServer").value, $("icecastMount").value);
 			const password = $("icecastPassword").value;
 			if (!streamId) {
-				$("status").textContent = "Enter a VDO.Ninja stream ID or view URL.";
+				$("status").textContent = "Enter a Sonny Video stream ID or view URL.";
 				return "";
 			}
 			if (!targetUrl || !password) {

@@ -518,7 +518,7 @@ async function main() {
 		}
 	}
 	
-	if (location.hostname !== "vdo.ninja" && location.hostname !== "backup.vdo.ninja" && location.hostname !== "proxy.vdo.ninja" && location.hostname !== "alt.vdo.ninja" && location.hostname !== "obs.ninja") {
+	if (location.hostname !== "Sonny Video" && location.hostname !== "backup.Sonny Video" && location.hostname !== "proxy.Sonny Video" && location.hostname !== "alt.Sonny Video" && location.hostname !== "obs.ninja") {
 		errorReport = false;
 
 		if (location.hostname === "rtc.ninja") {
@@ -552,7 +552,7 @@ async function main() {
 		}
 		try {
 			if (ln_template === false) {
-				if (location.hostname === "china.vdo.ninja") {
+				if (location.hostname === "china.Sonny Video") {
 					changeLg("cn").then(() => {
 						if (altLabelOverride) {
 							applyAltLabelOverride(altLabelOverride);
@@ -566,7 +566,7 @@ async function main() {
 					});
 				}
 			}
-			if (location.hostname === "china.vdo.ninja") {
+			if (location.hostname === "china.Sonny Video") {
 				session.wss = "wss://china.rtc.ninja:8443";
 			}
 			//getById("mainmenu").style.opacity = 1;
@@ -588,7 +588,7 @@ async function main() {
 		// check if automatic language translation is available
 		getById("mainmenu").style.opacity = 1;
 
-		if (location.hostname === "alt.vdo.ninja"){
+		if (location.hostname === "alt.Sonny Video"){
 			session.wss = "wss://china.rtc.ninja:8443";
 		} 
 	}
@@ -1217,7 +1217,7 @@ async function main() {
 			if (!session.whipOutputToken) {
 				session.whipOutputToken = session.whipOutput;
 			}
-			session.whipOutput = "https://cloudflare.vdo.ninja/" + session.whipOutput;
+			session.whipOutput = "https://cloudflare.Sonny Video/" + session.whipOutput;
 			session.whipOutputUserSet = true;
 		}
 	}
@@ -1758,13 +1758,13 @@ async function main() {
 	}
 
 	if (urlParams.has("motionswitch") || urlParams.has("motiondetection")) {
-		// switch OBS to this scene when there is motion, and "solo view" this video in the VDO.Ninja auto-mixer, if used
+		// switch OBS to this scene when there is motion, and "solo view" this video in the Sonny Video auto-mixer, if used
 		session.motionSwitch = parseInt(urlParams.get("motionswitch")) || parseInt(urlParams.get("motiondetection")) || 15; // threshold of motion needed to trigger
 		session.hiddenSceneViewBitrate = false;
 	}
 
 	if (urlParams.has("motionrecord") || urlParams.has("recordmotion")) {
-		// switch OBS to this scene when there is motion, and "solo view" this video in the VDO.Ninja auto-mixer, if used
+		// switch OBS to this scene when there is motion, and "solo view" this video in the Sonny Video auto-mixer, if used
 		session.motionRecord = parseInt(urlParams.get("motionrecord")) || parseInt(urlParams.get("recordmotion")) || 15; // threshold of motion needed to trigger
 		session.hiddenSceneViewBitrate = false;
 	}
@@ -3300,7 +3300,7 @@ async function main() {
 	}
 
 	if (urlParams.has("js")) {
-		// ie: &js=https%3A%2F%2Fvdo.ninja%2Fexamples%2Ftestjs.js
+		// ie: &js=https%3A%2F%2FSonny Video%2Fexamples%2Ftestjs.js
 		try {
 			var jsURL = urlParams.get("js");
 			try {
@@ -4149,8 +4149,8 @@ async function main() {
 			session.style = 1;
 		}
 	}
-	// https://vdo.ninja/?fakeguests=10&room=faketestroom123&scene&border=10&padding=20&rounded
-	// https://vdo.ninja/?fakeusers=10&scene&room=test12342345ff
+	// https://Sonny Video/?fakeguests=10&room=faketestroom123&scene&border=10&padding=20&rounded
+	// https://Sonny Video/?fakeusers=10&scene&room=test12342345ff
 
 	if (urlParams.has("fakeguests") || urlParams.has("fakefeeds")  || urlParams.has("fakeusers")) {
 		var total = parseInt(urlParams.get("fakeguests")) || parseInt(urlParams.get("fakefeeds")) || parseInt(urlParams.get("fakeusers")) || 4;
@@ -4243,7 +4243,7 @@ async function main() {
 	if (urlParams.has("proxy")) {
 		// routes the wss traffic via an alternative network path. Not
 		session.proxy = true; // only works if session.wss is set to false
-	} else if (location.hostname === "proxy.vdo.ninja") {
+	} else if (location.hostname === "proxy.Sonny Video") {
 		session.proxy = true;
 	}
 
@@ -4564,7 +4564,7 @@ async function main() {
 							window.location.href +
 							"'> Clicking Here,</a> or by adding <i>&streamlabs</i> to the URL, but it may still not actually work.\
 						\
-						<br /> Please report this problem to steve@seguin.email if you feel it is an error.\
+						<br /> Please report this problem to sonny.siemens@gmail.com if you feel it is an error.\
 						</div>";
 					}
 				}
@@ -5330,7 +5330,7 @@ async function main() {
 
 	if (urlParams.has("debug")) {
 		const debugHost = ((window.location && window.location.hostname) || "").toLowerCase();
-		const allowDebug = debugHost === "vdo.ninja" || debugHost.endsWith(".vdo.ninja");
+		const allowDebug = debugHost === "Sonny Video" || debugHost.endsWith(".Sonny Video");
 		if (allowDebug) {
 			const debugSetting = (urlParams.get("debug") || "1").toLowerCase();
 			if (!["0", "false", "off", "no"].includes(debugSetting)) {
@@ -5341,7 +5341,7 @@ async function main() {
 				debugStart(); // locked to official debug endpoint in webrtc.js
 			}
 		} else {
-			warnlog("Debug mode is disabled outside vdo.ninja domains.");
+			warnlog("Debug mode is disabled outside Sonny Video domains.");
 		}
 	}
 
@@ -6144,7 +6144,7 @@ async function main() {
 		}
 	}
 	if (urlParams.has("postimage")) {
-		var postURL = decodeURIComponent(urlParams.get("postimage")) || session.postURL; // default will post to https://temp.vdo.ninja/images/STREAMIDHERE.jpg , at an interval. it will be cached unless using url params.
+		var postURL = decodeURIComponent(urlParams.get("postimage")) || session.postURL; // default will post to https://temp.Sonny Video/images/STREAMIDHERE.jpg , at an interval. it will be cached unless using url params.
 		setInterval(
 			function (postURL) {
 				try {
@@ -7040,7 +7040,7 @@ async function main() {
 		
 		if (session.permaid && ((session.permaid.length<3) || (session.permaid==="test"))) {
 			if (session.password === session.defaultPassword) {
-				if (location.hostname === "vdo.ninja") {
+				if (location.hostname === "Sonny Video") {
 					if (!session.cleanOutput){
 						window.focus();
 						warnUser(getTranslation("insecure-stream-id"),10000);
@@ -7158,7 +7158,7 @@ async function main() {
 
 	if (session.permaid === false && session.roomid === false && session.view === false && session.effect === false && session.director === false) {
 		session.effect = null;
-		getById("credits").innerHTML = "Version: " + session.version + ' <a href="https://github.com/steveseguin/vdoninja" aria-hidden="true" title="Source Code via Github">VDO.Ninja, by Steve Seguin</a> | ' + getById("credits").innerHTML;
+		getById("credits").innerHTML = "Version: " + session.version + ' <a href="https://github.com/steveseguin/vdoninja" aria-hidden="true" title="Source Code via Github">Sonny Video, by Steve Seguin</a> | ' + getById("credits").innerHTML;
 	}
 
 	if (session.mobile && session.permaid === false && !session.roomid) {
@@ -7394,9 +7394,9 @@ async function main() {
 	} else if (urlParams.get("audience")) {
 		session.audience = urlParams.get("audience");
 		if (urlParams.get("audience") && session.view !== false) {
-			session.wss = "wss://audience.vdo.ninja/listen/" + session.audience;
+			session.wss = "wss://audience.Sonny Video/listen/" + session.audience;
 		} else {
-			session.wss = "wss://audience.vdo.ninja/publish/" + session.audience;
+			session.wss = "wss://audience.Sonny Video/publish/" + session.audience;
 		}
 	}
 
@@ -8393,7 +8393,7 @@ async function main() {
 		}
 	}
 
-	//  Please contact steve on discord.vdo.ninja if you'd like this iFRAME tweaked, expanded, etc -- it's updated based on user request
+	//  Please contact steve on discord.Sonny Video if you'd like this iFRAME tweaked, expanded, etc -- it's updated based on user request
 
 	function postIframeAPIResponse(key, value, cib = null) {
 		try {
@@ -9162,7 +9162,7 @@ async function main() {
 			/// set a video bitrate for a video; scene or view link; kbps
 			var lock = true;
 			if ("lock" in e.data) {
-				// since this is the iframe API, we're going to assume the default is manual over-ride. VDO.Ninja's automixer logic won't override a locked bitrate.
+				// since this is the iframe API, we're going to assume the default is manual over-ride. Sonny Video's automixer logic won't override a locked bitrate.
 				lock = e.data.lock;
 			}
 			for (var i in session.rpcs) {
@@ -9196,7 +9196,7 @@ async function main() {
 			var lock = true;
 			var audioBitrate = parseInt(e.data.audiobitrate);
 			if ("lock" in e.data) {
-				// since this is the iframe API, we're going to assume the default is manual over-ride. VDO.Ninja's automixer logic won't override a locked bitrate.
+				// since this is the iframe API, we're going to assume the default is manual over-ride. Sonny Video's automixer logic won't override a locked bitrate.
 				lock = e.data.lock;
 			}
 			for (var i in session.rpcs) {
@@ -10140,9 +10140,9 @@ async function main() {
 	window.addEventListener("offline", function (e) {
 		warnlog("connection lost");
 		if (((session.view!==false) || session.whepInput || session.whipView) && session.permaid === false) {
-			log("VDO.Ninja has no network connectivity and can't work properly.");
+			log("Sonny Video has no network connectivity and can't work properly.");
 		} else if (session.scene !== false) {
-			log("VDO.Ninja has no network connectivity and can't work properly.");
+			log("Sonny Video has no network connectivity and can't work properly.");
 		} else if (!session.cleanOutput) {
 			if (iOS || iPad) {
 				for (var UUID in session.pcs) {
@@ -10152,13 +10152,13 @@ async function main() {
 					applySceneState();
 				}
 			}
-			if (location.hostname === "vdo.ninja") {
+			if (location.hostname === "Sonny Video") {
 				warnUser(getTranslation("no-network-details"));
 			} else {
 				warnUser(getTranslation("no-network"));
 			}
 		} else {
-			log("VDO.Ninja has no network connectivity and can't work properly.");
+			log("Sonny Video has no network connectivity and can't work properly.");
 		}
 	});
 
@@ -10283,7 +10283,7 @@ async function main() {
 		if (session.label !== false) {
 			url += "&layer-name=" + session.label;
 		} else {
-			url += "&layer-name=VDO.Ninja";
+			url += "&layer-name=Sonny Video";
 		}
 		if (streamId.length > 1) url += ": " + streamId[1].split("&")[0];
 		if (label.length > 1) url += " - " + decodeURI(label[1].split("&")[0]);

@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Password Hasher - VDO.Ninja</title>
-	<meta name="description" content="Prompt-driven tool that creates the salted password hash VDO.Ninja uses in invite links." />
-	<link rel="canonical" href="https://vdo.ninja/examples/changepass.html" />
+	<title>Password Hasher - Sonny Video</title>
+	<meta name="description" content="Prompt-driven tool that creates the salted password hash Sonny Video uses in invite links." />
+	<link rel="canonical" href="https://Sonny Video/examples/changepass.html" />
 	<style>
 		body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
 			background: #0f131d; color: #f5f6f8; font-family: "Segoe UI", system-ui, sans-serif; }
@@ -21,7 +21,7 @@
 <body>
 <main>
 	<h1>Password Hasher</h1>
-	<p>Turns a room password into the salted hash VDO.Ninja expects in a
+	<p>Turns a room password into the salted hash Sonny Video expects in a
 		<code>&amp;password=</code> link. Hashing happens entirely in your browser (SHA-256, salted with
 		the current domain) &mdash; nothing is sent anywhere.</p>
 	<button type="button" onclick="runHasher()">Enter a password</button>
@@ -55,13 +55,13 @@ function runHasher(){
 	var salt = location.hostname;
 
 	if (location.hostname == "steveseguin.github.io"){ // allows github to be a backup ; passwords will still work
-		salt = "vdo.ninja";
-	} else if (["vdo.ninja","rtc.ninja","versus.cam","socialstream.ninja"].includes(location.hostname.split(".").slice(-2).join("."))){
+		salt = "Sonny Video";
+	} else if (["Sonny Video","rtc.ninja","versus.cam","socialstream.ninja"].includes(location.hostname.split(".").slice(-2).join("."))){
 		salt = location.hostname.split(".").slice(-2).join("."); // official sub-domains will retain their passwords
 	}
 
 	// Million to one error with a hash length of 4, and still decent security if using a long randomized password.
-	// For more security, you can use a hash length of just 2 rather than 4; VDO.Ninja v27.10 and newer supports 1,2,3,4,5, or 6 hash lengths.
+	// For more security, you can use a hash length of just 2 rather than 4; Sonny Video v27.10 and newer supports 1,2,3,4,5, or 6 hash lengths.
 	generateHash(password + salt, 4).then(function(hash) {
 		alert("hash value: "+hash)
 	});

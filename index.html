@@ -79,30 +79,58 @@
 		
 		<!-- Authentication styles -->
 		<link rel="stylesheet" href="auth-styles.css">
+
 <style>
-  /* 1. Sembunyikan 3 kotak selain 'Create a Room' */
-  .option-box:nth-child(2),
-  .option-box:nth-child(3),
-  .option-box:nth-child(4) {
+  /* 1. Sembunyiin semua kotak opsi lain SELAIN Create a Room */
+  #container-2,
+  #container-3,
+  #container-3a,
+  #container-4,
+  #container-5,
+  #container-6,
+  #container-7,
+  #container-8,
+  #container-9,
+  #container-10,
+  #container-11,
+  #container-12,
+  #container-13,
+  #container-14,
+  #container-15,
+  #container-16,
+  #container-17,
+  #container-18,
+  #container-19,
+  #container-20,
+  #container-21 {
     display: none !important;
   }
 
-  /* 2. Sembunyikan teks deskripsi bawah & footer */
-  #info-section,
-  .chevron,
-  #footer,
-  footer,
-  a[href*="terms-of-service"],
-  a[href*="privacy-policy"] {
+  /* 2. Sembunyiin teks "What is Sonny Video" & seluruh footer bawah */
+  #info,
+  #credits,
+  #legal,
+  .footer,
+  #miniTaskBar {
     display: none !important;
   }
 
-  /* 3. Bikin kotak 'Create a Room' rapi di tengah */
-  .option-box:first-child {
-    margin: 40px auto !important;
+  /* 3. Bikin kotak 'Create a Room' rapi & pas di tengah layar */
+  #mainmenu {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding-top: 60px !important;
+  }
+
+  #container-1 {
+    width: 100% !important;
+    max-width: 550px !important;
+    margin: 0 auto !important;
     float: none !important;
   }
 </style>
+
 
 	</head>
 	<body id="main" class="main hidden" onload="main()">

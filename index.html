@@ -79,6 +79,38 @@
 		
 		<!-- Authentication styles -->
 		<link rel="stylesheet" href="auth-styles.css">
+<style>
+  /* 1. Sembunyikan kotak Add Camera, Screenshare, & Reusable Invite */
+  .option-box:nth-child(n+2),
+  div[onclick*="camera"],
+  div[onclick*="screenshare"],
+  div[onclick*="invite"] {
+    display: none !important;
+  }
+
+  /* 2. Sembunyikan seluruh teks deskripsi & footer di bawah */
+  #info, 
+  #info-section, 
+  .info-section,
+  footer, 
+  #footer, 
+  .chevron,
+  div:has(> h2),
+  a[href*="terms-of-service"], 
+  a[href*="privacy-policy"] {
+    display: none !important;
+  }
+
+  /* 3. Bikin posisi 'Create a Room' persis rapi di tengah layar */
+  body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+  }
+</style>
 
 	</head>
 	<body id="main" class="main hidden" onload="main()">

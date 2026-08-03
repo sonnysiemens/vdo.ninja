@@ -81,7 +81,7 @@
 		<link rel="stylesheet" href="auth-styles.css">
 
 <style>
-  /* 1. Sembunyiin semua kotak opsi lain SELAIN Create a Room */
+  /* 1. Sembunyiin container lain di landing page (tanpa !important biar JS room tetep jalan) */
   #container-2,
   #container-3,
   #container-3a,
@@ -103,7 +103,7 @@
   #container-19,
   #container-20,
   #container-21 {
-    display: none !important;
+    display: none;
   }
 
   /* 2. Sembunyiin tombol panah dropdown, info bawah, & footer */
@@ -116,18 +116,11 @@
     display: none !important;
   }
 
-  /* 3. Bikin kotak 'Create a Room' persis di tengah layar */
-  #mainmenu {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding-top: 60px !important;
-  }
-
+  /* 3. Posisi Create a Room rapi di tengah landing page */
   #container-1 {
     width: 100% !important;
     max-width: 550px !important;
-    margin: 0 auto !important;
+    margin: 60px auto !important;
     float: none !important;
   }
 </style>

@@ -8,7 +8,7 @@
 				document.documentElement.classList.add('is-landing');
 			}
 
-			//  MS Internet Explorer check
+			// MS Internet Explorer check
 			try {
 				var msie = window.navigator.userAgent.indexOf("MSIE ");
 				if (msie>0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
@@ -229,17 +229,39 @@
 				</div>
 			</div>
 
-			<!-- Container Camera/Guest Setup -->
-			<div id="container-3" title="Add your Camera" tabindex="1" role="button" class="column columnfade pointer card" onclick="previewWebcam()" style="overflow-y: auto;">
-				<h2 id="add_camera"><span data-translate="add-your-camera">Add your Camera</span></h2>
+			<!-- Container Camera/Guest Setup FULL RESTORED -->
+			<div id="container-3" title="Add your Camera to OBS" onkeyup="enterPressedClick(event,this);" alt="Add your Camera to OBS" tabindex="1" role="button" aria-pressed="false" class="column columnfade pointer card" onclick="previewWebcam()" style="overflow-y: auto;">
+				<h2 id="add_camera"><span data-translate="add-your-camera">Add your Camera to OBS</span></h2>
 				<div class="container-inner" id="add_camera_inner">
 					<br />
-					<p><video id="previewWebcam" class="previewWebcam task" muted autoplay playsinline></video></p>
+					<p><video id="previewWebcam" class="previewWebcam task" aria-hidden="true" title="Right-click this video for additional options" data-menu="context-menu-video" oncanplay="updateStats();" controlsList="nodownload" muted autoplay playsinline ></video></p>
+					<div id="infof"></div>
+					<button onclick="this.disabled=true;setTimeout(function(){requestBasicPermissions();},20);" id="getPermissions" style="display:none;" data-ready="false">
+						<span data-translate="ask-for-permissions">Allow Access to Camera/Microphone</span>
+					</button>
 					<span style="display:block;">
-						<button onclick="publishWebcam(this)" id="gowebcam" class="gowebcam" disabled>
-							<span data-translate="waiting-for-camera">Start Streaming</span>
+						<button onclick="publishWebcam(this)" title="Start streaming" aria-label="Start streaming" role="button" aria-pressed="false" tabindex="1" id="gowebcam" class="gowebcam" disabled data-audioready="false" data-ready="false">
+							<span data-translate="waiting-for-camera">Waiting for Camera to Load</span>
 						</button>
 					</span>
+					<div id="videoMenu" class="videoMenu" aria-hidden="true">
+						<div class="title"><i class="las la-video"></i><span data-translate="video-source"> Video Source </span></div>
+						<span style="display:inline-block;padding-top: 5px;">
+							<select id="videoSourceSelect" tabindex="1" autocomplete="off" title="Video source list"></select>
+						</span>
+					</div>
+					<div id="audioMenu" class="form-group multiselect" title="Audio Source">
+						<a id="multiselect-trigger" class="form-control multiselect-trigger" data-state="1">
+							<div class="title"><i class="las la-microphone-alt"></i><span data-translate="select-audio-source"> Audio Source(s) </span></div>
+						</a>
+						<ul id="audioSource" class="multiselect-contents">
+							<li><input type="checkbox" id="multiselect1" name="multiselect1" autocomplete="off" style="display: none;" checked value="ZZZ" /><label for="multiselect1"><span data-translate="no-audio"> No Audio</span></label></li>
+						</ul>
+					</div>
+					<div id="headphonesDiv" class="audioMenu hidden" aria-hidden="true">
+						<div class="title"><i class="las la-headphones"></i><span data-translate="select-output-source"> Audio Output Destination</span></div>
+						<select id="outputSource" autocomplete="off" alt="Audio output device"></select>
+					</div>
 				</div>
 			</div>
 		</div>

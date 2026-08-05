@@ -24,10 +24,10 @@ The API supports three connection methods:
 
 ### WebSocket API
 
-Connect to `wss://api.Sonny Video:443` and authenticate with your API key:
+Connect to `wss://api.vdo.ninja:443` and authenticate with your API key:
 
 ```javascript
-const socket = new WebSocket("wss://api.Sonny Video:443");
+const socket = new WebSocket("wss://api.vdo.ninja:443");
 
 socket.onopen = function() {
     // Join with your API key
@@ -223,7 +223,7 @@ import asyncio
 import json
 
 async def control_camera():
-    async with websockets.connect("wss://api.Sonny Video:443") as websocket:
+    async with websockets.connect("wss://api.vdo.ninja:443") as websocket:
         # Join with API key
         await websocket.send(json.dumps({"join": "YOUR_API_KEY"}))
         

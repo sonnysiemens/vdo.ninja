@@ -156,7 +156,7 @@ function connect(){
 			socket.close();
 		} catch(e){}
 	}
-	socket = new WebSocket("wss://api.Sonny Video:443");
+	socket = new WebSocket("wss://api.vdo.ninja:443");
 
 	socket.onclose = function (){
 		failedCount+=1;

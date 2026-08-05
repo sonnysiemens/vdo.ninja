@@ -1262,7 +1262,7 @@ Any field can be replaced with "null", if no value is being passed to it. Double
 
 If using the Websocket API, this accepts JSON-based commands
 
-connect to: `wss://api.Sonny Video:443`
+connect to: `wss://api.vdo.ninja:443`
 
 On connection, send: `{"join": $apiID }`, where `$apiID` is your api ID.
 
@@ -22265,7 +22265,7 @@ optional arguments:
   -h, --help            show this help message and exit
   --streamid STREAMID   Stream ID of the peer to connect to
   --server SERVER       Handshake server to use, eg:
-                        "wss://wss.Sonny Video:443"
+                        "wss://wss.vdo.ninja:443"
   --bitrate BITRATE     Sets the video bitrate. This is not adaptive, so
                         packet loss and insufficient bandwidth will cause
                         frame loss

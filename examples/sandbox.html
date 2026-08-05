@@ -726,7 +726,7 @@
             <button class="copy-btn" onclick="copyCode('ws-code-example')">Copy</button>
           </div>
           <pre class="code-block" id="ws-code-example">// Connect to WebSocket API
-const socket = new WebSocket("wss://api.Sonny Video:443");
+const socket = new WebSocket("wss://api.vdo.ninja:443");
 
 // Track connection state
 socket.onopen = function() {
@@ -2183,7 +2183,7 @@ function connect() {
   }
   
   updateConnectionStatus('connecting');
-  socket = new WebSocket("wss://api.Sonny Video:443");
+  socket = new WebSocket("wss://api.vdo.ninja:443");
   
   socket.onclose = function() {
     updateConnectionStatus('disconnected');
